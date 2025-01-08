@@ -1,0 +1,86 @@
+no short int or long int is allowed 
+short int a = 2;
+
+there is no unsignied in Java
+unsigned int a = 2;
+
+default whole number is int to make it long add L or l as suffix(prefer L)
+long a = 2L;
+
+default real number is double to make it float add F or f as suffix(prefer F)
+float a = 2.5F;
+
+Type mismatch: cannot convert from int to boolean
+if (condition){
+    The condition has to be boolean it cannot be int float or anything else
+    Java doesn't convert data types
+    strictly type language
+}
+
+no const keyword in java
+const int a = 10;
+
+
+Control Statements
+1. Condtionals: if, else if, else, nested if, switch
+2. Looping / Iteration: for , while, do while
+3. Branching / Jumping: break , continue, return, goto (not allowed in Java)
+
+Operators:
+Unary, Binary, Ternary
+
+Arithmetic: +, -, *, /, % 
+Logical: &&, ||, !
+Biwise: ^, &, |
+Assignment: =, +=, -=, *=, /=, %=, ^=, &=, |=
+Relational: ==, !=, >, <, >=, <=
+Increment / Decrement: ++, --
+Shift: >>, << , >>> (unsigned right shift --> shifts even the signed bits to right)
+Conditional / Ternary: ? :
+
+
+A class with the fila name should only be the public class
+There can be as many as main method in a class but only one public static void main method is allowed
+The classes with the main method are called as application classes or entry point classes, which are used to run the java program
+We can have whichever main method we want
+
+The Compiler is the goat
+The Compiler adds the default constructor to the class if we don't add it manually.
+The Compiler calls the super class constructor before calling the subclass constructor.
+
+Default Constructors job is to assign define values to the unassigned variables.
+When 2 variable have same name with different hierarchy then the value of one with the outer scope.
+Once a Constructor is provided in a class then the Compiler will not add the default constructor to the class.
+this() is used to call the constructor of the same class.
+this() must be the first statement in the constructor.
+
+
+Arrays
+In multidimensional arrays the first index that is the row is mandatory
+In multidimensional arrays the second index that is the column is optional
+
+Assignment
+java EmployeeManagementApp
+-----------------------------
+1. Create
+2. Display
+3. Raise Salary
+4. Exit
+----------------------------
+Enter choice 1: 
+1. Clerk - 20000
+2. Programmer - 30000
+3. Manager - 100000
+4. Exit
+
+Enter choice 2:
+Enter name:
+Enter Age
+----------------------------
+display everything
+----------------------------
+clerk += 2000
+programmer += 5000
+manager += 15000
+
+
