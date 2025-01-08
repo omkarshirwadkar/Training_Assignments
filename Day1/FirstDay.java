@@ -1,4 +1,4 @@
-// package Training_Assignments.Day2;
+// package Training_Assignments.Day1;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -96,30 +96,8 @@ class Employee{
     }
   }
 }
-// Assignment
-// java EmployeeManagementApp
-// -----------------------------
-// 1. Create
-// 2. Display
-// 3. Raise Salary
-// 4. Exit
-// ----------------------------
-// Enter choice 1: 
-// 1. Clerk - 20000
-// 2. Programmer - 30000
-// 3. Manager - 100000
-// 4. Exit
 
-// Enter choice 2:
-// Enter name:
-// Enter Age
-// ----------------------------
-// display everything
-// ----------------------------
-// clerk += 2000
-// programmer += 5000
-// manager += 15000
-public class EmployeeManagementApp {
+public class FirstDay {
   public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
@@ -147,25 +125,6 @@ public class EmployeeManagementApp {
               System.out.print("Enter choice: ");
               int choice1 = scanner.nextInt();
               scanner.nextLine();
-              // Kaif's Idea
-              // EmployeeType type;
-              // Employee emp ;
-              // switch (choice1) {
-              //   case 1:
-              //   type = EmployeeType.CLERK;
-              //   break;
-              //   case 2:
-              //   type = EmployeeType.PROGRAMMER;
-              //   break;
-              //   case 3:
-              //   type = EmployeeType.MANAGER;
-              //   break;
-              //   case 4:
-              //   System.out.println("Exitting the Sub Menu");
-              //   break;
-              //   default:
-              //   System.out.println("Invalid choice");
-              // }
 
               switch (choice1) {
 
