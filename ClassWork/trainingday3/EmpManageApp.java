@@ -20,6 +20,7 @@ abstract class Emp{
         this.salary = salary;
         this.designation = designation;
         countEmp += 1;
+        sc.close();
     }
 
     public void display() {
@@ -79,6 +80,7 @@ public class EmpManageApp {
     public static void main(String[] args) {
         int ch1 = 0, ch2 = 0;
         Emp emp[] = new Emp[100];
+        Scanner sc = new Scanner(System.in);
         do{
             System.out.println("-------------------------------------");
             System.out.println("1. Create Employee");
@@ -87,7 +89,7 @@ public class EmpManageApp {
             System.out.println("4. Exit");
             System.out.println("-------------------------------------");
             System.out.print("Enter your choice: ");
-            ch1 = new Scanner(System.in).nextInt();
+            ch1 = sc.nextInt();
             switch(ch1){
                 case 1:
                 do{
@@ -98,7 +100,7 @@ public class EmpManageApp {
                     System.out.println("4. Back");
                     System.out.println("--------------------------------------------");
                     System.out.print("Enter your choice: ");
-                    ch2 = new Scanner(System.in).nextInt();
+                    ch2 = sc.nextInt();
                     switch(ch2){
                         case 1:
                         emp[Emp.countEmp] = new Clerk();
@@ -131,7 +133,7 @@ public class EmpManageApp {
                 break;
             }
         }while(ch1 != 4);
-
-        System.out.println("Total Employees: " + Emp.countEmp);
+        sc.close();
+        System.out.println("Total Employees Present in the Company: " + Emp.countEmp);
     }
 }
