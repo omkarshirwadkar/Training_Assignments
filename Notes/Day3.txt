@@ -1,0 +1,28 @@
+
+The javap tool is used to get the information of any class or interface.
+
+A pure class has all variables private and all methods public. 
+A class with both public and private variables and methods is called a hybrid class.
+
+--> A a1 = new B();
+--> a1.abc() ==> the method present in class B is called as a1 is an object of class B.
+
+
+---------------------------Interface---------------------------------
+
+Can we have abstract class without any or one abstract methods --> You can have abstract class without any abstract methods. But it is not recommended. It is better to have a normal class
+
+--> Interface methods does not have a body. They are abstract by default. We can have multiple methods in an interface.
+--> Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+--> Interface methods do not have a body - the body is provided by the "implement" class
+--> On implementation of an interface, you must override all of its methods
+--> Interface methods are by default abstract and public
+--> Interface attributes are by default public, static and final
+--> An interface cannot contain a constructor (as it cannot be used to create objects)
+--> An interface cannot contain a static method (as it cannot be used to create objects)
+
+We cannot access the method of other interfaces but we can access the variables of other interfaces
+
+Advantages:
+--> Achieiving Security
+--> Achieving Abstraction

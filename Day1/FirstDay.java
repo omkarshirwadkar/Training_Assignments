@@ -16,11 +16,12 @@ class Employee{
   // making everything private and providing getter setter methods --> Encapsulation
   private int id;
   private String ename;
-  EmployeeType designation;
+  private EmployeeType designation;
   private int age;
   private double salary;
 
   // List to store Employee objects
+  // Could use array instead of List
   static List<Employee> employee = new ArrayList<>();
 
   // Constructor
