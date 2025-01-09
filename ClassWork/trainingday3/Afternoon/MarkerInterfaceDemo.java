@@ -34,8 +34,8 @@ class A implements I{
     }
 }
 
-public class MarkerInterfaceDemo {
-    public static void main(String[] args) {
+public class MarkerInterfaceDemo  {
+    public static void main(String[] args) throws CloneNotSupportedException{
         Student s1 = new Student("Rahul", 5);
         s1.display();
         Student s2 = s1;
