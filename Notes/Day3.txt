@@ -60,3 +60,17 @@ But abstract class comes under class hierarchy and object hierarchy.
 
 
 Interfaces will save memory space, the constructor calls, better experience over abstract class
+
+
+
+Marker Interface:
+Marker interface is an interface that has no methods.
+Examples of marker interface are Serializable, Cloneable and Remote interface.
+
+Functional Interface:
+Functional interface is an interface that has only one abstract method.
+Examples of functional interface are Runnable, Callable and Comparator interface.
+
+General/ Normal Interface:
+General interface is an interface that has more than one abstract method.
+Examples of general interface are List, Set and Map interface.
