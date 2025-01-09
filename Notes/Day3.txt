@@ -1,4 +1,5 @@
 
+------------------------------Morning Session-------------------------------------------
 The javap tool is used to get the information of any class or interface.
 
 A pure class has all variables private and all methods public. 
@@ -26,3 +27,36 @@ We cannot access the method of other interfaces but we can access the variables 
 Advantages:
 --> Achieiving Security
 --> Achieving Abstraction
+
+
+
+------------------------------Afternoon Session------------------------------------------
+
+                Constructor                   v/s                   Method
+Same as class name                                                 Any name                               
+Called when object is created                               Called after object created
+Must not have a return type                                     Have return type
+
+
+Similarities
+--> Both are used to initialize the object
+--> Both are used to perform some operation
+--> Exception Handling
+--> Return statement can be used in a constructor and method as well
+--> Any Logic
+
+
+                Abstract Class                          v/s                      Interface
+Methods with body as well as methods without body                           Only Abstract Methods
+Variables which can be Modified                                             Only final Variables
+Can have instance variables                                                 Only static Variables 
+Doesn't support multiple inheritance                                    Supports Multiple Inheritance
+Variables/Methods can have various access modifiers                      Only public method/variables
+Can have Constructor                                                        Don't have constructor
+
+
+Interfaces never come under class hierarchy or object hierarchy because we cannot create an object of interface.
+But abstract class comes under class hierarchy and object hierarchy.
+
+
+Interfaces will save memory space, the constructor calls, better experience over abstract class

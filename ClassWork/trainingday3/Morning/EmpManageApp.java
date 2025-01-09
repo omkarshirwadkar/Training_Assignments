@@ -1,3 +1,4 @@
+package Morning;
 // package ClassWork.trainingday3;
 
 import java.util.Scanner;
