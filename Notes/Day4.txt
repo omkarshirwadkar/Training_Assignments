@@ -1,0 +1,29 @@
+---------------------------Morning Session----------------------------------------
+
+Access Modifiers: public, private, protected, default
+
+
+Outermost Class access Modifiers are only public and default
+--> If a class is public , it can be accessed from any package
+--> If a class is default, it can be accessed from the same package only.
+
+One import statement can only import one class from another package and not its sub classes. 
+If you want to import multiple classes from another package, you can use import statement with wildcard (*) like this: import package_name.*;
+
+
+javac -d . A.java ==> 1. -d: to create the directory structure for the class files mentioned in the .java files
+2. .:  is the current directory, so the class files will be created in the current directory and its subdirectories
+
+no default keyword in java, it is default access modifier, it is used when no access modifier is used in front of a class, method or variable declaration.
+
+protected variables and protected methods can be accessed from the same class, from the same package and from the subclasses of the class in which they are declared.
+
+protected variables and methods cannot be called using instances only available to sub classes 
+
+
+--> Outer most class access modifiers are only public and default
+--> There is no default keyword as access modifier in java 
+--> Always check the class scope before the members
+--> Compile with -d . to create custom packages
+--> import statement can only import the current package classes (not of sub classes)
+--> protected scope members are directly accessed without creating objects

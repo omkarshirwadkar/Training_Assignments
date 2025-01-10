@@ -1,4 +1,4 @@
-package Training_Assignments.ClassWork.trainingday1;
+// package Training_Assignments.ClassWork.trainingday1;
 import java.util.ArrayList;
 
 // only 3 types(constants) were specified therefore enums
