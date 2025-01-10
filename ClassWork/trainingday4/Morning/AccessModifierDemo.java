@@ -8,5 +8,11 @@ class A{
 }
 
 public class AccessModifierDemo {
-    
+    public static void main(String[] args) {
+        A a[] = new A[10];
+        a[3] = new A();
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
 }

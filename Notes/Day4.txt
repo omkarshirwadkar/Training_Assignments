@@ -64,3 +64,12 @@ class GFG {
             "Static block can be printed without main method");
     }
 }
+
+
+
+assignment 4:
+--> No one should be able to inherit from Clerk/Manager/Employee
+--> No one can override display method
+--> Keep all classes in emp.assignment package
+--> Add an employee id for the emp class (take input from user then also handle the collision)
+--> 4. Remove: ask for employee id, shows all details and ask do you really want to delete the employee then confirmation and once deleted return back to main menu.
