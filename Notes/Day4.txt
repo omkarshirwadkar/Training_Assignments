@@ -26,4 +26,41 @@ protected variables and methods cannot be called using instances only available 
 --> Always check the class scope before the members
 --> Compile with -d . to create custom packages
 --> import statement can only import the current package classes (not of sub classes)
---> protected scope members are directly accessed without creating objects
+--> protected scope members are directly accessed by child class without creating any instance
+
+------------------------------------Afternoon Session-----------------------------------
+
+Non Access Modifier: 
+
+                        Variables           Classes             Method
+------------------------------------------------------------------------------------
+abstract             |       No         |      Yes         |        Yes
+------------------------------------------------------------------------------------
+static               |       Yes        |       No         |        Yes
+------------------------------------------------------------------------------------
+final                |      Yes         |       Yes        |        Yes
+------------------------------------------------------------------------------------
+
+
+--> abstract method can't have a body and must be implemented in non terminating class
+--> static method can only access static variables and methods
+--> static methods can only invoke static methods directly
+--> static methods can't invoke non-static methods directly
+--> A class is called static if it has only static methods and variables
+--> The System class the Collection class and the Math class are examples of static classes
+--> Before our main method is executed , the static block is executed, and if there are more than 1 static block then all the blocks are clubbed together in a single block and executed before the main method is executed
+
+--> final methods can't be overridden
+--> No ordering between access and non access modifiers
+
+
+class GFG {
+   
+    // Static block
+    static
+    {
+        // Print statement
+        System.out.print(
+            "Static block can be printed without main method");
+    }
+}
