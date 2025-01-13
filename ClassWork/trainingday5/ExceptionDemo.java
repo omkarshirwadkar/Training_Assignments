@@ -1,13 +1,53 @@
 // package ClassWork.trainingday5;
 import java.io.*;
+import java.sql.SQLException;
 
 public class ExceptionDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, SQLException, UserException {
         try{
-            int a = 50;
-            for (int i = 1; i <= 20; i++) {
+            System.out.println(" Program ended");
+            A a = new A();
+            a.methodA();
+        }
+        catch (IOException e){
+            System.out.println("IOException Handler.");
+        }
+        //Multiple Exception handling
+        catch (ArrayIndexOutOfBoundsException | NullPointerException e){
+            System.out.println("ArithmeticException or NullPointerException Handler.");
+        }
+        catch (UserException e){
+            System.out.println("UserException Handler.");
+            System.out.println("Reason: " + e.getMessage());
+            e.display();
+            e.printStackTrace();
+            System.out.println();
+        }
+        catch(Exception e){
+            System.out.println("General Exception Handler.");
+        }
+        finally{
+            System.out.println("This is finally block");
+            System.out.println("Finally block can be used to release system resources.");
+        }
+    }
+}
+
+class A{
+    public void methodA() throws IOException, SQLException, UserException{
+        methodAA();
+    }
+
+    public void methodAA() throws IOException, SQLException, UserException{
+        methodAB();
+    }
+    public void methodAB() throws IOException, SQLException, UserException{
+        try{
+            // int a = 50;
+            for (int i = 0; i <= 10; i++){
+
                 System.out.println(i);
-                int res = a /(a - i);
+                // int res = a /(a - i);
 
                 // The code will be complied but will throw ArithmeticException at runtime
                 if (i == 15){
@@ -39,34 +79,15 @@ public class ExceptionDemo {
                     System.out.println("No Execution of finally block.");
                     System.exit(0);
                 }
-
                 if (i == 5){
                     throw new UserException("i == 5");
                 }
-
-            }
         }
-        catch (IOException e){
-            System.out.println("IOException Handler.");
-        }
-        //Multiple Exception handling
-        catch (ArrayIndexOutOfBoundsException | NullPointerException e){
-            System.out.println("ArithmeticException or NullPointerException Handler.");
-        }
-        catch (UserException e){
-            System.out.println("UserException Handler.");
-            System.out.println("Reason: " + e.getMessage());
-            e.display();
-            System.out.println();
-        }
-        catch(Exception e){
-            System.out.println("General Exception Handler.");
         }
         finally{
             System.out.println("This is finally block");
             System.out.println("Finally block can be used to release system resources.");
-        }
-        System.out.println(" Program ended");
+            }
     }
 }
 

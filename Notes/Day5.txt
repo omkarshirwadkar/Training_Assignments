@@ -69,3 +69,12 @@ class UserException extends Exception {
     }
 }
 
+Unchecked Exception are not required to be passed to the caller, but checked exceptions are required to be passed to the caller.
+Unchecked Exceptions are automatically passed.
+
+
+try should be pair with catch and finally. If you have a try block, you must have a catch block or a finally block. If you have a catch block, you must have a try block. If you have a finally block, you must have a try block.
+Order should be try -catch-finally.
+There can't be any statement between try and catch block or between catch and finally block.
+
+catch block exceptions should be ordered from most specific to least specific that is from subclass to superclass.
