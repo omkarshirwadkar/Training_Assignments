@@ -78,3 +78,9 @@ Order should be try -catch-finally.
 There can't be any statement between try and catch block or between catch and finally block.
 
 catch block exceptions should be ordered from most specific to least specific that is from subclass to superclass.
+
+
+--------------Assignment------------------
+Enter Number Only
+Age between 18 and 60 Only
+Enter correct choice
