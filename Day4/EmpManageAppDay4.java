@@ -1,11 +1,10 @@
 
-// package ClassWork.trainingday3;
-// package emp.assignment;
 import java.util.Scanner;
 import emp.assignment.Emp;
 import emp.assignment.Clerk;
 import emp.assignment.Programmer;
 import emp.assignment.Manager;
+
 public class EmpManageAppDay4 {
     public static void main(String[] args) {
         int ch1 = 0, ch2 = 0;
@@ -81,8 +80,10 @@ public class EmpManageAppDay4 {
                 if (Emp.countEmp == 0){
                     System.out.println("No Employee Present to Raise Salary");
                 }
-                for (int i = 0; i < Emp.countEmp; i++){
-                    emp[i].raiseSalary();
+                for (int i = 0; i < 100; i++){
+                    if (emp[i] != null){
+                        emp[i].raiseSalary();
+                    }
                 }
                 break;
                 case 4:
@@ -109,7 +110,6 @@ public class EmpManageAppDay4 {
 
             }
         }while(ch1 != 5);
-        // sc.close();
         System.out.println("Total Employees Present in the Company: " + Emp.countEmp);
     }
 }

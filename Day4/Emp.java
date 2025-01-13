@@ -5,15 +5,11 @@ public abstract class Emp{
     int id;
     String name;
     int age;
-    float salary;
+    public float salary;
     String designation;
 
     static public int countEmp = 0;
     static public int trackId = -1;
-
-    // not a property of employee so don't declare in the employee class
-    // static List<Employee> employee = new ArrayList<>();
-
 
     Emp(float salary, String designation) {
         Scanner sc = new Scanner(System.in);
@@ -28,10 +24,8 @@ public abstract class Emp{
         this.designation = designation;
         trackId = id;
 
-        // sc.close();
     }
 
-    // No one should override this method therefore making it final
     final public void display() {
         System.out.println("Employee ID: " + id);
         System.out.println("Name: "+name);
@@ -40,6 +34,5 @@ public abstract class Emp{
         System.out.println("Designation: "+designation);
         System.out.println();
     }
-
     public abstract void raiseSalary();
 }

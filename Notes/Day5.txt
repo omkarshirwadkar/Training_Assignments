@@ -1,0 +1,41 @@
+--------------------------Morning Session-------------------------------
+
+------------------------Exception Handling-------------------------------
+
+Error:
+--> Compile Time Error: Syntactical Error
+--> Runtime Error: Logical Error
+    --> Error
+    --> Exception
+
+--> Error cannot be handled in runtime , but exception can be handled in runtime.
+
+Exception:
+--> Exception is a runtime error.
+1. Checked Exception: Compile Time Exception
+   --> Checked exceptions are the exceptions that are checked at compile-time. 
+   --> This means that the compiler verifies that the code handles these exceptions either by catching them or declaring them in the method signature using the throws keyword. 
+   --> Examples of checked exceptions include: IOException, SQLException, ParseException, ClassNotFoundException.
+2. Unchecked Exception: Runtime Exception
+   --> Unchecked exceptions, also known as runtime exceptions, are not checked at compile-time. 
+   --> These exceptions usually occur due to programming errors, such as logic errors or incorrect assumptions in the code. 
+   They do not need to be declared in the method signature using the throws keyword, making it optional to handle them. 
+   --> Examples of unchecked exceptions include: NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException, ClassCastException.
+
+
+
+Keywords: try, catch, finally, throw, throws
+1. try (helmet): This block contains the code that might throw an exception.
+2. catch (accident): This block contains the code that will be executed if an exception is thrown in the try block.
+   --> catch block can be used multiple times to handle different types of exceptions.
+   --> catch block can be used with a specific exception type or with a general exception type (Exception e).
+3. finally(insurance): This block contains the code that will be executed regardless of whether an exception is thrown or not.
+   --> Even if we write return statement in try block, finally block will be executed.
+   --> System.exit(0) will not execute finally block.
+   --> finally block in Java can be used to put "cleanup" code such as closing a file, closing connection, etc.
+   --> finally block can be used to release system resources.
+4. throw: This keyword is used to throw an exception.
+   --> Manually raise an exception using throw keyword.
+   --> Anti-Pattern 
+5. throws: This keyword is used to declare that a method might throw a certain exception.
+   --> 
