@@ -29,13 +29,19 @@ public class ExceptionDemo {
                 }
 
                 // Finally block still runs even after returning from the method
-                if (i == 8){
+                if (i == 80){
                     return;
                 }
 
                 // The finally block isn't executed after System teminaion
-                if (i == 10){
+                if (i == 100){
+                    System.out.println("Terminated :(");
+                    System.out.println("No Execution of finally block.");
                     System.exit(0);
+                }
+
+                if (i == 5){
+                    throw new UserException("i == 5");
                 }
 
             }
@@ -47,6 +53,12 @@ public class ExceptionDemo {
         catch (ArrayIndexOutOfBoundsException | NullPointerException e){
             System.out.println("ArithmeticException or NullPointerException Handler.");
         }
+        catch (UserException e){
+            System.out.println("UserException Handler.");
+            System.out.println("Reason: " + e.getMessage());
+            e.display();
+            System.out.println();
+        }
         catch(Exception e){
             System.out.println("General Exception Handler.");
         }
@@ -55,5 +67,17 @@ public class ExceptionDemo {
             System.out.println("Finally block can be used to release system resources.");
         }
         System.out.println(" Program ended");
+    }
+}
+
+class UserException extends Exception {
+    public UserException(){
+        super();
+    }
+    public UserException(String msg) {
+        super(msg);
+    }
+    public void display(){
+        System.out.println("UserException display method.");
     }
 }

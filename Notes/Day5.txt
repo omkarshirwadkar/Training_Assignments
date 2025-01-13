@@ -38,4 +38,34 @@ Keywords: try, catch, finally, throw, throws
    --> Manually raise an exception using throw keyword.
    --> Anti-Pattern 
 5. throws: This keyword is used to declare that a method might throw a certain exception.
-   --> 
+   --> Declare that a method might throw a certain exception using throws keyword.
+   --> It forces the caller to handle the declared exceptions.
+
+How to identify if a given exception is checked or unchecked without running a program?
+--> Checked Exception: If the exception is a subclass of Exception class, then it is a checked exception.
+--> Unchecked Exception: If the exception is a subclass of RuntimeException class, then it is an unchecked exception.
+
+
+JVM Exception Handler:
+--> prints Stack trace
+--> prints the name and reason behind the exception
+--> terminates the program
+
+Making your own exception class:
+--> extend Exception class or RuntimeException class
+--> override the toString() method to provide a meaningful error message
+--> use the constructor to initialize the exception with a meaningful error message
+--> use the exception class in your code to throw the exception
+--> minimum 2 methods: one for the constructor and one for the toString() method
+class UserException extends Exception {
+    public UserException(){
+        super();
+    }
+    public UserException(String msg) {
+        super(msg);
+    }
+    public void display(){
+        System.out.println("UserException display method.");
+    }
+}
+
