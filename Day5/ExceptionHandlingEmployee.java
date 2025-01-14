@@ -19,11 +19,11 @@ abstract class Emp{
 
     Emp(float salary, String designation) {
         Scanner sc1 = new Scanner(System.in);
-        System.out.println("Enter your name");
+        System.out.print("Enter your name: ");
         name = sc1.nextLine();
         do {
             try{
-                System.out.print("Enter your age");
+                System.out.print("Enter your age: ");
                 age = sc1.nextInt();
                 if (age < 18 || age > 60) {
                     throw new WrongAge("Age Should be between 18 and 60");
@@ -32,7 +32,6 @@ abstract class Emp{
             catch (InputMismatchException e){
                 System.out.println("------------------------------------");
                 System.out.println("Invalid input. Please enter a number.");
-                // System.out.println("Exception: " + e);
                 sc1.next();
             }
             catch (WrongAge e){
