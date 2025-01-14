@@ -1,6 +1,5 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 class Menu{
     private static int maxChoice;
     public static int readChoice(int mc){
@@ -18,7 +17,7 @@ class Menu{
                 System.out.println("Please Enter a number");
             }
             catch (InvalidChoiceException e){
-                e.display(maxChoice);
+                e.displayMessage(maxChoice);
             }
         } 
     }
@@ -30,7 +29,7 @@ class InvalidChoiceException extends RuntimeException{
     public InvalidChoiceException(String msg){
         super(msg);
     }
-    public void display(int maxChoice){
+    public void displayMessage(int maxChoice){
         System.out.println("Please enter number between 1 to " + maxChoice);
     }
 }
@@ -51,7 +50,6 @@ abstract class Emp{
         this.designation = designation;
         countEmp += 1;
     }
-
     public void display() {
         System.out.println("Name: "+name);
         System.out.println("Age: "+age);
@@ -59,10 +57,8 @@ abstract class Emp{
         System.out.println("Designation: "+designation);
         System.out.println();
     }
-
     public abstract void raiseSalary();
 }
-
 class Clerk extends Emp{
     Clerk(){
         super(20000, "Clerk");
@@ -71,7 +67,6 @@ class Clerk extends Emp{
         salary += 2000;
     }
 }
-
 class Programmer extends Emp{
     Programmer(){
         super(30000, "Programmer");
@@ -80,7 +75,6 @@ class Programmer extends Emp{
         salary += 5000;
     }
 }
-
 class Manager extends Emp{
     Manager(){
         super(100000, "Manager");
@@ -89,7 +83,6 @@ class Manager extends Emp{
         salary += 15000;
     }
 }
-
 public class EmployeeManagementAppDay6 {
     public static void main(String[] args) {
         int ch1 = 0, ch2 = 0;

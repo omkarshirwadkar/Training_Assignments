@@ -1,0 +1,5 @@
+--> Resource Oriented Programming should always be handled with try-with-resources to ensure that the resources are properly closed.
+--> UserCreated class should implement AutoClosable interface to be used in try-with-resources statement.
+--> No need to call close() method manually
+--> No memory leak
+--> The order in which the resources are closed is the reverse order in which they are declared in the try-with-resources statement
