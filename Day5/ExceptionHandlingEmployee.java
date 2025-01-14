@@ -9,16 +9,6 @@ class WrongAge extends RuntimeException{
         super(message);
     }
 }
-
-class WrongChoice extends RuntimeException{
-    public WrongChoice() {
-        super("Invalid choice");
-    }
-    public WrongChoice(String message) {
-        super(message);
-    }
-}
-
 abstract class Emp{
     String name;
     int age;
@@ -26,13 +16,14 @@ abstract class Emp{
     String designation;
 
     static int countEmp = 0;
+
     Emp(float salary, String designation) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Enter your name");
         name = sc1.nextLine();
         do {
             try{
-                System.out.println("Enter your age");
+                System.out.print("Enter your age");
                 age = sc1.nextInt();
                 if (age < 18 || age > 60) {
                     throw new WrongAge("Age Should be between 18 and 60");
@@ -41,7 +32,7 @@ abstract class Emp{
             catch (InputMismatchException e){
                 System.out.println("------------------------------------");
                 System.out.println("Invalid input. Please enter a number.");
-                System.out.println("Exception: " + e);
+                // System.out.println("Exception: " + e);
                 sc1.next();
             }
             catch (WrongAge e){
