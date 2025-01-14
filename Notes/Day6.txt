@@ -3,3 +3,18 @@
 --> No need to call close() method manually
 --> No memory leak
 --> The order in which the resources are closed is the reverse order in which they are declared in the try-with-resources statement
+
+
+
+Pattern Matching:
+[abcd] --> contains any character between a and d (inclusive)
+[^abcd] --> contains any character not between a and d (inclusive)
+[a-d][p-r] --> 1st character between a and d (inclusive) and 2nd character between p and r (inclusive)
+[a-d[p-r]] --> contains any character between a and d (inclusive) or any character between p and r (inclusive)
+[a-d&&[p-r]] --> kind of intersection of two patterns, contains any character between a and d (inclusive) and any character between p and r (inclusive)
+
+
+
+Assignment:
+Firstname and Lastname should start with capital letter
+No special characters or number should be allowed 

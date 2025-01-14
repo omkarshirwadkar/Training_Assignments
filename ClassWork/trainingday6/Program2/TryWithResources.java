@@ -34,24 +34,6 @@ class B implements AutoCloseable{
 
 public class TryWithResources {
     public static void main(String[] args) {
-        // instead of doing this just pass resources in try() block
-        // Connection con;
-        // PreparedStatement pstmt;
-        // ResultSet rs;
-        // try{
-        //     con = DriverManager.getConnection();
-        //     pstmt = con.prepareStatement();
-        //     rs = pstmt.executeQuery("select * from EMP");
-        // }
-        // catch (SQLException e){
-        //     System.out.println("Error");
-        // }
-        // finally{
-        //     rs.close();
-        //     pstmt.close();
-        //     con.close();
-        // }
-
         // Only the classes that implement AutoCloseable interface can be used in try-with-resources statement
         
         try (A a = new A(); B b = new B()) {
