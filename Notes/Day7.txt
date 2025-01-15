@@ -38,3 +38,44 @@ non-sealed class is used to create a class that can be extended by any class
 
 sealed class can only be extended by another sealed, final or non-sealed class
 non-sealed class can be extended by any class
+
+
+-----------------------------Afternoon Session---------------------------
+
+Anti-Patterns: Bad Practices to Avoid
+Patterns: Best Practices to Write Clean Code
+--> Architectural Patterns: MVC, MVP, MVVM, REST, Microservices, Event-Driven Architecture
+--> Messaging Patterns: P2P, Pub/Sub, Request/Response
+--> Database Patterns: ER, DAO, 
+--> Integration Patterns: Point-2-Point, API Gateway, Service Bus, Message Queue, Hub-n-Spoke
+--> Programmatic Patterns: Mutable, Immutable
+--> Designing Patterns:
+    --> Object-Oriented:
+        --> Java SE:
+            --> Creational: Singleton, Factory, Builder, Prototype, Abstract Factory
+            --> Structural: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+            --> Behavioral: Observer, Strategy, Template Method, Visitor, Command, Iterator, Mediator, Memento, State, Chain of Responsibility(COR), Interpreter
+
+        --> Java EE:
+            Presentation
+            Business
+            Integration
+
+
+1. Singleton: A class that can have only one instance and provides a global point of access to that instance.
+Early Initialization : The instance is created when the class is loaded.
+Lazy Initialization : The instance is created when it is first requested.
+
+
+Assignment:
+class A{}
+class B extends A{}
+public class SingletonAssignment{
+    public static void main(String[] args) {
+        A a1 = A.getObject();
+        B b1 = B.getObject();
+
+        // If more than 1 object created then throw an exception
+        
+    }
+}
