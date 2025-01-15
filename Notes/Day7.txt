@@ -1,0 +1,40 @@
+---------------------Morining Session---------------------------
+
+Immutable:
+
+To print the details we have to display one by one the properties of Student
+s1.getName(), s1.getRollNo(), s1.getStandard()
+We can create a display method in Student class to print the details
+toString() method is used to print the details of the object
+
+Whenever the object is printed it will print the toString() method
+If there is no toString() method it will print the memory address of the object as every class extends Object class in Java
+If the toString() method is overridden then when printing the object it will execute the toString() method
+The class should be final and it should implement the Serializable interface to be used in the serialization process.
+We should also override the hashCode() method to be used in the HashMap and HashSet classes.
+
+--> record in java is used to create a class with immutable properties
+
+Why make a class immutable?
+1. It is thread-safe
+2. It is easier to reason about the code
+3. It is easier to debug the code
+4. It is easier to test the code
+5. It is easier to cache the objects
+6. It is easier to use in multi-threaded environment
+7. It is easier to use in concurrent environment
+8. It is easier to use in distributed environment
+9. It is easier to use in cloud environment
+10. It is easier to use in big data environment
+11. Where the object is created just once and then it is not needed to modified like transactions
+
+What is a canonical constructor?
+A canonical constructor is a constructor that is used to create an object from a set of parameters.
+
+
+sealed class is used to create a class that can be extended by only one class
+permits is used to create a class that can be extended by multiple classes
+non-sealed class is used to create a class that can be extended by any class
+
+sealed class can only be extended by another sealed, final or non-sealed class
+non-sealed class can be extended by any class
