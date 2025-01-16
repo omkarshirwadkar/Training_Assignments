@@ -23,7 +23,7 @@ class A {
             System.out.println("A instance created");
         }
         else{
-            throw new InstanceAlreadyExist("Instance already exist");
+            System.out.println("Instance already exist");
         }
     }
     public static A getInstance() {

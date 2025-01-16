@@ -20,6 +20,15 @@ class Author{
 // Can create objects of subclasses at runtime
 abstract class Vehicle{
     public static Vehicle getVehicle(String type){
+        if (type.equals("car")){
+            return new Car();
+        }
+        else if (type.equals("bike")){
+            return new Bike();
+        }
+        else {
+            return null;
+        }
 
     }
 }
@@ -38,6 +47,8 @@ class Van extends Vehicle{
 
 public class FactoryDesign {
     public static void main(String[] args) {
-        Vehicle car = Vehicle.getVehicle("Car");
+        Vehicle car = Vehicle.getVehicle("car");
+        System.out.println(car);
+
     }
 }

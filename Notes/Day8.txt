@@ -27,4 +27,95 @@ The Prototype Design Pattern is a creational design pattern that provides a way 
 
 Builder Design Pattern:
 The Builder Design Pattern is a creational design pattern that separates the construction of complex objects from their representation , allowing the same construction process to create different representations.
-Depends on the property specified in the builder class, the builder class will create different objects.
+Depends on the property specified in the builder class, the builder class will create different objects.    
+
+
+#### Structural Design Pattern:
+Structural Design Patterns are concerned with how classes and objects are composed to form larger structures.
+
+1. Adapter Design Pattern:
+The Adapter Design Pattern is a structural design pattern that allows objects with incompatible interfaces to work together by converting the interface of one class into an interface expected by the clients.
+Two classes are almost similar like both reading from files but different kinds of file then Adapter.
+
+2. Bridge Design Pattern:
+The Bridge Design Pattern is a structural design pattern that separates an object's abstraction from its implementation so that the two can vary independently.
+
+
+3. Decorator Design Pattern:
+The Decorator Design Pattern is a structural design pattern that allows behavior to be added to an individual object , either statically or dynamically, without affecting the behavior of other objects from the same class.
+
+
+4. Proxy Design Pattern:
+Something made available in place of something else , especially a substitute or a representative. The Proxy Design Pattern is a structural design pattern that provides an object that acts as a substitute for another object, controlling access to it.
+--> Whatsapp profile picture is a proxy of the real picture. We get a blurred version of the picture.
+
+
+5. Facade Design Pattern:
+The Facade Design Pattern is a structural design pattern that provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use. 
+
+
+
+#### Behavioral Design Pattern:
+Behavioral Design Patterns are concerned with the interactions between objects.
+1. Observer Design Pattern:
+The Observer Design Pattern is a behavioral design pattern that defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+--> When you like a post on Facebook, you are an observer of that post. When the post is updated, you are notified.
+--> When you are a subscriber of a YouTube channel, you are an observer of that channel. When the channel uploads a new video, you are notified.
+
+2. Delegator Design Pattern:
+The Delegator Design Pattern is a behavioral design pattern that allows one object to act on behalf of another object. The delegator object can be thought of as a proxy that controls access to the real object.
+--> When you are a manager of a team, you are a delegator. You delegate tasks to your team members.
+--> When you are a parent, you are a delegator. You delegate tasks to your children.
+--> When you are a teacher, you are a delegator. You delegate tasks to your students.
+--> When you are a boss, you are a delegator. You delegate tasks to your employees.
+--> When you are a coach, you are a delegator. You delegate tasks to your players.
+--> When you are a leader, you are a delegator. You delegate tasks to your followers.
+
+3. Chain of Responsibility Design Pattern:
+The Chain of Responsibility Design Pattern is a behavioral design pattern that allows multiple objects to handle a request in a sequence. The request is passed through a chain of objects, and each object in the chain can choose to handle the request or pass it on to the next object in the chain.
+--> When you are a customer service representative, you are a chain of responsibility. You handle customer requests , and if you cannot handle the request, you pass it on to your supervisor or the next level of support.
+--> When you are a doctor, you are a chain of responsibility. You handle patient requests, and if you cannot handle the request, you pass it on to a specialist or the next level of care.
+--> When you are a teacher, you are a chain of responsibility. You handle student requests, and if you cannot handle the request, you pass it on to a school counselor or the next level of support.
+
+
+4. Template Method Design Pattern:
+The Template Method Design Pattern is a behavioral design pattern that defines the skeleton of an algorithm in a method , deferring some steps to subclasses. The Template Method Design Pattern is a way to define a method that can be overridden by subclasses.
+--> When you are a teacher, you are a template method. You define the skeleton of a lesson plan, and your students fill in the details.
+--> When you are a coach, you are a template method. You define the skeleton of a game plan, and your players fill in the details.
+--> When you are a leader, you are a template method. You define the skeleton of a project plan, and your team members fill in the details.
+
+
+5. Interpreter Design Pattern:
+The Interpreter Design Pattern is a behavioral design pattern that gives an object a way to interpret a language or set of data.
+Convert the data in a specific format to a more understandable format so that the data can be used by the application.
+--> When you are a programmer, you are an interpreter. You interpret code and write it in a language that a computer can understand.
+--> When you are a translator, you are an interpreter. You interpret text from one language to another.
+--> When you are a lawyer, you are an interpreter. You interpret laws and regulations and advise clients on their rights and obligations.
+--> Currency Converter is an interpreter. It converts the value of one currency to another.
+
+
+6. Iterator Design Pattern:
+The Iterator Design Pattern is a behavioral design pattern that allows you to traverse a collection of objects without exposing the underlying representation.
+--> When you are a customer, you are an iterator. You traverse a list of products and select the ones you want to buy.
+--> When you are a student, you are an iterator. You traverse a list of courses and select the ones you want to take.
+
+
+7. Strategy Design Pattern:
+The Strategy Design Pattern is a behavioral design pattern that allows you to define a family of algorithms or behaviors, put each of them in a separate class, and make them interchangeable at runtime. This pattern is useful when you want to dynamically change the behavior of a class without modifying its code.
+Google Maps uses the Strategy Design Pattern to determine the best route between two points. It uses different algorithms to calculate the route, and the user can choose the algorithm they want to use.
+
+
+
+---------------------------Anti-Patterns------------------------------
+1. Swallowing Excptions
+2. Throwing Exceptions 
+3. Using Constructor: No direct constructor calls
+4. God Object: A class that does too much and has too many responsibilities.
+5. Dangling References: A reference to an object that has already been deleted.
+
+
+Assignment:
+class Clerk
+class Programmer
+class Manager
+class CEO
