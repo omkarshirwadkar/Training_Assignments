@@ -1,0 +1,30 @@
+---------------- Morning Session ------------------------------
+F### Factory Design Pattern:
+The Factory Design Pattern is a creational design pattern that provides a way to create objects without specifying the exact class of object that will be created.
+
+## When to use Factory Pattern?
+-->If your object creation process is complex or varies under different conditions, using a factory method can make your client code simpler and promote reusability.
+--> The Factory Method Pattern allows you to create objects through an interface or abstract class, hiding the details of concrete implementations. This reduces dependencies and makes it easier to modify or expand the system without affecting existing code.
+--> If your application needs to create different versions of a product or may introduce new types in the future, the Factory Method Pattern provides a flexible way to handle these variations by defining specific factory methods for each product type.
+--> Factories can also encapsulate configuration logic, allowing clients to customize the object creation process by providing parameters or options to the factory method.
+
+
+
+### Prototype Design Pattern:
+The Prototype Design Pattern is a creational design pattern that provides a way to create new objects by copying an existing object.
+## When to use Prototype Pattern?
+--> Use the Prototype pattern when creating new objects is more complex or costly than copying existing ones. Cloning can be more efficient if significant resources are needed.
+--> The Prototype pattern is helpful for managing various objects with minor differences. Instead of creating multiple classes, you can clone and modify prototypes.
+--> Consider the Prototype pattern for dynamic configurations where you need to create objects at runtime. You can clone a base configuration and adjust it as necessary.
+--> The Prototype pattern can lower initialization costs, as cloning is often faster than building a new object from scratch, especially if initialization is resource-intensive.
+
+## When not to use Prototype Pattern?
+--> Avoid using the Prototype pattern when your application predominantly deals with unique object instances, and the overhead of implementing the pattern outweighs its benefits.
+--> If object creation is simple and does not involve significant resource consumption, and there are no variations of objects, using the Prototype pattern might be unnecessary complexity.
+--> If your objects are immutable (unchangeable) and do not need variations, the benefits of cloning may not be significant.
+--> If your system has a clear and straightforward object creation process that is easy to understand and manage, introducing the Prototype pattern may add unnecessary complexity.
+
+
+Builder Design Pattern:
+The Builder Design Pattern is a creational design pattern that separates the construction of complex objects from their representation , allowing the same construction process to create different representations.
+Depends on the property specified in the builder class, the builder class will create different objects.
