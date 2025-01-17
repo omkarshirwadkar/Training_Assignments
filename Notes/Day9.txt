@@ -1,0 +1,25 @@
+-------------------------------------Morning Session--------------------------------------
+Assignment Implementation:
+--> CEO as Singleton class
+--> Add Factory Pattern for each Employee sub class
+--> Use Abstract Factory for creating Employee objects
+--> Template CEO and then the rest
+--> Iterator Implementation for Employee objects
+
+
+
+--------------------------------Multi-Threading-----------------------------------
+Multithreading:
+Every Process needs it's own set of resources, but threads share the same memory space. So, we can use threads to improve the performance of our program. We can use the following methods to implement multithreading:
+
+--> Start method : This method is used to start a new thread. It takes a Runnable object as a parameter.
+--> Run method : This method is used to execute the code in a thread. It is called when the start method is called.
+--> main method : This method is used to start the main thread of the program.
+
+1.  **Thread Class**: This is the most basic way to create a thread. We can create a new thread by extending the Thread class and overriding the run() method.
+2.  **Runnable Interface**: This is another way to create a thread. We can create a new thread by implementing the Runnable interface and overriding the run() method.
+3.  **Thread Pool**: This is a group of threads that are used to execute tasks.
+
+
+
+Multi-threading v/s Multi-tasking

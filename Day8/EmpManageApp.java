@@ -1,36 +1,66 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-abstract class Emp{
-    private String name;
-    private int age;
-    private String designation;
-    double salary;
-    static int countEmp = 0; 
-    protected Emp(float salary, String designation) {
+// Class to take input from user
+class InputTaker{
+    public static String getName(){
         Scanner sc1 = new Scanner(System.in);
         System.out.print("Enter your name: ");
-        name = sc1.nextLine();
+        String name = sc1.nextLine();
+        return name;
+    }
+    public static int getAge(){
+        Scanner sc2 = new Scanner(System.in);
+        int age = 0;
         do {
             try{
                 System.out.print("Enter your age: ");
-                age = sc1.nextInt();
+                age = sc2.nextInt();
                 if (age < 18 || age > 60) {
-                    throw new InputMismatchException();
+                    throw new NullPointerException();
                 }
             }
             catch (InputMismatchException e){
                 System.out.println("------------------------------------");
                 System.out.println("Invalid input. Please enter a number.");
-                sc1.next();
+                sc2.next();
             }
             catch (Exception e){
                 System.out.println("---------------" + e.getMessage() + "----------------");
             }
         } while (age < 18 || age > 60);
-        this.salary = salary;
-        this.designation = designation;
-        countEmp += 1;
+        return age;
+    }
+}
+
+// 
+abstract class Emp{
+    private String name;
+    private int age;
+    private String designation;
+    private double salary;
+    static int countEmp = 0; 
+    private static boolean isFirstEmployeeCEO = false;
+    protected Emp(float salary, String designation) {
+        // to ensure that the first employee is always the CEO
+        if ((isFirstEmployeeCEO == false) && (designation.equals("CEO"))) {
+            isFirstEmployeeCEO = true;
+            this.salary = salary;
+            this.designation = designation;
+            this.name = InputTaker.getName();
+            this.age = InputTaker.getAge();
+            countEmp += 1;
+        }
+        else if (isFirstEmployeeCEO == false){
+            System.out.println("-----------------First Employee must be CEO-------------------");
+        }
+        else{
+            this.name = InputTaker.getName();
+            this.age = InputTaker.getAge();
+            this.salary = salary;
+            this.designation = designation;
+            countEmp += 1;
+        }
     }
     public void display() {
         System.out.println("Name: "+name);
@@ -39,22 +69,38 @@ abstract class Emp{
         System.out.println("Designation: "+designation);
         System.out.println();
     }
+    public double getSalary() {
+        return salary;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
     public abstract void raiseSalary();
 }
 
+// Singleton class for CEO as there can be only one CEO
 final class CEO extends Emp {
-    private static final CEO b1 = new CEO();
+    private static CEO b1 = null;
     private CEO() {
         super(1000000, "CEO");
     }
     public static CEO getCEO() {
+        if (b1 == null) {
+            b1 = new CEO();
+        }
+        else{
+            System.out.println("-------------------CEO already exists-------------------------");
+        }
         return b1;
     }
     public void raiseSalary(){
+        double salary = getSalary();
         salary += 100000;
+        setSalary(salary);
     }
 }
 
+// Factory class for Manager and limiting the number of Manager to 7
 class Manager extends Emp {
     private static int managerCount = 0;
     private Manager(){
@@ -70,7 +116,9 @@ class Manager extends Emp {
         }
     }
     public void raiseSalary(){
-        salary += 20000;
+        double salary = getSalary();
+        salary += 10000;
+        setSalary(salary);
     }
 }
 class Clerk extends Emp {
@@ -81,7 +129,9 @@ class Clerk extends Emp {
         return new Clerk();
     }
     public void raiseSalary(){
-        salary += 3000;
+        double salary = getSalary();
+        salary += 10000;
+        setSalary(salary);
     }
 }
 class Programmer extends Emp {
@@ -92,29 +142,11 @@ class Programmer extends Emp {
         return new Programmer();
     }
     public void raiseSalary(){
+        double salary = getSalary();
         salary += 5000;
+        setSalary(salary);
     }
 }
-
-// abstract class Employee{
-//     public static Employee getEmployee(String designation){
-//         if (designation.equals("CEO")){
-//             return CEO.getInstance();
-//         }
-//         else if (designation.equals("Manager")){
-//             return Manager.getManager();
-//         }
-//         else if (designation.equals("Programmer")){
-//             return Programmer.getProgrammer();
-//         }
-//         else if (designation.equals("Clerk")){
-//             return Clerk.getClerk();
-//         }
-//         else{
-//             return null;
-//         }
-//     }
-// }
 public class EmpManageApp {
     
     public static void main(String[] args) {
@@ -147,17 +179,23 @@ public class EmpManageApp {
                             switch(ch2){
                                 case 1:
                                 emp[Emp.countEmp] = CEO.getCEO();
+                                break;
+
                                 case 2:
                                 emp[Emp.countEmp] = Clerk.getClerk();
                                 break;
+
                                 case 3:
                                 emp[Emp.countEmp] = Programmer.getProgrammer();
                                 break;
+
                                 case 4:
                                 emp[Emp.countEmp] = Manager.getManager();
                                 break;
+
                                 case 5:
                                 break;
+
                                 default:
                                 System.out.println("Message: Enter Valid choice");
                                 break;
@@ -169,8 +207,9 @@ public class EmpManageApp {
                             System.out.println("Exception: " + e);
                             sc.next();
                         }
-                    }while(ch2 != 4);
+                    }while(ch2 != 5);
                     break;
+
                     case 2:
                     if (Emp.countEmp == 0){
                         System.out.println("No Employee Present to Display");
@@ -188,9 +227,11 @@ public class EmpManageApp {
                         emp[i].raiseSalary();
                     }
                     break;
+
                     case 4:
                     System.out.println("Exiting...");
                     break;
+
                     default:
                     System.out.println("Message: Enter Valid Choice");
                     break;
