@@ -88,3 +88,25 @@ System.gc() is a method in Java that suggests the JVM to reclaim any unused memo
 System.exit() is a method in Java that terminates the Java application and releases all system resources associated with the application
 
 Runtime is a class in Java that provides methods to interact with the Java Virtual Machine (JVM). It is used to load classes, get system properties, and exit the JVM.
+
+
+Object 
+Class
+
+Object class:
+The Object class is the root of the class hierarchy in Java. It is the superclass of all classes in Java.
+The Object class provides methods that are common to all objects, such as equals(), hashCode(), and toString(), which are used to compare objects, get their hash code, and convert them to a string, respectively.
+--> clone()
+--> toString()
+--> equals()
+--> hashCode()
+--> getClass(): returns the runtime class of an object.
+--> notify()
+--> notifyAll()
+--> wait()
+--> finalize(): This method is called by the garbage collector when it is about to destroy the object. It is used to release any system resources held by the object. Before destroying the object we can perform some cleanup operations in this method.
+
+
+# instanceOf v/s getClass:
+instanceOf() is used to check if an object is an instance of a particular class or not.
+getClass() is used to get the class of an object.
