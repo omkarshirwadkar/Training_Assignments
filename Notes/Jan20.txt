@@ -1,0 +1,90 @@
+----------------------Packages------------------------
+java.util, java.lang, java.io, java.net, java.security, java.math, java.text, java.util.regex, java.time, java.time.format, java.time.temporal, java.time.zone,
+
+
+packages in java.lang.*:
+
+
+Object
+Class
+
+System
+Math
+Runtime
+Process
+Record
+
+Thread
+ThreadGroup
+Runnable
+
+
+Throwable
+Exception
+Error
+RuntimeException
+ArithmeticException
+NullPointerException
+ArrayIndexOutOfBoundsException
+
+Enum
+
+Cloneable
+Runnable
+AutoCloseable
+Iterable
+
+java.lang.reflect:
+    Field
+    Method
+    Constructor
+java.lang.annotations:
+
+all annotations are 
+
+
+Autoboxing is a feature in Java that allows you to automatically convert between primitive types and their corresponding object wrapper classes.
+Unboxing is the reverse of autoboxing, where an object is converted to a primitive type and vice versa.
+
+Number
+Integer
+Float
+Double
+Boolean
+Byte
+Short
+Long
+Character
+--> advantages of wrapper classes:
+They suppport Serializable
+
+
+
+String
+StringBuffer
+StringBuilder
+
+difference between String and StringBuffer
+String is immutable, StringBuffer is mutable
+String is thread-safe, StringBuffer is not thread-safe
+String is faster, StringBuffer is slower
+String is used for small strings, StringBuffer is used for large strings
+String is used for concatenation, StringBuffer is used for appending
+String is used for immutable strings, StringBuffer is used for mutable strings
+
+
+difference between StringBuffer and StringBuilder
+But StringBuffer is synchronized, StringBuilder is not synchronized
+StringBuffer is thread-safe, StringBuilder is not thread-safe
+StringBuffer is slower, StringBuilder is faster
+
+
+System
+Math
+Runtime
+Record
+Process
+System.gc() is a method in Java that suggests the JVM to reclaim any unused memory. It is not a guarantee that the memory will be reclaimed, but it is a request to the JVM to do so.
+System.exit() is a method in Java that terminates the Java application and releases all system resources associated with the application
+
+Runtime is a class in Java that provides methods to interact with the Java Virtual Machine (JVM). It is used to load classes, get system properties, and exit the JVM.
