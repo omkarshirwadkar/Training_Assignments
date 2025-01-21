@@ -56,3 +56,44 @@ The standard date from which it is calculated is January 1, 1970.
 Difference Between getMethod() and getDeclaredMethod() in Java:
 The getMethod() method is used to get a method that is public.
 The getDeclaredMethod() method is used to get a any method, whether it is public or not.
+
+
+------------------------------Afternoon Session---------------------------------
+Collection Framework classes:
+Used to store and manipulate a collection of objects.
+Arrays are static, but collections are dynamic. Collections are used to store a group of objects.
+
+Collection:
+    --> Set: A collection that does not allow duplicate elements.
+        --> 1. HashSet: A set that uses a hash table to store elements. Stores element depending on the hash code of the element.
+        --> 2. TreeSet: A set that uses a tree to store elements. Stores elements in a sorted order.
+        --> 3. LinkedHashSet: A set that uses a linked list to store elements. Stores elements in the order they were added.
+    --> List: A collection that allows duplicate elements.
+        --> 1. Vector: A list that uses a dynamic array to store elements. It is synchronized.
+        --> 2. ArrayList: A list that uses a dynamic array to store elements. It is not synchronized.
+        --> 3. LinkedList: A list that uses a linked list to store elements. Doubly linked list.
+    --> Queue: A collection that follows the FIFO (First In First Out) principle. It is used to store elements in the order they were added.
+        --> 1. Deque: A queue that uses a double-ended queue to store elements. It is a collection that can be accessed from both ends. It is an interface that extends the Queue interface.
+            --> 1. ArrayDeque: A deque that uses a dynamic array to store elements. It is not synchronized.
+        --> 2. PriorityQueue: A queue that uses a priority queue to store elements. Elements are ordered based on their priority.
+Map:
+    --> 1. HashMap: A map that uses a hash table to store elements. Stores elements depending on the hash code of the key.
+    --> Hashmap allows null values and keys.
+    --> Hashmap is not synchronized.
+    --> 2. Hashtable:
+    --> It is synchronized.
+    --> It does not allow null values and keys.
+    --> 3. TreeMap: A map that uses a tree to store elements. Stores elements in a sorted order.
+    --> 4. LinkedHashMap: A map that uses a linked list to store elements. Stores elements in the order they were added.
+
+Enumeration: hasMoreElements(), nextElement() methods. It is used to iterate over a collection of objects.
+--> Older version of Java. Now replaced by Iterator.
+Iterator: hasnext(), next(), remove() and forEachRemaining() methods. It is used to iterate over a collection of objects.
+--> Also supports older version of Java.
+
+
+
+Assignment:
+--> Take Input of ID from user keep it unique
+--> Use Collection Class
+--> Add Another Option Search based on ID
