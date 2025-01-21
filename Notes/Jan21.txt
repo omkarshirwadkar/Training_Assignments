@@ -1,0 +1,58 @@
+--------------------------------Morning Session------------------------------------
+
+java.util.*
+--------------------
+Scanner
+Random
+Date
+Stack
+Calendar
+GregorianCalendar
+BitSet
+
+ArrayList
+LinkedList
+HashSet
+HashMap
+TreeSet
+TreeMap
+LinkedHashSet
+PriorityQueue
+Collections
+
+Enumerations
+Iterator
+Comparator
+
+Locale
+SimpleTimeZone
+
+
+
+1. Scanner: A class that provides methods for reading input from the user. It is used to get user input from the keyboard, read from a file, or read from a network connection.
+--> Keyboard: Scanner sc = new Scanner(System.in);
+--> File: Scanner sc = new Scanner(new File("filename.txt"));
+--> Network: Scanner sc = new Scanner(new URL("http://www.example.com"));
+
+2. Random: A class that generates random numbers. It is used to create random numbers for simulations, games , and other applications.
+
+3. Date: A class that represents a date. It is used to get the current date, add or subtract days from a date, and compare dates.
+The standard date from which it is calculated is January 1, 1970.
+
+
+4. Stack: A class that implements a stack data structure. It is used to implement recursive algorithms, evaluate postfix expressions, and implement recursive descent parsers.
+A stack is a LIFO (Last In First Out) data structure, meaning the last item added to the stack is the first one to be removed.
+
+
+5. Calendar: A class that provides methods for working with dates and times. It is used to get the current date and time, add or subtract days from a date, and compare dates.
+The standard date from which it is calculated is January 1, 1970.
+
+6. GregorianCalendar: A class that extends the Calendar class and provides methods for working with dates and times in the Gregorian calendar. It is used to get the current date and time, add or subtract days from a date, and compare dates.
+The standard date from which it is calculated is January 1, 1970.
+
+7. BitSet: A class that represents a set of bits. It is used to store a set of boolean values, where each bit represents a boolean value. It is more memory efficient than using a boolean array. 
+
+
+Difference Between getMethod() and getDeclaredMethod() in Java:
+The getMethod() method is used to get a method that is public.
+The getDeclaredMethod() method is used to get a any method, whether it is public or not.

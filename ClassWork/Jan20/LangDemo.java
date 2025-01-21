@@ -20,8 +20,8 @@ public class LangDemo {
             Runtime rt = Runtime.getRuntime();
             // start chrome
             Process p4 = rt.exec("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-            // start vscode
-            // Process p5 = rt.exec("C:\\Users\\user\\AppData\\Local\\ Programs\\Microsoft VS Code\\Code.exe");
+            // start eclipse ide
+            Process p5 = rt.exec("C:\\Program Files\\Eclipse\\eclipse.exe");
             System.out.println(" Opening the notepad in 5 seconds");
             Thread.sleep(5000);
             Process p1 = rt.exec("notepad.exe");

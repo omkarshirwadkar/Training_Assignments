@@ -33,6 +33,7 @@ Cloneable
 Runnable
 AutoCloseable
 Iterable
+Comparable
 
 java.lang.reflect:
     Field
