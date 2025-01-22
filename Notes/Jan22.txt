@@ -42,3 +42,21 @@ Whenever a class implements the Comparable interface, it must implement the comp
 
 Whenever TreeSet has to be sorted, it calls the compareTo() method of the class that implements the Comparable interface. Thus implement the Comparable Interface and override the compareTo() method to sort the objects of the class in a TreeSet.
 No need to override the equals() and hashCode() methods when implementing the Comparable interface for sorting purpose(in our case TreeSet).
+
+
+
+Assignment:
+Display id, name, age, salary, designation
+Search by id, designation, name
+
+Use Generics
+
+when you want subclass of a class
+LinkedList< ? extends Employee> employee = new LinkedList< ? extends Employee>(); // this is the upper bound
+
+
+Covariant: 
+Invariant
+Contravariant
+
+inner classes .class filed are named as A$F$G.class

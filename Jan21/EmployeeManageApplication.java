@@ -1,28 +1,27 @@
-// package Jan16;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.util.HashMap;
+package Jan21;
+import java.util.*;
 
-// Class to take input from user
-class InputTaker{
-    
-    public static int getID( HashMap <Integer, Emp> mp){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter ID:");
-        int id = sc.nextInt();
-        while (!mp.containsKey(id)){
-            System.out.println("ID already exists. Enter new ID:");
-            id = sc.nextInt();
+class GetDetails{
+    public static HashSet <Integer>  idList = new HashSet<>();
+    public static int getID(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter ID: ");
+        int id = scanner.nextInt();
+        while (idList.contains(id)) {
+            System.out.println("ID already exists. Enter a new ID: ");
+            id = scanner.nextInt();
         }
+        idList.add(id);
         return id;
-
     }
+
     public static String getName(){
         Scanner sc1 = new Scanner(System.in);
         System.out.print("Enter your name: ");
         String name = sc1.nextLine();
         return name;
     }
+
     public static int getAge(){
         Scanner sc2 = new Scanner(System.in);
         int age = 0;
@@ -45,79 +44,65 @@ class InputTaker{
         } while (age < 18 || age > 60);
         return age;
     }
-}
 
-// 
-abstract class Emp{
+}
+abstract class Employee{
     private int id;
     private String name;
     private int age;
     private String designation;
     private double salary;
     private static boolean isFirstEmployeeCEO = false;
-    public static HashMap <Integer, Emp> mp = new HashMap<>();
-    protected Emp(float salary, String designation) {
+
+    protected Employee(int id, float salary, String designation) {
         // to ensure that the first employee is always the CEO
         if ((isFirstEmployeeCEO == false) && (designation.equals("CEO"))) {
             isFirstEmployeeCEO = true;
+            this.id = id;
             this.salary = salary;
             this.designation = designation;
-            this.id = InputTaker.getID(mp);
-            this.name = InputTaker.getName();
-            this.age = InputTaker.getAge();
-            mp.put(id, this);
-
+            this.name = GetDetails.getName();
+            this.age = GetDetails.getAge();
         }
         else if (isFirstEmployeeCEO == false){
             System.out.println("-----------------First Employee must be CEO-------------------");
         }
         else{
-            this.id = InputTaker.getID(mp);
-            this.name = InputTaker.getName();
-            this.age = InputTaker.getAge();
+            this.id = id;
+            this.name = GetDetails.getName();
+            this.age = GetDetails.getAge();
             this.salary = salary;
             this.designation = designation;
-            mp.put(id, this);
         }
     }
-    public void search(int id) {
-        if (mp.containsKey(id)) {
-            System.out.println("Name: " + mp.get(id).name);
-            System.out.println("Age: " + mp.get(id).age);
-            System.out.println("Salary: "+mp.get(id).salary);
-            System.out.println("Designation: "+mp.get(id).designation);
-        }
-        else{
-            System.out.println("Employee not found");
-        }
+    public void display(){
+        System.out.println("Employee ID: "+id);
+        System.out.println("Employee Name: "+name);
+        System.out.println("Employee Age: "+age);
+        System.out.println("Employee Designation: "+designation);
+        System.out.println("Employee Salary: "+salary);
     }
+    public abstract void raiseSalary();
 
-    public void displayAll(){
-        for (Emp e : mp.values()) {
-            System.out.println("Name: " + e.name);
-            System.out.println("Age: " + e.age);
-            System.out.println("Salary: "+e.salary);
-            System.out.println("Designation: "+e.designation);
-        }
-    }
-    public double getSalary() {
+    public double getSalary(){
         return salary;
     }
     public void setSalary(double salary) {
         this.salary = salary;
     }
-    public abstract void raiseSalary();
+    public int getID() {
+        return id;
+    }
 }
 
-// Singleton class for CEO as there can be only one CEO
-final class CEO extends Emp {
+final class CEO extends Employee {
     private static CEO b1 = null;
-    private CEO() {
-        super(1000000, "CEO");
+    private CEO(int id) {
+        super(id, 1000000, "CEO");
     }
     public static CEO getCEO() {
         if (b1 == null) {
-            b1 = new CEO();
+            b1 = new CEO(GetDetails.getID());
         }
         else{
             System.out.println("-------------------CEO already exists-------------------------");
@@ -132,15 +117,15 @@ final class CEO extends Emp {
 }
 
 // Factory class for Manager and limiting the number of Manager to 7
-class Manager extends Emp {
+class Manager extends Employee {
     private static int managerCount = 0;
-    private Manager(){
-        super(50000, "Manager");
+    private Manager(int id){
+        super(id, 50000, "Manager");
     }
     public static Manager getManager(){
         if (managerCount < 7){
             managerCount++;
-            return new Manager();
+            return new Manager(GetDetails.getID());
         }
         else {
             return null;
@@ -152,12 +137,12 @@ class Manager extends Emp {
         setSalary(salary);
     }
 }
-class Clerk extends Emp {
-    private Clerk(){
-        super(20000, "Clerk");
+class Clerk extends Employee {
+    private Clerk(int id){
+        super(id, 20000, "Clerk");
     }
     public static Clerk getClerk(){
-        return new Clerk();
+        return new Clerk(GetDetails.getID());
     }
     public void raiseSalary(){
         double salary = getSalary();
@@ -165,12 +150,12 @@ class Clerk extends Emp {
         setSalary(salary);
     }
 }
-class Programmer extends Emp {
-    private Programmer(){
-        super(40000, "Programmer");
+class Programmer extends Employee {
+    private Programmer(int id){
+        super(id, 40000, "Programmer");
     }
     public static Programmer getProgrammer(){
-        return new Programmer();
+        return new Programmer(GetDetails.getID());
     }
     public void raiseSalary(){
         double salary = getSalary();
@@ -178,15 +163,16 @@ class Programmer extends Emp {
         setSalary(salary);
     }
 }
-public class EmpManageApp {
-    
+
+public class EmployeeManageApplication {
     public static void main(String[] args) {
         int ch1 = 0, ch2 = 0;
+        HashMap <Integer, Employee> empMap = new HashMap<>();
         Scanner sc = new Scanner(System.in);
         do{
             System.out.println("----------------Main Menu---------------------");
             System.out.println("1. Create Employee");
-            System.out.println("2. Display");
+            System.out.println("2. Display All");
             System.out.println("3. Raise Salary");
             System.out.println("4. Remove Employee");
             System.out.println("5. Search Employee");
@@ -210,19 +196,27 @@ public class EmpManageApp {
                             ch2 = sc.nextInt();
                             switch(ch2){
                                 case 1:
-                                CEO.getCEO();
+                                CEO c1 = CEO.getCEO();
+                                empMap.put(c1.getID(), c1);
+                                GetDetails.idList.add(c1.getID());
                                 break;
 
                                 case 2:
-                                Clerk.getClerk();
+                                Clerk c2 = Clerk.getClerk();
+                                empMap.put(c2.getID(), c2);
+                                GetDetails.idList.add(c2.getID());
                                 break;
 
                                 case 3:
-                                Programmer.getProgrammer();
+                                Programmer p1 = Programmer.getProgrammer();
+                                empMap.put(p1.getID(), p1);
+                                GetDetails.idList.add(p1.getID());
                                 break;
 
                                 case 4:
-                                Manager.getManager();
+                                Manager m1 = Manager.getManager();
+                                empMap.put(m1.getID(), m1);
+                                GetDetails.idList.add(m1.getID());
                                 break;
 
                                 case 5:
@@ -243,27 +237,78 @@ public class EmpManageApp {
                     break;
 
                     case 2:
-                    if 
-                    if (Emp.countEmp == 0){
-                        System.out.println("No Employee Present to Display");
+                    if (empMap.isEmpty()){
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("No employees in the Company.");
+                        System.out.println("------------------------------------------------------");
                     }
-                    for (int i = 0; i < Emp.countEmp; i++){
-                        emp[i].display();
+                    else{
+                        for (Map.Entry<Integer, Employee> entry : empMap.entrySet()) {
+                            entry.getValue().display();
+                        }
                     }
                     break;
-    
+
                     case 3:
-                    if (Emp.countEmp == 0){
-                        System.out.println("No Employee Present to Raise Salary");
+                    if (empMap.isEmpty()){
+                        System.out.println("------------------------------------------------------");
+                        System.out.println("No employees in the Company.");
+                        System.out.println("------------------------------------------------------");
                     }
-                    for (int i = 0; i < Emp.countEmp; i++){
-                        emp[i].raiseSalary();
+                    else{
+                        for (Map.Entry<Integer, Employee> entry : empMap.entrySet()) {
+                            entry.getValue().raiseSalary();
+                        }
                     }
                     break;
 
                     case 4:
+                    if (empMap.isEmpty()){
+                        System.out.println("No employees in the Company");
+                    }
+                    else{
+                        System.out.println("Enter Employee ID to remove");
+                        int id = sc.nextInt();
+                        if (empMap.containsKey(id)){
+                            empMap.get(id).display();
+                            System.out.println("Are you sure you want to remove this employee? (y/n)");
+                            String choice = sc.next();
+                            if (choice.equalsIgnoreCase("y")){
+                                empMap.remove(id);
+                                GetDetails.idList.remove(id);
+                                System.out.println("Employee removed");
+                            }
+                            else{
+                                System.out.println("Employee not removed");
+                            }
+                        }
+                        else{
+                            System.out.println("Employee not found");
+                        }
+                        
+                    }
+                    break;
+
+                    case 5:
+                    if (empMap.isEmpty()){
+                        System.out.println("No employees in the Company");
+                    }
+                    else{
+                        System.out.println("Enter Employee ID to search");
+                        int id = sc.nextInt();
+                        if (empMap.containsKey(id)){
+                            empMap.get(id).display();
+                        }
+                        else{
+                            System.out.println("Employee not found");
+                        }
+                        
+                    }
+                    break;
+                    case 6:
                     System.out.println("Exiting...");
                     break;
+
 
                     default:
                     System.out.println("Message: Enter Valid Choice");
@@ -276,7 +321,8 @@ public class EmpManageApp {
                 System.out.println("Exception: " + e);
                 sc.next();
             }
-        }while(ch1 != 4);
-        System.out.println("Total Employees Present in the Company: " + Emp.countEmp);
+        }while(ch1 != 6);
+
     }
+    
 }

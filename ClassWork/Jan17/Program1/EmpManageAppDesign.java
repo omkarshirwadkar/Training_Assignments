@@ -1,5 +1,10 @@
 import java.util.Iterator;
 
+import Jan21.CEO;
+import Jan21.Clerk;
+import Jan21.Manager;
+import Jan21.Programmer;
+
 class EmployeeList implements Iterator{
     public static int count = 0;
     public static Employee [] employees = new Employee[100];

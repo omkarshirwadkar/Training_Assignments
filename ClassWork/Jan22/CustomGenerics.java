@@ -23,7 +23,7 @@ class GenericClass <T> {
 // }
 public class CustomGenerics {
     public static void main(String[] args) {
-        GenericClass< Integer > genericClass1 = new GenericClass<>();
+        GenericClass<Integer> genericClass1 = new GenericClass<>();
         Integer[] array = {1, 2, 3, 4, 5};
         genericClass1.printArray(array);
         genericClass1.add(10, 20);
