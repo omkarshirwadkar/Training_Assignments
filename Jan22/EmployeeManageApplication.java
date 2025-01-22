@@ -1,18 +1,16 @@
 import java.util.*;
 
 class GetDetails{
-    public static HashSet <Integer>  idList;
+    public static HashSet <Integer>  idList = new HashSet<>();
     public static int getID(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter ID: ");
         int id = scanner.nextInt();
-        while (idList.contains(id) == true) {
+        while (idList.contains(id)) {
             System.out.println("ID already exists. Enter a new ID: ");
             id = scanner.nextInt();
         }
-        System.out.println("lopop");
         idList.add(id);
-        scanner.next();
         return id;
     }
 
@@ -199,21 +197,25 @@ public class EmployeeManageApplication {
                                 case 1:
                                 CEO c1 = CEO.getCEO();
                                 empMap.put(c1.getID(), c1);
+                                GetDetails.idList.add(c1.getID());
                                 break;
 
                                 case 2:
                                 Clerk c2 = Clerk.getClerk();
                                 empMap.put(c2.getID(), c2);
+                                GetDetails.idList.add(c2.getID());
                                 break;
 
                                 case 3:
                                 Programmer p1 = Programmer.getProgrammer();
                                 empMap.put(p1.getID(), p1);
+                                GetDetails.idList.add(p1.getID());
                                 break;
 
                                 case 4:
                                 Manager m1 = Manager.getManager();
                                 empMap.put(m1.getID(), m1);
+                                GetDetails.idList.add(m1.getID());
                                 break;
 
                                 case 5:

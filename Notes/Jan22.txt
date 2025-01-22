@@ -1,0 +1,44 @@
+-----------------------Morning Session-----------------------
+#### Generics: Type Parameters
+--> Type parameters are used to specify the type of a generic type.
+--> Type parameters are defined in angle brackets <>.
+
+
+Generics are static in nature
+They are added at compile time
+They are removed at runtime because of backward compatibility
+Generics are used to avoid boxing and unboxing of value types
+
+
+Advantages of Generics:
+1. Type Safety: Generics ensure type safety by preventing the mixing of different data types.
+2. Reusability: Generics enable code reusability by allowing the same code to work with different data types.
+3. Performance: Generics improve performance by reducing the need for casting and boxing/unboxing operations.
+4. Flexibility: Generics provide flexibility by allowing developers to create generic classes, interfaces, and methods that can work with multiple data types.
+
+
+
+The Collections Class: java.util.Collections
+The Collections class is a utility class that provides a collection of methods for working with collections. It is a static class, meaning that it does not need to be instantiated to use its methods.
+
+
+Adding a duplicate
+        studentList.add(new Student(1, "John", 10));
+It adds the  duplicate object as the object has different memory location 
+For this purpose we override the equals() and hashCode() methods
+To avoid duplicate objects override both equals() and hashCode() methods 
+        public boolean equals(Object obj) {
+            Student student = (Student) obj;
+            return this.rollNo == student.rollNo && this.standard == student.standard;
+        }
+// this is for the searching purpose 
+// creates buckets based on the hash code
+// Use appropriate feature and not the primary key
+        public int hashCode() {
+            return standard;
+        }
+
+Whenever a class implements the Comparable interface, it must implement the compareTo() method. This method is used to compare two objects of the same class. The compareTo() method returns an integer value that indicates the relationship between the two objects being compared.
+
+Whenever TreeSet has to be sorted, it calls the compareTo() method of the class that implements the Comparable interface. Thus implement the Comparable Interface and override the compareTo() method to sort the objects of the class in a TreeSet.
+No need to override the equals() and hashCode() methods when implementing the Comparable interface for sorting purpose(in our case TreeSet).
