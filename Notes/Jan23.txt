@@ -1,0 +1,52 @@
+-------------------------Morning Session------------------------------
+
+Defalut format whenever reading from a hardware device is ASCII(Byte format).
+java.io:
+Stream
+InputStream
+OutputStream
+
+These are also called as filter classes.
+
+InputStream, OutputStream, Reader , Writer are all abstract classes in Java.
+
+DataInput is an interface and the class which implements this interface is DataInputStream. DataInputStream is used to read primitive data types from the stream. It is used to read data from the stream in a binary format.
+DataOutput is an interface and the class which implements this interface is DataOutputStream. DataOutputStream is used to write primitive data types to the stream. It is used to write data to the stream in a binary format.
+
+Bytes(ASCII format: 1 Byte) and Character(Unicode format: 2 Bytes) are categories;
+               Bytes                                             Character
+                 |                                                   |
+     --------------------------                           -------------------------
+     |                         |                          |                        |
+InputStream              OutputStream                   Reader                  Writer
+--> FileInputStream      --> FileOutputStream           --> FileReader          --> FileWriter
+--> BufferInputStream    --> BufferOutputStream         --> BufferedReader      --> BufferedWriter
+--> PipeInputStream      --> PipeOutputStream           --> PipedReader         --> PipedWriter
+--> DataInputStream      --> DataOutputStream           --> InputStreamReader   --> OutputStreamWriter
+(implements DataInput)   (implements DataOutput)
+
+### PrintStream: to print anything                      ### PrintWriter: to print anything
+
+
+#### RandomAccessFile:
+RandomAccessFile is a class which is used to read and write data from a file. It is used to read and write data from a file in a random manner. It is used to read and write data from a file in a binary format.
+RandomAccessFile implments both DataInput and DataOutput interfaces.
+RandomAccessFile has more control over the file than the other classes.
+
+File class methods:
+--> exists(): to check if the file exists or not
+--> canRead(): to check if the file can be read or not
+--> canWrite(): to check if the file can be written or not
+--> delete(): to delete the file
+--> isDirectory(): to check if the file is a directory or not
+--> isFile(): to check if the file is a file or not
+--> lastModified(): to get the last modified time of the file
+--> length(): to get the length of the file
+--> list(): to get the list of files in the directory
+--> listFiles(): to get the list of files in the directory
+--> mkdir(): to create a new directory
+--> mkdirs(): to create a new directory and all its parents if they do not exist
+--> renameTo(): to rename the file
+--> setLastModified(): to set the last modified time of the file
+--> setReadable(): to set the file readable
+--> setWritable(): to set the file writable
