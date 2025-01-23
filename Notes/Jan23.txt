@@ -50,3 +50,11 @@ File class methods:
 --> setLastModified(): to set the last modified time of the file
 --> setReadable(): to set the file readable
 --> setWritable(): to set the file writable
+
+
+Assignment:
+Write all data to a file
+Record files can be separated by comma and stored as csv files
+Read all the data on the file
+Update the data in the file
+File name should be employees.csv

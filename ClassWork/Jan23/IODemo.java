@@ -14,7 +14,11 @@ public class IODemo {
                 String line = "";
                 while((line = fr.readLine()) != null){
                     System.out.println("Size of line: " + line.length());
+                    String [] words = line.split(",");
                     System.out.println(line);
+                    // for(String word : words){
+                    //     System.out.print(word + "            ");
+                    // }
 
                 }
                 fr.close();
