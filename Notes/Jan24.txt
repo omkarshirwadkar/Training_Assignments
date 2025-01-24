@@ -1,0 +1,126 @@
+------------------------------Morning Session--------------------------------
+
+Serialization:
+-----------------------------------------------
+Serialization is the process of converting an object into a byte stream. This byte stream can then be written to a file or sent over a network connection. The byte stream can be reconstructed back into an object using deserialization.
+
+Advantages of Serialization:
+--------------------------------
+1.  It allows objects to be saved to a file or database and then loaded back into memory
+2.  It allows objects to be sent over a network connection
+3.  It allows objects to be stored in a database
+
+Disadvantages of Serialization:
+--------------------------------
+1.  It can be slow and resource-intensive
+2.  It can be complex to implement
+3.  It can be difficult to debug
+
+
+Deserialization:
+--------------------------------------------------
+Deserialization is the process of reconstructing an object from a byte stream. This byte stream was previously created using serialization.
+
+--------------------------------------------------
+#### To perform Serialization: Add SerialVersionUID to the class
+#### static and transient keywords are not serialized
+
+
+transient keyword:
+-----------------------------------------------------
+The transient keyword is used to prevent an object from being serialized. When an object is marked as transient , its fields are not included in the serialization process.
+
+
+ObjectOutputStream:
+-----------------------------------------------------
+ObjectOutputStream is a class in Java that is used for serialization. It is used to write the state of an object to a file or to a byte stream. The object must implement the Serializable interface in order to be serialized.
+
+#### Marker Interface:
+----------------------------------------------------
+#### In multithreaded environment if we want something to be single threaded then we use synchronized keyword.
+----------------------------------------------------
+
+----------------------------Afternoon Session------------------------------
+###### Design Principles:
+
+
+#### DRY principle: Don't Repeat Yourself. It is a principle of software development aimed at reducing code duplication.
+
+#### KISS principle: Keep it Simple, Stupid. It is a principle of software development aimed at reducing complexity.
+
+#### SOLID principle: Single responsibility, Open/closed, Liskov substitution, Interface segregation, and Dependency inversion . It is a set of five design principles of object-oriented programming that aim to promote cleaner, more robust, and more maintainable code.
+
+1.  Single Responsibility Principle (SRP): A class should have only one reason to change.
+
+2.  Open-Closed Principle (OCP): A class should be open for extension but closed for modification.
+
+3.  Liskov Substitution Principle (LSP): Derived classes should be substitutable for their base classes.
+example:
+class Printer{
+    // use the base class wherever can
+    public void display(Employee e){
+        ......
+    }
+    // Don't do this use base class
+    public void display(Manager m){
+        ....
+    }
+}
+
+4.  Interface Segregation Principle (ISP): A client should not be forced to depend on interfaces it does not use. Breaking down large interfaces into smaller ones can help with this.
+--> interfaces should not have too many methods
+
+5.  Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules, but both should depend on abstractions.
+
+interface Engine{
+    .....
+}
+class FiatEngine implements Engine{
+    .....
+}
+class FerrariEngine implements Engine{
+    .....
+}
+
+class Tyres{
+    .....
+}
+class ApolloTyres extends Tyres{
+    .....
+}
+class MichelinTyres extends Tyres{
+    .....
+}
+
+class Car{
+    Engine engine;
+    Tyres tyres;
+    public Car(Engine engine, Tyres tyres){
+        this.engine = engine;
+        this.tyres = tyres;
+    }
+}
+
+
+###### Clean Code Practices:
+1. Choose noun as Class name
+2. Choose verbs as method name
+3. Choose entities on which action is performed or the entities required to perform the action as variable name
+4. Variables/Methods name starts with lowercase letter
+5. Class/Interface/Enums names starts with uppercase letter
+6. Package name should be all small letters no separation by underscore
+7. Constant name should be all uppercase letters with separation by underscore
+8. Use meaningful names variables/methods/classes
+9. Avoid Redundant Comments, Misleading Comments, Journal/Documentation
+--> // single line comment <-----------|
+--> /*                                 |
+    multi                              |<-------------- This is Comment
+    line comment                       |
+    */  <------------------------------|
+/* This is
+* Journaling / Documentation
+* and is saved in a doc <----------------------- This is Documentation
+* by java doc command
+*/
+10. Exception Handling(Both resource based and Non-Resource based)
+11. Indentation
