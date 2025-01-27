@@ -1,0 +1,100 @@
+--------------------------------Morning Session--------------------------------------
+When we perform Serialization we have to share .class file of the class which we are going to serialize. So we have to make sure that the class is accessible from the class which is performing serialization.
+
+Serial Version UID: It is a 64-bit number which is used to identify the version of the class. It is used to prevent the deserialization of the older version of the class. If the class is changed then the serial version UID will be changed.
+
+
+##### Databases: 
+-------------------------------------------------------------
+Advantages of Database Management System over Traditional File System:
+
+1. Better Data Security : DBMS provides a centralized approach to data management that ensures data integrity and security. To prevent illegal access, alteration, or theft, database management systems (DBMS) include a number of security features, including encryption, authentication, and authorization. Sensitive data is safeguarded against both internal and external attacks thanks to this.
+
+2. Reduced Data Redundancy : DBMS eliminates data redundancy by storing data in a structured way. It allows sharing data across different applications and users, reducing the need for duplicating data. By keeping data centrally and offering methods for sharing and reusing it, database management systems (DBMS) remove data redundancy. As a result, less data storage is needed, and data consistency is increased.
+
+3. Improved Data Consistency : DBMS allows defining constraints and rules to ensure that data is consistent and accurate. DBMS ensures data consistency by enforcing data validation rules and constraints. This ensures that data is accurate and consistent across different applications and users.
+4. Improved Data Access and Availability : DBMS provides efficient data access and retrieval mechanisms that enable quick and easy data access. It allows multiple users to access the data simultaneously, ensuring data availability.
+
+5. Improved Data Sharing : DBMS provides a platform for sharing data across different applications and users. It allows sharing data between different departments and systems within an organization, improving collaboration and decision-making. Database Management Systems prevent conflicts and data loss by enabling numerous people to view and edit the same data at once. This promotes teamwork and enhances data uniformity throughout the company.
+
+6. Improved Data Integration : DBMS allows integrating data from different sources, providing a comprehensive view of the data. It enables data integration from different systems and platforms, improving the quality of data analysis. To avoid data mistakes and inconsistencies, database management systems (DBMSs) apply data integrity requirements including referential integrity, entity integrity, and domain integrity. This guarantees the consistency, accuracy, and completeness of the data.
+
+7. Improved Data Backup and Recovery : DBMS provides backup and recovery mechanisms that ensure data is not lost in case of a system failure. It allows restoring data to a specific point in time, ensuring data consistency. Database management systems (DBMS) offer backup and recovery features that let businesses swiftly and effectively restore lost or damaged data. This guarantees business continuity and lowers the chance of data loss.
+
+8. Data independence: By separating the logical and physical views of data, database management systems (DBMS) enable users to work with data without being aware of its exact location or structure. This offers adaptability and lowers the possibility of data damage as a result of modifications to the underlying hardware or software.
+
+
+Types of Databases:
+Flat File Databases is used more than relational databases. It is used for small data. It is used for simple data.
+
+Flat File Databases
+Network Databases
+Hierarchical Databases
+DBMS
+RDBMS
+ORDBMS
+SQL
+NoSQL
+
+Structured v/s Unstructured v/s Semi-structured Data:
+Structured Data: It is the data which is stored in a table format. It is easy to manage and query. It is used in relational databases.
+Unstructured Data: It is the data which is not stored in a table format. It is difficult to manage and query. It is used in NoSQL databases.
+Semi-structured Data: It is the data which is stored in a table format but it is not fixed. It is easy to manage and query. It is used in NoSQL databases.
+
+            SQL              v/s                NoSQL
+-----------------------------------------------------------------------
+--> Schema based                  --> Schema less
+
+
+
+
+
+##### Types of Languages: 
+Programming Languages: OOP(C++, Java, .NET, etc.) POP(C, Fortran, etc.)
+Scripting Languages(Interpreted Languages): JS, Python, Ruby, PHP, VBS, etc.
+Markup Languages: HTML, XML, SGML, XHTML, etc.
+Query Languages: SQL, PL-SQL, NoSQL, XQuery, etc.
+
+
+SQL:
+DDL(Data Definition Language)                           : CREATE, ALTER, DROP, TRUNCATE, RENAME
+DML(Data Manipulation Language)                         : INSERT, UPDATE, DELETE
+DCL(Data Control Language)                              : GRANT, REVOKE
+TCL(Transactional Control Language)                     : COMMIT, ROLLBACK, SAVEPOINT
+DQL(Data Query Language) / DRL(Data Retrieval Language) : SELECT
+
+
+
+##### COMMIT, ROLLBACK, SAVEPOINT:
+-------------------------------------
+Table:
+======
+========
+====
+set savepoint s1;
+======
+========
+====
+set savepoint s2;
+======
+========
+====
+set savepoint s3;
+======
+========
+====
+set savepoint s4;
+======
+========
+====
+set savepoint s5;
+// if rollback --> then it will go to the beginning
+// if rollback to s4 --> then it will go to s4
+// if rollback to s2 --> then it will go to s2 and it will delete all the savepoint after s2
+
+
+
+Postgre SQL:
+Open pgadmin4 username
+Default port: 5432
+Keep the password: tiger
