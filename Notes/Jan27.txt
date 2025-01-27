@@ -98,3 +98,44 @@ Postgre SQL:
 Open pgadmin4 username
 Default port: 5432
 Keep the password: tiger
+
+
+
+Commands:
+\list or \l: list all the databases
+\c or \connect: connect to a database
+
+Alt + Shit + Q --> query selector shortcut
+
+select datname from pg_database; --> show all the database
+postgres --> to disconnect from the database
+\q --> to quit from the pgadmin4
+
+start transaction;
+should be met with end transaction or rollback or commit;
+
+Keys:
+1. Primary key: There can be only one primary key in a table
+2. Foreign key: reference to the primary key.
+3. Unique key: It allows null values. There can be multiple unique keys in a table.
+4. Candidate key: It is a primary key or unique key.  It is a combination of one or more columns. All keys which can be primary key.
+5. Alternate key: 
+6. Composite Key: Comination of two or more column to form a primary key.
+7. Surrogate key: It is a unique identifier for each row in a table. It is a synthetic key. It is not a natural key. Extra column is added to the table to form a surrogate key. It is used in the case of composite key.
+
+
+Assignment:
+
+empdb
+------
+EMPLOYEE:
+    EID(Primary Key)
+    NAME
+    AGE (21 to 60)
+    GENDER(MALE/FEMALE)
+    SALARY(999999.99)
+    DESIGNATION(PROGRAMMER/TESTER/ADMIN/MANAGER)
+    MGR_ID(Pointing to EID)
+    EMAIL_ID(name@company.com UNIQUE)
+    MARRIED(true/false)
+    JOINING_DATE(current_date by default)
