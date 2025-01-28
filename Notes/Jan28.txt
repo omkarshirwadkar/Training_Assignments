@@ -1,0 +1,47 @@
+-----------------------------Morning Session--------------------------------
+
+Joins are often more efficient for large datasets, while subqueries are more efficient for small result sets. 
+
+#### Joins:
+--------------------------------------------------------------------
+1. Purpose: Combine data from multiple tables based on logical relationships 
+2. Use cases: Retrieve data from related tables, establish relationships between tables, and normalize data 
+3. Performance: Factors that affect performance include join order, indexes, and join strategy 
+4. Efficiency: Efficient when dealing with large datasets and indexed columns 
+
+#### Subqueries:
+--------------------------------------------------------------------
+1. Purpose: Break down complex problems into smaller, more manageable parts 
+2. Use cases: Filter data, aggregate data, and retrieve specific rows or values 
+3. Performance: More efficient when only a few rows need to be returned 
+4. Flexibility: Can be used with various SQL commands, such as SELECT, INSERT, UPDATE, and DELETE 
+
+When to use joins or subqueries:
+-----------------------------------
+Joins:
+--------------------------------------------------------------------
+Use joins when you need to retrieve data from multiple tables based on a related column 
+
+Subqueries:
+--------------------------------------------------------------------
+Use subqueries when you need to filter data based on complex criteria or retrieve specific rows or values 
+
+
+Types of joins:
+Inner / Self Join
+Outer Join: Left Outer Join, Right Outer Join
+Full Join
+Cross Join
+Union 
+Equi Join
+
+rollup: Aggregate data by grouping multiple columns together
+coalesce: Return the first non-null value from a list of expressions
+cast: Convert data type of a value or expression
+
+functions return but procedures don't return anything
+
+pl-sql: procedural language extension for SQL, to perform dynamic programming 
+
+Assignment:
+Employee who are earning more than their own manager.
