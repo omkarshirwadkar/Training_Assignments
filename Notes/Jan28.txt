@@ -43,5 +43,20 @@ functions return but procedures don't return anything
 
 pl-sql: procedural language extension for SQL, to perform dynamic programming 
 
+
+        Delete                              Truncate
+---------------------------------------------------------------------------
+deletes specific records                deletes all records
+creates logs                            does not creates logs
+does not reset the autoincrement        resets the autoincrement
+can be rollback                         cannot be rollback
+
+triggers: special procedure that automatically executes when a specific event occurs in the database.
 Assignment:
 Employee who are earning more than their own manager.
+
+
+Assignment:
+name of the employ
+
+
