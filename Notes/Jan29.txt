@@ -1,0 +1,42 @@
+----------------------------Morining Session-----------------------------------
+
+JDBC: Java Database Connectivity - SunMicrosystem(Accquired by Oracle) --> Java API to connect to relational databases.
+ODBC: Open Database Connectivity - Microsoft --> Only for Windows
+-------------------------------------------------------------------------------------------------
+
+Drivers: The programs which knows how the hardware works and how to communicate with it. In case of JDBC, the driver is the JDBC driver.
+-------------------------------------------------------------------------------------------------
+
+JDBC:
+1. Load/Register the Driver
+    a. Type 1: JDBC-ODBC Bridge (JDBC-ODBC Bridge is a JDBC driver that allows a Java application to connect to a database using the ODBC API)
+    b. Type 2: Partly Java, Partly Native
+    c. Type 3: Purely Native
+    d. Type 4: Pure Java Driver(THIN Driver) (Pure Java Driver is a JDBC driver that is written in Java and does not use any native code)
+    ######### Class.forName("driver-class"); // --> Not required in Java 8 and above
+
+2. Establish a Connection / Connect to Database:
+    --> Connection con = DriverManager.getConnection(url, username, password);
+    eg. DriverManager.getConnection("jdbc:subprotocol:subname", "username", "password");
+
+3. Create a Statement Object:
+    --> Statement stmt = con.createStatement();
+
+4. Execute SQL Queries:
+    --> Application to Database:
+    stmt.executeUpdate("SQL Query");
+    --> Database to Application:
+    ResultSet rs = stmt.executeQuery("SQL Query");
+    // ResultSet is an iterable object which contains the data returned by the query.
+
+Statements are executed by the database server. The database server then returns the result to the application.
+----------------------------------------------------------------------------------------
+
+#### Types of Statement:
+Simple Statement
+PreparedStatement: Pre Compiled SQL Statement, if in a loop , it will be faster. Because it is pre compiled and only the parameters are changed.
+
+Two Engines:
+---------------------------------------------------------------------------------------------
+PLSQL Engine : Oracle's PL/SQL Engine is a SQL engine that executes PL/SQL code. It is a part of the Oracle Database Server.
+SQL Engine : SQL Engine is a part of the database server that executes SQL queries. It is responsible for parsing, optimizing, and executing SQL queries.
