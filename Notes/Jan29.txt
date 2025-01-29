@@ -33,10 +33,37 @@ Statements are executed by the database server. The database server then returns
 ----------------------------------------------------------------------------------------
 
 #### Types of Statement:
-Simple Statement
-PreparedStatement: Pre Compiled SQL Statement, if in a loop , it will be faster. Because it is pre compiled and only the parameters are changed.
+-------------------------------------------------------------------------------
+1. Simple Statement: Used for executing SQL queries that return data.
+
+2. PreparedStatement: Pre Compiled SQL Statement, if in a loop , it will be faster. Because it is pre compiled and only the parameters are changed.
+
+3. Callable Statement: Used to call stored procedures.
+
+4. Batch Statement: Used to execute multiple SQL queries in a single batch.
 
 Two Engines:
 ---------------------------------------------------------------------------------------------
 PLSQL Engine : Oracle's PL/SQL Engine is a SQL engine that executes PL/SQL code. It is a part of the Oracle Database Server.
 SQL Engine : SQL Engine is a part of the database server that executes SQL queries. It is responsible for parsing, optimizing, and executing SQL queries.
+
+
+Assignment:
+Employee (eid, name, age, salary, designation, department)
+---------------------
+1. Create
+2. Display
+3. Appraisal
+4. Search
+5. Remove
+6. Exit
+--------------------------------------------------------------------------------------------------
+Enter Choice: 1   Enter Choice: 2     Enter Choice: 3   Enter Choice: 4
+--------------------------------------------------------------------------------------------------
+1. Clerk          1. By ID            Enter ID
+2. Manager        2. By Name          Enter Amount
+3. Programmer     3. By Age
+4. Other          4. By Salary
+5. Exit           5. By Designation
+                  6. Exit 
+---------------------
