@@ -74,3 +74,29 @@ public class PostgreSQLUser DAO implements UserDAO {
 2. Updatable
 3. Forward Only
 4. Scrollable
+
+MetaData
+javap java.sql.ResultSetMetaData: 
+javap java.sql.DatabaseMetaData
+
+
+Assignment:
+Employee(eid, name, age, salary(basic, hra, ta, da, pf), designation, department(HOD))
+
+
+
+EMPLOYEE(EID, NAME, AGE, SALARY, BASIC, HRA, TA, DA, PF, DESIGNATION, DEPARTMENT, HOD)
+
+---------------------------------------------------------------------------------------
+1NF: Atomic values
+All values are atomic.
+---------------------------------------------------------------------------------------
+2NF: Non-key attributes depend on the whole primary key
+Prime attributes are 
+--> salary as basic,hra,ta,da,pf depend on it
+--> Department as HOD depend on it
+employee(eid(primary key), name, age, salary(foreign key), designation, department)
+salary_table(salary(primary key), basic, hra, ta, da, pf)
+department_table(department(primary key), hod)
+---------------------------------------------------------------------------------------
+3NF: Non-key attributes depend on only one key
