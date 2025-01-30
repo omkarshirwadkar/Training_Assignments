@@ -47,6 +47,7 @@ Two Engines:
 PLSQL Engine : Oracle's PL/SQL Engine is a SQL engine that executes PL/SQL code. It is a part of the Oracle Database Server.
 SQL Engine : SQL Engine is a part of the database server that executes SQL queries. It is responsible for parsing, optimizing, and executing SQL queries.
 
+set classpath = C:\Users\Wissen\Desktop\Training_Assignments\Postgre_SQL_Driver\postgresql-42.7.5.jar;.;%classpath%
 
 Assignment:
 Employee (eid, name, age, salary, designation, department)
@@ -67,3 +68,22 @@ Enter Choice: 1   Enter Choice: 2     Enter Choice: 3   Enter Choice: 4
 5. Exit           5. By Designation
                   6. Exit 
 ---------------------
+
+    // public static void displayEmployees(PreparedStatement pstmt){
+    //     try{
+    //         ResultSet rs = pstmt.executeQuery();
+    //         while(rs.next()){
+    //             System.out.println("Employee ID: " + rs.getInt("emp_id"));
+    //             System.out.println("Employee Name: " + rs.getString("emp_name"));
+    //             System.out.println("Employee Age: " + rs.getInt("emp_age"));
+    //             System.out.println("Employee Salary: " + rs.getDouble("emp_salary"));
+    //             System.out.println("Employee Designation: " + rs.getString("emp_designation"));
+    //             System.out.println("Employee Department: " + rs.getString("emp_department"));
+    //             System.out.println();
+    //         }
+    //         rs.close();
+    //     }
+    //     catch (Exception e) {
+    //         System.out.println("Error: " + e.getMessage());
+    //     }
+    // }

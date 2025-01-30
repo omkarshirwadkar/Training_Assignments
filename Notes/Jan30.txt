@@ -1,0 +1,76 @@
+No Connection, No Statement or anything in the client side / main method
+DAO Pattern:
+DAO stands for Data Access Object. It is a design pattern that provides a way to separate the data access logic from the business logic. It is used to encapsulate the data access operations in a separate class, making it easier to change or replace the data source without affecting the business logic.
+
+
+
+
+---------------------------Assignment Structure------------------------------
+interface EmpDAO{
+    public void save(Emp e)
+    public void display()
+    public void search()
+    ...
+}
+class DBConnection{
+    private static final Connection conn;
+    private DBConnection(){
+
+    }
+    public static Connection getConnection(){
+        if(conn==null){
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/empdb", "root", "root");
+        }
+        return conn;
+    }
+    // keep it in the finally block
+    public static void closeConnection(){
+        if(conn!=null){
+            conn.close();
+        }
+    }
+}
+
+class EmpDAOImp1 implements EmpDAO{
+    public void save(Emp e) {
+        PreparedStatement pstmt = con.prepareStatement("insert into emp values(?,?,?)");
+    }
+}
+
+############## Why use interface in DAO? ##############
+1. Decoupling
+Interfaces help decouple the DAO from the business logic of the application. By defining an interface for the DAO, you can change the underlying implementation without affecting the rest of the application.
+
+2. Polymorphism
+Interfaces enable polymorphism, which allows you to use different implementations of the DAO without changing the code that uses it. This makes it easier to switch between different data storage systems, such as databases or file systems.
+
+3. Testability
+Interfaces make it easier to write unit tests for the DAO. You can create mock implementations of the DAO interface to test the business logic without actually accessing the data storage system.
+
+4. Reusability
+Interfaces promote reusability by defining a contract that can be implemented by multiple classes. This makes it easier to reuse the DAO in different parts of the application or even in different applications.
+
+5. Flexibility
+Interfaces provide flexibility by allowing you to change the implementation of the DAO without affecting the rest of the application. This makes it easier to adapt to changing requirements or new technologies.
+
+Example:
+public interface UserDAO {
+    List<User> getAllUsers();
+    User getUserById(int id);
+    void createUser(User user);
+    void updateUser(User user);
+    void deleteUser(int id);
+}
+public class MySQLUser DAO implements UserDAO {
+    // implementation details
+}
+public class PostgreSQLUser DAO implements UserDAO {
+    // implementation details
+}
+
+
+-------------------Types of ResultSet-----------------------------
+1. Read Only
+2. Updatable
+3. Forward Only
+4. Scrollable
