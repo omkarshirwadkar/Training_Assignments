@@ -6,3 +6,5 @@ emp_salary DECIMAL(8,2) CHECK (emp_salary > 0.0),
 emp_designation VARCHAR(20),
 emp_department VARCHAR(20)
 );
+select * from employee_database;
+select * from employee_database order by emp_name;

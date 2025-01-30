@@ -1,22 +1,26 @@
-// package Jan29;
-
-// import java.beans.Statement;
 import java.sql.*;
 import java.io.*;
 
 class EmplooyeeDisplayer{
     public static void displayByType(PreparedStatement pstmt){
         try{
+            // rs opened
             ResultSet rs = pstmt.executeQuery();
-            while(rs.next()){
-                System.out.println("Employee ID: "+rs.getInt("emp_id"));
-                System.out.println("Employee Name: "+rs.getString("emp_name"));
-                System.out.println("Employee Age: "+rs.getInt("emp_age"));
-                System.out.println("Employee Salary: "+rs.getDouble("emp_salary"));
-                System.out.println("Employee Designation: "+rs.getString("emp_designation"));
-                System.out.println("Employee Department: "+rs.getString("emp_department"));
-                System.out.println();
+            if (rs.next()){
+                while(rs.next()){
+                    System.out.println("Employee ID: "+rs.getInt("emp_id"));
+                    System.out.println("Employee Name: "+rs.getString("emp_name"));
+                    System.out.println("Employee Age: "+rs.getInt("emp_age"));
+                    System.out.println("Employee Salary: "+rs.getDouble("emp_salary"));
+                    System.out.println("Employee Designation: "+rs.getString("emp_designation"));
+                    System.out.println("Employee Department: "+rs.getString("emp_department"));
+                    System.out.println();
+                }
             }
+            else{
+                System.out.println("No employee found");
+            }
+            // rs closed
             rs.close();
         }
         catch (Exception e){
@@ -46,33 +50,12 @@ class InputTaker{
             System.out.println("Error: " + e.getMessage());
         }
     }
-    public static void displayEmployees(PreparedStatement pstmt){
-        try{
-            ResultSet rs = pstmt.executeQuery();
-            while(rs.next()){
-                System.out.println("Employee ID: " + rs.getInt("emp_id"));
-                System.out.println("Employee Name: " + rs.getString("emp_name"));
-                System.out.println("Employee Age: " + rs.getInt("emp_age"));
-                System.out.println("Employee Salary: " + rs.getDouble("emp_salary"));
-                System.out.println("Employee Designation: " + rs.getString("emp_designation"));
-                System.out.println("Employee Department: " + rs.getString("emp_department"));
-                System.out.println();
-            }
-            rs.close();
-        }
-        catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
 }
 public class EmpManageApp {
     public static void main(String[] args) {
         try{
-            // Class.forName("org.postgresql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demodb", "postgres", "tiger");
             System.out.println("Connected to the database");
-
-            Statement stmt = conn.createStatement();
 
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -89,6 +72,7 @@ public class EmpManageApp {
                 System.out.println("Enter your choice");
                 ch1 = Integer.parseInt(br.readLine());
                 switch(ch1){
+
                     case 1:
                     PreparedStatement pstmt = conn.prepareStatement("INSERT INTO employee_database (emp_name, emp_age, emp_salary, emp_designation, emp_department) VALUES (?, ?, ?, ?, ?)");
                     do{
@@ -114,7 +98,6 @@ public class EmpManageApp {
                         }
                     }while(ch2 != 5);
                     pstmt.close();
-
                     break;
 
                     case 2:
@@ -174,8 +157,14 @@ public class EmpManageApp {
                     PreparedStatement pstmt2 = conn.prepareStatement("update employee_database set emp_salary = emp_salary + ? where emp_id = ?");
                     pstmt2.setDouble(1, amount);
                     pstmt2.setInt(2, empid);
-                    pstmt2.executeUpdate();
+                    int rows = pstmt2.executeUpdate();
                     pstmt2.close();
+                    if (rows > 0){
+                        System.out.println("Salary updated");
+                    }
+                    else{
+                        System.out.println("Employee ID not found");
+                    }
                     break;
 
                     case 4:
@@ -196,14 +185,9 @@ public class EmpManageApp {
                     int empid1 = Integer.parseInt(br.readLine());
                     PreparedStatement pstmt4 = conn.prepareStatement("SELECT * FROM employee_database where emp_id = ?");
                     pstmt4.setInt(1, empid1);
+                    EmplooyeeDisplayer.displayByType(pstmt4);
                     ResultSet rs = pstmt4.executeQuery();
-                    if (rs.next()) {
-                        System.out.println( "Employee Name: " + rs.getString("emp_name"));
-                        System.out.println("Employee Age: " + rs.getInt("emp_age"));
-                        System.out.println("Employee Salary: " + rs.getDouble("emp_salary"));
-                        System.out.println( "Employee Department: " + rs.getString("emp_department"));
-                        System.out.println( "Employee Designation: " + rs.getString("emp_designation"));
-                        System.out.println();
+                    if (rs.next()){
                         System.out.println("Are you sure you want to delete this employee?");
                         System.out.println("1. Yes");
                         System.out.println("2. No");
@@ -218,17 +202,12 @@ public class EmpManageApp {
                             System.out.println("Employee not deleted");
                         }
                     }
-                    else{
-                        System.out.println("Employee not found");
-                    }
                     rs.close();
                     pstmt4.close();
                 }
             }while (ch1 != 6);
 
-            // Closing resources
             br.close();
-            stmt.close();
             conn.close();
         }
         catch (Exception e){
