@@ -1,3 +1,5 @@
+import org.json.simple.JSONObject;
+
 import java.sql.*;
 import java.io.*;
 import javax.sql.rowset.*;
@@ -52,12 +54,12 @@ class InputTaker{
         }
     }
 }
-public class EmpManageApp {
+public class EmpAppManagement {
     public static void main(String[] args) {
         try{
             // Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demodb"); 
             JdbcRowSet rs = RowSetProvider.newFactory().createJdbcRowSet();
-            rs.setUrl("jdbc:postgresql://localhost:5432/demodb");
+            rs.setUrl("jdbc:postgresql://localhost:5432/empdb");
             rs.setUsername("postgres");
             rs.setPassword("tiger");
 
