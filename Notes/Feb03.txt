@@ -1,0 +1,35 @@
+Advance Java Features:
+-------------------------
+record
+Enums
+for-each loop
+try-with resources
+sealed class
+interfaces with multiple methods with body
+Functional interfaces
+Lambda Expressions
+Method references
+forEach() method
+Stream API
+Date and Time API
+Optional API
+
+
+Interfaces can have default methods with body and static methods with body from java 8.
+private methods with body are allowed from java 9.
+
+Functional Interfaces:
+-------------------------------------
+Functional interfaces are interfaces that have only one abstract method. They can have multiple default methods and static methods.
+An interface whose only one method should be implemented
+How many of that interface are compulsory implemented --> if 1 then it is functional interface.
+
+
+Anonyomous Classes:
+-------------------------------------------------
+Anonymous classes are classes that are defined without a name. They are used to create objects on the fly.
+The name of Anonymous class is shown as the class in which it was created with a dollar sign and a number.
+
+why lambda expressions added in java?
+------------------------------------------------
+Lambda expressions are used to create functional interfaces. They are used to reduce the boilerplate code and make the code more concise.

@@ -61,10 +61,10 @@ public interface UserDAO {
     void updateUser(User user);
     void deleteUser(int id);
 }
-public class MySQLUser DAO implements UserDAO {
+public class MySQLUserDAO implements UserDAO {
     // implementation details
 }
-public class PostgreSQLUser DAO implements UserDAO {
+public class PostgreSQLUserDAO implements UserDAO {
     // implementation details
 }
 
