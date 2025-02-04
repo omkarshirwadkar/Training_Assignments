@@ -167,12 +167,6 @@ public class EmpManageApp {
                     double amount = Double.parseDouble(br.readLine());
                     rs.setCommand("update employee_database set emp_salary = emp_salary + "+ amount +"  where emp_id = " + empid);
                     rs.execute();
-                    // if (rs.getUpdateCount() == 1){
-                    //     System.out.println("Salary updated");
-                    // }
-                    // else{
-                    //     System.out.println("Employee ID not found");
-                    // }
                     break;
 
                     case 4:
