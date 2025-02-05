@@ -1,7 +1,13 @@
+########### Features after Java 8:
+
+## no JavaScript Engine from java 15 onwards 
+$$$$$$$$$ Nashorn JavaScript Engine: 
+This engine is used to execute JavaScript code in Java applications. It is a JavaScript engine that is integrated into the Java Runtime Environment (JRE). Nashorn is designed to be used in conjunction with the Java language, allowing developers to write JavaScript code that interacts with Java objects and libraries.
+
 Joda Time:
 --> Up to date time zone calculations
 
-Java is not purely object-oreinted. Primitive types are not objects, and they are not instances of any class. null is not an object, it is a primitive value. 
+Java is not purely object-oreinted. Primitive types are not objects, and they are not instances of any class. null is not an object, it is a primitive value.
 
 Why do we have OptionalAPI in java?
 --> The Optional class in Java is used to avoid NullPointerExceptions. 
@@ -19,3 +25,7 @@ Why do we have OptionalAPI in java?
 --> If you try to call or () on an empty Optional, it will return the Optional you provided as an argument. 
 --> If you try to call orElseGet() on an empty Optional, it will return the value you provided as an argument. 
 --> If you try to call orElseThrow() on an empty Optional, it will throw the exception you provided as an argument.
+
+
+Can we use Java Code in JavaScript?
+--> No, we cannot use Java code in JavaScript. Java and JavaScript are two different programming languages. Java is a statically-typed, compiled language, while JavaScript is a dynamically-typed, interpreted language . They have different syntax, semantics, and use cases. Java is primarily used for developing Android apps , web applications, and enterprise software, while JavaScript is used for client-side scripting in web browsers and for developing desktop and mobile applications using frameworks like React Native and Angular. However, you can use Java code in JavaScript using a technology called Java Bridge, which allows you to call Java code from JavaScript.
