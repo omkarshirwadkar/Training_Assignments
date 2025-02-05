@@ -1,0 +1,21 @@
+Joda Time:
+--> Up to date time zone calculations
+
+Java is not purely object-oreinted. Primitive types are not objects, and they are not instances of any class. null is not an object, it is a primitive value. 
+
+Why do we have OptionalAPI in java?
+--> The Optional class in Java is used to avoid NullPointerExceptions. 
+--> It is a container object which may or may not contain a non-null value. 
+--> If a value is present, isPresent() will return true . 
+--> If no value is present, isPresent() will return false. 
+--> If you try to call get () on an empty Optional, it will throw a NoSuchElementException. 
+--> If you try to call orElse() on an empty Optional, it will return the value you provided as an argument. 
+--> If you try to call orElseThrow() on an empty Optional, it will throw the exception you provided as an argument. 
+--> If you try to call ifPresent() on an empty Optional, nothing will happen. 
+--> If you try to call ifPresentOrElse() on an empty Optional, nothing will happen. 
+--> If you try to call map() on an empty Optional, it will return an empty Optional. 
+--> If you try to call flatMap() on an empty Optional, it will return an empty Optional. 
+--> If you try to call filter() on an empty Optional, it will return an empty Optional. 
+--> If you try to call or () on an empty Optional, it will return the Optional you provided as an argument. 
+--> If you try to call orElseGet() on an empty Optional, it will return the value you provided as an argument. 
+--> If you try to call orElseThrow() on an empty Optional, it will throw the exception you provided as an argument.
