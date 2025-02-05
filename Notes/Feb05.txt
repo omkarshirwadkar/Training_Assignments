@@ -29,3 +29,12 @@ Why do we have OptionalAPI in java?
 
 Can we use Java Code in JavaScript?
 --> No, we cannot use Java code in JavaScript. Java and JavaScript are two different programming languages. Java is a statically-typed, compiled language, while JavaScript is a dynamically-typed, interpreted language . They have different syntax, semantics, and use cases. Java is primarily used for developing Android apps , web applications, and enterprise software, while JavaScript is used for client-side scripting in web browsers and for developing desktop and mobile applications using frameworks like React Native and Angular. However, you can use Java code in JavaScript using a technology called Java Bridge, which allows you to call Java code from JavaScript.
+
+
+
+------------------------------------ Data Modeling Patterns --------------------------------
+Normalization
+Entity Attribute values representation --> 
+Different ways of representing history --> 
+How to represent the Hierarchical data --> 2 ways
+Semi-Structured data using JSON like legal document, missing data -->
