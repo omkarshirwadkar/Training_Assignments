@@ -1,0 +1,47 @@
+Stream API --> Introduced by Big Data Industry
+
+Why Stream API is used in Java?
+-------------------------------------
+The Stream API is used in Java to process data in a declarative way, which means that you specify what you want to do with the data, rather than how to do it. This allows for more concise and expressive code, as well as improved performance and memory efficiency.
+The Stream API is particularly useful for working with collections, as it provides a way to perform operations such as filtering, mapping, and reducing on the data in a pipeline-like fashion. This makes it easier to write code that is modular, reusable, and easy to understand.
+
+Two Types of Streams in Java:
+--------------------------------
+1. Sequential Stream: 
+------------------------
+This type of stream processes the data in a single thread, which means that each operation is performed on the data in the order it is received.
+2. Parallel Stream: 
+------------------------
+This type of stream processes the data in multiple threads, which means that each operation is performed on the data in parallel, resulting in improved performance for large datasets.
+
+
+Three Phases of Stream API in Java:
+-----------------------------------------
+1. Initialization: Collection --> Stream
+--------------------
+This is where the stream is created and initialized with a source of data. This can be a collection, an array, or any other type of data source. The stream is created using the `stream()` method. For example: 
+`List<String> list = Arrays.asList("apple", "banana", "cherry"); 
+Stream<String> stream = list.stream();`
+
+2. Processing: Stream --> Stream
+-------------------
+This is where the stream is processed using various operations such as filtering, mapping, and reducing. These operations are performed on the stream using methods such as `filter()`, `map()`, and `reduce()`. For example:
+`stream.filter(s -> s.startsWith("a")).map(String::toUpperCase).forEach(System.out::println);`
+
+3. Termination: Stream --> Collection
+-------------------
+This is where the stream is terminated and the result is returned. This can be done using methods such as `forEach()`, `collect()`, or `reduce()`. For example:
+`stream.forEach(System.out::println);`
+
+
+Operation       Input           Output
+map()             n                n
+filter()          n               <=n
+reduce()          n                1
+
+Working of range(1, 6).reduce((a, b) -> a + b):
+-----------------------------------------------
+1. (a, b) = (1,2) --> a = 3
+2. (a, b) = (3,3) --> a = 6
+3. (a, b) = (6,4) --> a = 10
+4. (a, b) = (10,5) --> a = 15
