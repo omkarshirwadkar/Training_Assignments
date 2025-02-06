@@ -45,3 +45,8 @@ Working of range(1, 6).reduce((a, b) -> a + b):
 2. (a, b) = (3,3) --> a = 6
 3. (a, b) = (6,4) --> a = 10
 4. (a, b) = (10,5) --> a = 15
+
+
+Difference between map() and flatMap():
+-------------------------------------------
+map() is used to transform each element of the stream into a new element, whereas flatMap() is used to transform each element of the stream into a stream of elements. The key difference is that map() returns a stream of the same size as the original stream, whereas flatMap() returns a stream of a different size.
