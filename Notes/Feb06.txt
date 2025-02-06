@@ -50,3 +50,39 @@ Working of range(1, 6).reduce((a, b) -> a + b):
 Difference between map() and flatMap():
 -------------------------------------------
 map() is used to transform each element of the stream into a new element, whereas flatMap() is used to transform each element of the stream into a stream of elements. The key difference is that map() returns a stream of the same size as the original stream, whereas flatMap() returns a stream of a different size.
+
+
+filter(): Only 1 Condition(True) --> Age greater than 30
+partioningBy(): Only 2 Conditions(True or False) --> Spam or Not Spam
+groupingBy(): Any number of Conditions(Categories) --> Type Classification
+
+
+Assignment
+---------------
+Student
+-------
+rollNo
+name
+age
+standard
+schoolName
+gender
+percentage
+
+Fees:
+------
+totalFees
+feesPaid
+feesPending
+
+How many students in each standard
+How many students are male and female
+How many students have failed and passed(40%)
+    --> Whole University
+    --> School Wise
+Top 3 students
+Top Scorer School wise
+average age of mail and female students
+Total fees collected school wise
+Total fees pending school wise
+Total no of students in the University
