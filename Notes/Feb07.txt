@@ -4,6 +4,10 @@ Phaser
 Exchanger
 CyclicBarrier
 CountDownLatch
+Lock
+Reentrant Lock
+Atomic classes
+ForkJoinPool
 
 
 Difference between Semaphore and Mutex:
@@ -66,3 +70,15 @@ ExecutorService --> Execute tasks in the thread pool
 
 Runnable --> thread doesn't return any value
 Callable --> thread may returns a value
+
+
+Future --> Synchronous
+CompletableFuture --> Asynchronous
+
+1. CompletableFuture:
+- It is a class in Java that represents a future result of an asynchronous computation.
+- It is a part of the Java 8 API.
+- It is used to handle asynchronous tasks in a more efficient and elegant way.
+- It provides a lot of methods to handle the result of the computation, such as thenApply, thenAccept, thenCombine, and others.
+Command ==> javap java.util.concurrent.CompletableFuture
+Class ==> public class java.util.concurrent.CompletableFuture<T> implements java.util.concurrent.Future<T>, java.util.concurrent.CompletionStage<T> 
