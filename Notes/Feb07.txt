@@ -1,0 +1,68 @@
+Concurrent API
+-------------------
+Phaser 
+Exchanger
+CyclicBarrier
+CountDownLatch
+
+
+Difference between Semaphore and Mutex:
+- A semaphore is a variable that controls the access to a common resource by multiple processes. It acts as a gatekeeper, allowing a certain number of processes to access the resource at the same time. 
+- A mutex (short for mutual exclusion) is a lock that allows only one process to access a resource at a time. It is used to prevent multiple processes from accessing the same resource simultaneously.
+--> Semaphore ==> 0 or more
+--> Mutex ==> 0 or 1
+
+Phaser API in Java:
+Phaser is a class in Java that provides a way to synchronize threads. It is used to coordinate the actions of multiple threads. Phaser is a reusable synchronization construct that can be used to wait for multiple events. Phaser is a thread-safe class, meaning it can be safely used by multiple threads. Phaser is a powerful tool for synchronizing threads in Java. Phaser is used to wait for multiple events, and it can be used to implement a variety of synchronization algorithms.
+
+Exchanger API in Java:
+The Exchanger API in Java is used to exchange data between two threads. It is a class in the java.util.concurrent package that provides a way to exchange data between two threads. The Exchanger class is a blocking queue that allows two threads to exchange data. The Exchanger class is a thread-safe class, meaning it can be safely used by multiple threads. The Exchanger class is used to exchange data between two threads, and it can be used to implement a variety of synchronization algorithms.
+
+Executive Service Framework:
+The Executor Framework is a high-level API that simplifies the process of executing tasks in a concurrent environment. It provides a way to execute tasks asynchronously, which means that the tasks are executed in the background , without blocking the main thread. The Executor Framework is a powerful tool for executing tasks in a concurrent environment.
+
+
+
+Types of Thread Pools:
+--------------------------
+1. Single:
+- A single thread pool is a type of thread pool that has only one thread. 
+- This thread is responsible for executing all the tasks in the pool. 
+
+2. Fixed:
+- A fixed thread pool is a type of thread pool that has a fixed number of threads.
+- The number of threads in a fixed thread pool is specified when the pool is created.
+- The fixed thread pool is useful when the number of tasks is known in advance.
+- The fixed thread pool is also useful when the tasks are CPU-bound, because the number of threads is fixed and the threads are not created or destroyed dynamically.
+
+3. Dynamic/Cached:
+- A dynamic thread pool is a type of thread pool that has a dynamic number of threads.
+- The number of threads in a dynamic thread pool is not fixed and can change dynamically.
+- The dynamic thread pool is useful when the number of tasks is not known in advance.
+- The dynamic thread pool is also useful when the tasks are I/O-bound, because the number of threads can change dynamically.
+
+
+4. Scheduled/Timed: 
+- This type of thread pool is used to execute tasks at a specific time or after a certain delay. 
+- It is useful for tasks that need to be executed at a specific time, such as sending emails or updating a database. 
+- Scheduled thread pools are also useful for tasks that need to be executed periodically, such as cleaning up temporary files or updating a cache.
+
+5. Custom Thread
+
+
+
+
+
+
+
+
+
+Executor --> can only submit the tasks which are runnable 
+Executors --> Create or choose a thread pool
+ExecutorService --> Execute tasks in the thread pool 
+                --> (implements Executor)
+                --> can submit tasks which are callable or runnable
+                --> manage the thread pool
+
+Runnable --> thread doesn't return any value
+Callable --> thread may returns a value
