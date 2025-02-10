@@ -157,7 +157,7 @@ public class RoadRashGame {
         Rankings.rankBikers(bikers);
         Rankings.printRankings(bikers);
     }
-// }
+}
 // =======
 // import java.lang.Math;
 
