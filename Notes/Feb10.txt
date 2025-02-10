@@ -1,0 +1,62 @@
+Full-Stack Developer: (Front-end + Back-end + Database)
+Full-Stack Engineer: (Front-end + Back-end + Database + DevOps)
+
+SDLC:
+--> Requirement Gathering and Analysis
+--> Planning
+--> Coding
+--> Building
+--> Testing
+--> Release/deployment
+--> Maintainence and Monitoring
+
+
+Plan
+Code
+Build
+Test
+Release
+Deploy
+Operate
+Monitor
+
+
+
+SDLC models:
+1. Waterfall model: 
+2. Spiral
+3. V-Model
+4. Agile model: The meaning of Agile is swift or versatile.
+
+
+Waterfall works phase wise for the whole project, if one phase is completed then only move to the next phase.
+Agile works phase wise for smaller parts of the project, if one phase is completed then only move to the next phase.
+
+
+Difference between Waterfall and Agile model:
+Waterfall model:
+- Linear and sequential approach
+- Each phase is completed before moving to the next phase
+- No change in the requirement once the project is started
+Agile model:
+- Iterative and incremental approach
+- Each phase is completed before moving to the next phase
+- Change in the requirement is allowed during the project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is Dev-Ops?
+--> DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to improve the speed, quality, and reliability of software releases and deployments. It aims to bridge the gap between development and operations teams, enabling them to work together more effectively and efficiently. 
