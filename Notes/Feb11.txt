@@ -1,0 +1,39 @@
+Maven:
+PMT(Project Management Tool)
+POM(Project Object Model/Management)
+pom.xml
+
+Features of Build Tools: (Ant , Maven, Gradle)
+---------------------------
+*** It should be able to validate the project structure. ***
+*** Dependency Management ***
+*** Compile ***
+*** Test and Generate reports ***
+*** Generate .jar files ***
+*** Making it reusable ***
+
+
+Ant --> 
+Gradle --> (build.gradle, groovy, dynamic)
+Maven --> (pom.xml, xml, static)
+
+
+Maven Artifacts/ Properties/ Attributes:
+-------------------------------------------
+Archetype: (template)2217: remote ==> maven-archetype-quickstart
+GroupId: --> Mostly a company name
+ArtifactId:  --> Project name
+Package: 
+Version: --> Version number
+
+*********************COMMAND --> mvn archetype:generate
+
+
+mvn validate: validate the project structure
+mvn compile: compile the project
+mvn test: run the test
+mvn package: generate the .jar file
+mvn install: install the project in local repository
+mvn deploy: deploy the project in remote repository
+
+other mvn commands: clean, site, site:deploy, site:report, site:site, site:stage
