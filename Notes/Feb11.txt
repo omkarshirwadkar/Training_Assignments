@@ -37,3 +37,15 @@ mvn install: install the project in local repository
 mvn deploy: deploy the project in remote repository
 
 other mvn commands: clean, site, site:deploy, site:report, site:site, site:stage
+
+
+Scopes in Maven: (compile, provided, runtime, test, system, import)
+---------------------------
+default scope: compile
+compile: (e.g. log4j.jar) - will be compiled with the project
+runtime: (e.g. mysql-connector-java.jar, hibernate-core.jar) - will be available at runtime
+test: (e.g. junit.jar, testng.jar) - will be available for testing
+provided: (e.g. servlet-api.jar, jsp-api.jar) - will be provided by the container
+system: (e.g. system specific jar) - will be available in system path
+import: (e.g. import other project) - will be available in classpath
+
