@@ -69,11 +69,41 @@ Some Terminologies:
 @BeforeAll and @AfterAll annotated method should be static
 
 
-Annotations:
-* @Test --> Test Case
+Annotations:                            Previous Version
+* @Test --> Test Case                   
 * @DisplayName --> Test Case Name
-* @Disabled --> Disable Test Case
-* @BeforeEach --> Before Test Case
-* @AfterEach --> After Test Case
-* @BeforeAll --> Before Test Suite
-* @AfterAll --> After Test Suite
+* @Disabled --> Disable Test Case       @Ignored 
+* @BeforeEach --> Before Test Case      @Before
+* @AfterEach --> After Test Case        @After
+* @BeforeAll --> Before Test Suite      @BeforeClass
+* @AfterAll --> After Test Suite        @AfterClass
+* @Tag --> Tag Test Case ==> to group test cases and run them together
+* @TestInstance(Lifecycle.PER_CLASS) --> Only one test instance for every test case
+
+
+** Test Driven Development (TDD): a software development process that involves writing tests before writing code.
+1. Write a test case
+2. Run the test case
+3. Write the code
+4. Run the test case again
+5. Repeat the process
+6. Refactor the code
+7. Repeat the process
+
+
+The real testing is assertion, that is do the testing   
+assumption is to take a decision whether to assert or not 
+
+######### Our Example ##########
+Calculator.java will have only one object created
+CalculatorTest.java will have the same number of objects created as the number of test cases
+--> new object for every test case
+* @TestInstance(Lifecycle.PER_CLASS) --> Only one test instance for every test case
+* @TestInstance(Lifecycle.PER_METHOD) --> new object for every test case
+
+
+Assignment:
+-------------
+* How to test a method that returns void?
+* How to test an interface without having an access to the implementation?
+* How to test for the method been called exactly three times?
