@@ -1,0 +1,79 @@
+Done till now:
+-----------------------
+Plan --> JIRA
+Code --> Git
+Build --> Maven
+-----------------------
+
+Testing:
+-----------------------
+1. Unit Testing: We will use JUnit for unit testing. We will write test cases for each method in the class.
+2. Integration Testing: We will use the Mockito framework for integration testing. We will write test cases for the integration of different components.
+3. Functional Testing: We will use Selenium WebDriver for functional testing. We will write test cases for the functionality of the application.
+4. Non-Functional Testing
+5. Acceptance Testing
+6. Load Testing
+7. Performance Testing
+8. Feasibility Testing
+9. Validation Testing
+10. Compatibility Testing
+
+
+1. Black Box Testing: When you don't know the internal workings of the system, you test it from the outside. You test the inputs and outputs of the system. You don't know how the system works internally, but you know how it should behave.
+2. White Box Testing: When you know the internal workings of the system, you test it from the inside. You test the code, the logic, the flow of the system. You know how the system works internally, and you test it to make sure it works as expected.
+3. Grey Box Testing
+4. Sand Box Testing
+
+
+1. Manual Testing
+2. Automated Testing
+
+
+1. Alpha Testing
+2. Beta Testing
+
+
+1. Unit Testing  --> JUnit
+2. Integration Testing --> Mockito, TestNG
+3. Performance/ Load Testing --> JMeter
+4. End -to-End Testing --> Selenium
+5. Rest API Testing --> Postman, SOAP UI
+
+
+JUnit:
+-----------------------
+JUnit 3
+JUnit 4
+
+** JU>nit 5 --> Jupiter
+--> Lambda
+--> Annotations
+--> Microservices
+--> Multiple new patterns
+
+** Something Interesting ** 
+Android --> A, B, Cupcake, Donut, Eclair, Froyo, Gingerbread, Honeycomb, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie
+
+Eclipse --> A, B, C, D, E, F, Galileo, Helios, Indigo, Juno, Kepler, Luna, Mars, Neon, Oxygen, Photon
+
+
+Some Terminologies:
+* Test Suite: Contains multiple test cases
+* Test Case: Contains multiple test steps
+* Test Step: Contains multiple test actions
+* Test Action: Contains multiple test data
+* Test Data: Contains multiple test inputs
+* Test Input: Contains multiple test values
+
+
+@BeforeAll and @AfterAll annotated method should be static
+
+
+Annotations:
+* @Test --> Test Case
+* @DisplayName --> Test Case Name
+* @Disabled --> Disable Test Case
+* @BeforeEach --> Before Test Case
+* @AfterEach --> After Test Case
+* @BeforeAll --> Before Test Suite
+* @AfterAll --> After Test Suite
