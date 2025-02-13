@@ -1,4 +1,4 @@
-package com;
+package assignment;
  
 import static org.junit.jupiter.api.Assertions.assertEquals;
  
@@ -17,4 +17,9 @@ public class CalculatorTest{
       	Calculator c1 = new Calculator();
       	assertEquals(0,c1.sub(2,2),"The sub of 2 and 2 is not resulting in 0");
      }
+	 @Test
+	 public void testMul() {
+		Calculator c1 = new Calculator();
+		assertEquals(4, c1.mul(2, 2), "The product of 2 and 2 is not resulting in 4");
+	 }
 }
