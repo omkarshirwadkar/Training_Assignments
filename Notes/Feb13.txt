@@ -34,3 +34,35 @@ To run with parameters:
     --> echo Welcome: %Name%
         echo Your Maritial Status is %Married%
         echo Your Gender is %Gender%
+
+
+Assignment:
+-------------------------
+class Calculator{
+    public void add(int a, int b){
+        System.out.println(a+b);
+    }
+    public void sub(int a, int b){
+        System.out.println(a-b);
+    }
+}
+public class CalculatorMain{
+    public static void main(String [] args){
+        Calculator calc = new Calculator();
+        calc.add(10, 20);
+        calc.sub(20, 10);
+    }
+}
+
+git add .
+git commit -m "First Commit"
+git push
+
+Jenkins should pick up the code
+Compile
+Build
+Test
+Execute
+
+Git Poll SCM
+Github Web hook
