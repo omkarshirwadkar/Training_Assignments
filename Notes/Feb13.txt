@@ -1,0 +1,36 @@
+Done till now:
+-----------------------
+Plan --> JIRA
+Code --> Git
+Build --> Maven
+Test --> JUnit
+-----------------------
+
+CI/CD: Continuous Integration/Continuous Deployment --> Jenkins
+--> Create Jenkins folder 
+--> Paste the war file
+--> Open Command Prompt 
+--> java -jar jenkins.war
+--> Copy Password from console 
+--> Open Browser 
+--> localhost:8080 
+--> Paste the Password 
+--> Install Plugins(1st Option)
+--> Use first name for name and last name for password (all small)
+
+To run a java file:
+--> Add jdk home
+--> Add maven home
+--> Choose Execute Windows Batch Command and add the following script:
+    --> cd C:\Users\Wissen\Desktop\Jenkins
+        javac ABC.java
+        set classpath=.;
+        java ABC
+
+To run with parameters:
+--> Select project is parameterized
+--> Add parameters
+--> Choose Execute Windows Batch Command and add the following script:
+    --> echo Welcome: %Name%
+        echo Your Maritial Status is %Married%
+        echo Your Gender is %Gender%
