@@ -1,0 +1,9 @@
+Done till now:
+-----------------------
+Plan --> JIRA
+Code --> Git
+Build --> Maven
+Test --> JUnit
+Release --> Jenkins
+-----------------------
+

@@ -110,7 +110,7 @@ Trunk Based Development is a type of branching strategy that involves merging ch
 Git Flow vs Github Flow:
 ---------------------------
 Git Flow is a branching strategy that was developed by Vincent Driessen. It is a more complex branching strategy that involves multiple branches, including a master branch, a develop branch, and feature branches.
-Github Flow is a simpler branching strategy that was developed by GitHub. It is based on the idea of trunk-based development and involves a main branch, called the master branch and a feature branch that is created from the master branch.
+Github Flow is a simpler branching strategy that was developed by GitHub. It is based on the idea of trunk-based development and involves a main branch, called the master branch and a feature branch that is created from the master branch.  
 
 
 What is Dev-Ops?
