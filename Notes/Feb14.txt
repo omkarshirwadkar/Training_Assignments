@@ -7,3 +7,54 @@ Test --> JUnit
 Release --> Jenkins
 -----------------------
 
+Docker v/s Virtual Machines:
+--------------------------------
+Docker is a containerization platform that allows you to package your application and its dependencies into a single container that can run on any system that supports Docker. Virtual machines, on the other hand, are a full-fledged operating system that runs on top of a host operating system. Here are some key differences between Docker and Virtual Machines:
+- **Lightweight**: Docker containers are much lighter than virtual machines. They don't require a separate operating system to run, which makes them faster and more efficient.
+- **Portable**: Docker containers are highly portable. You can create a container on one system and run it on another system without any modifications.
+- **Fast**: Docker containers are much faster than virtual machines. They start up quickly and can be spun up or down in a matter of seconds.
+- **Secure**: Docker containers are more secure than virtual machines. They run in a isolated environment and can't access the host system's resources.
+- **Scalable**: Docker containers are highly scalable. You can create multiple containers and scale them up or down as needed.
+- **Easy to manage**: Docker containers are easy to manage. You can use Docker's command-line interface or a GUI tool to manage your containers.
+- **Cost-effective**: Docker containers are cost-effective. You don't need to purchase a separate operating system or hardware to run your application.
+- **Easy to deploy**: Docker containers are easy to deploy. You can deploy your application to any system that supports Docker without any modifications.
+- **Easy to debug**: Docker containers are easy to debug. You can use Docker's built-in debugging tools to debug your application.
+- **Easy to monitor**: Docker containers are easy to monitor. You can use Docker's built-in monitoring tools to monitor your application.
+
+
+
+class --> objects
+images --> containers
+
+
+
+docker --version
+
+docker commands: 
+* docker info: shows the information about the docker environment, including the version of Docker, the * number of containers running on client as well as server side, and the amount of memory available.
+* docker images: shows the list of images available on the system.
+* docker ps: shows the list of containers running on the system.
+* docker ps -a: shows the list of all containers, including those that are not running.
+* docker rm <container_id>: removes the container with the specified id.
+* docker rmi <image_id>: removes the image with the specified id.
+* docker pull <image_name>: pulls the image with the specified name from the registry.
+  --> docker pull redis: pulls the redis image from the docker hub if it is not already available on the system.
+* docker create <image_name>: creates a new container from the specified image.
+* docker start <container_id>: starts the container with the specified id.
+* docker exec -i -t <container_id> sh: starts a new terminal session inside the container with the specified id.
+* docker stop <container_id>: stops the container with the specified id. --> (2 signals: SIGTERM and SIGKILL)
+* docker kill <container_id>: kills the container with the specified id. --> (1 signal: SIGKILL)
+* docker run <image_name>: runs a new container from the specified image.
+* docker build . -t <image_name>: builds a new image from the Dockerfile in the current directory.
+* docker login : logs in to the Docker Hub registry.
+* docker push <image_name>: pushes the image with the specified name to the Docker Hub registry.
+
+
+
+If always want to create a new container then use docker run command instead of docker create command.
+
+Create your own image:
+Dockerfile:
+Base OS
+Softwares
+Entrypoint/Command
