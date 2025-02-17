@@ -31,6 +31,13 @@ public class DemoApplication {
 		System.out.println(p2);
 		System.out.println(p3);
 		
+		Person p4 = (Person) bf.getBean("emp");
+		Person p5 = (Person) bf.getBean("emp");
+		Person p6 = (Person) bf.getBean("emp");
+		System.out.println(p4);
+		System.out.println(p5);
+		System.out.println(p6);
+		
 	}
 
 }
