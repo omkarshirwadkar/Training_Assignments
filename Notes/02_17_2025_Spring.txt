@@ -74,3 +74,18 @@ Some Annotations:
 BeanFactory bf = SpringApplication.run(DemoApplication.class, args);
 Person p2 = (Person) bf.getBean("emp");
 Person p3 = (Person) bf.getBean("student");
+
+
+By default every class is singleton class with early initialization. 
+If you want to make it prototype then you have to use @Scope("prototype") annotation on the class. 
+Can make it Lazy instanciation by using @Lazy annotation on the class.
+prototype is by default lazy instanciation.
+
+
+@Bean advantages over @Component:
+@Bean --> Complex but more control
+@Component --> Simple but less control
+
+
+** @Bean is preferred over @Component because it gives more control over the bean creation process.
+** If a class's scope is under @Bean and @Component then @Bean will be used.
