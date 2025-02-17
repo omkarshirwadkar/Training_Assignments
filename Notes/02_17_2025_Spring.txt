@@ -1,0 +1,76 @@
+What is a framework?
+--> A framework is a set of guidelines, rules, and best practices that provide a structure for building and maintaining software systems. It is a high-level structure that outlines the overall architecture, organization, and development process of a software system.
+--> It has pre defined design patters.
+
+Spring vs Spring Boot:
+Spring is a full-fledged framework that provides a comprehensive set of tools and libraries for building enterprise-level applications. It is a complex and feature-rich framework that requires a significant amount of configuration and setup. 
+Spring Boot, on the other hand, is a subset of the Spring framework that provides a simplified and streamlined approach to building applications. Spring Boot is designed to simplify the development process and reduce the amount of configuration required.
+
+
+Spring:
+--> Spring is a popular Java-based framework that provides a comprehensive set of tools and libraries for building enterprise-level software applications. It is an application framework and an inversion of control container for Java.
+--> It is used for building web applications, enterprise applications, and microservices.
+--> It is a dependency injection framework.
+--> It is a framework that provides a lot of features out of the box, such as transaction management, security, and caching.
+--> It is a modular framework, meaning that it can be used in different ways to suit different needs.
+
+
+Spring Framework:
+------------------
+--> Spring Core(Model): This module provides the core functionality of the Spring Framework, including the IoC container, dependency injection, and AOP.
+--> Spring Web MVC(View): This module provides a web application framework that allows developers to build web applications using a request-response model.
+--> Spring Rest(Controller): This module provides a RESTful web services framework that allows developers to build RESTful web services.
+--> Spring Data JPA: This module provides a simple and consistent programming model for data access, including support for JPA and other data access technologies.
+--> Spring AOP(Aspect Oriented Programming): This module provides a framework for implementing aspects, which are reusable pieces of code that can be applied to multiple points in an application.
+--> Spring Test: This module provides a testing framework that allows developers to write unit tests and integration tests for their applications.
+
+
+Spring Core:
+-------------
+What is difference between DI and IOC?
+--> Dependency Injection (DI) is a design pattern that allows components to be loosely coupled, making it easier to test, maintain, and extend the system.
+--> Inversion of Control (IoC) is a Principle that allows the container to manage the dependencies of the components, rather than the components managing their own dependencies.
+--> IOC is a container that manages the dependencies between components, while DI is a design pattern that allows components to be loosely coupled.
+--> IOC is a broader concept that includes DI, while DI is a specific implementation of IOC.
+--> IOC is a container that manages the dependencies between components, while DI is a design pattern that allows components to be loosely coupled.
+
+* Dependency Injection (DI):
+When we buy a car we mention that we want a car and we dont say we want a car with 4 wheels, 4 doors, engine, etc. We just say we want a car. The car manufacturer will take care of the rest. This integrating the Wheels , Doors, Engine, etc. is called Dependency Injection as the wheels, doors, engine, etc. are the dependencies of the car. This is how we can say that the car is loosely coupled with its dependencies. This is the concept of Dependency Injection.
+
+* Inversion of Control (IOC):
+When we buy a car we dont say we want a car with 4 wheels, 4 doors , engine, etc. We just say we want a car. The car manufacturer will take care of the rest. This integrating the Wheels , Doors, Engine, etc. is called Inversion of Control as the car manufacturer is taking care of the dependencies of the car. This is how we can say that the car is loosely coupled with its dependencies. This is the concept of Inversion of Control.
+
+
+* DI types:
+---------------
+1. Constructor-based DI: This is the most common type of DI, where the dependencies are injected through the constructor of the class.
+2. Setter-based DI: This type of DI is less common, where the dependencies are injected through setter methods.
+3. Field-based DI: This type of DI is not recommended, where the dependencies are injected through the fields of the class.
+
+
+* IOC Container:
+-----------------
+1. BeanFactory: This is the core component of the IOC container, which is responsible for creating and managing the beans.
+2. ApplicationContext: This is a higher-level component of the IOC container, which provides additional features such as event publication and resource loading.
+
+
+* Spring Boot: It is a modern way to build Spring applications.
+--------------
+--> Autoconfiguration: auto configures the application based on the dependencies.
+--> Spring Initializr/Starter Kit: manages the dependencies of the project.
+--> Embedded Server: provides an embedded server that can be used to run the application.
+--> Inbuilt Database: provides an inbuilt h2 database(h2 --> cached and local).
+--> Actuators: provides a set of endpoints that can be used to monitor and manage the application.
+--> Microservices: provides a set of features that can be used to build microservices applications.
+
+
+Some Annotations:
+@Component -->It is used to provide a way to mark a class as a Spring component, which can be used by the Spring container to create an instance of the class.
+@Component("some_name") -->use the name as some_name instead of the class name starting with small letter.
+@Value("${some_value}") --> It is used to inject a value from a properties file into a Spring component.
+@Value("some_value") --> Inject some_value into the Spring component.
+
+* How to dynamically create a bean in Spring?
+BeanFactory bf = SpringApplication.run(DemoApplication.class, args);
+Person p2 = (Person) bf.getBean("emp");
+Person p3 = (Person) bf.getBean("student");
