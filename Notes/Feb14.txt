@@ -58,3 +58,17 @@ Dockerfile:
 Base OS
 Softwares
 Entrypoint/Command
+
+
+
+Assignment:
+-------------
+Jdbc Program - In one container
+---------------------------------
+Database - In other container
+---------------------------------
+And finally make these containers to communicate with each other
+-----------------------------------------------------------------
+Docker Compose
+Docker Volume
+Docker Swarm
