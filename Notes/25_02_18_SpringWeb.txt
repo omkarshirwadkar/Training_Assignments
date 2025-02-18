@@ -1,0 +1,35 @@
+Spring Web:
+- `@RestController` annotation is used to indicate that a class is a controller and it handles HTTP requests and returns HTTP responses.
+- `@GetMapping` annotation is used to map HTTP GET requests to a specific method.
+- `@PostMapping` annotation is used to map HTTP POST requests to a specific method.
+- `@PutMapping` annotation is used to map HTTP PUT requests to a specific method.
+- `@DeleteMapping` annotation is used to map HTTP DELETE requests to a specific method.
+Spring Data JPA:
+- `@Entity` annotation is used to indicate that a class is an entity and it represents a table in the database.
+- `@Table` annotation is used to specify the name of the table in the database.
+- `@Id` annotation is used to specify the primary key of the entity.
+- `@GeneratedValue` annotation is used to specify that the primary key should be generated automatically.
+- `@Column` annotation is used to specify the name of the column in the database.
+- `@OneToMany` annotation is used to specify a one-to-many relationship between two entities.
+- `@ManyToOne` annotation is used to specify a many-to-one relationship between two entities.
+- `@JoinColumn` annotation is used to specify the column in the database that is used to join two tables.
+
+Spring Security:
+- `@EnableWebSecurity` annotation is used to enable web security in the application.
+- `@EnableGlobalMethodSecurity` annotation is used to enable global method security in the application.
+- `@Secured` annotation is used to specify the security roles that are required to access a method.
+
+
+* Home Page
+* Netbanking Page
+* When Clicked on Netbanking link we should be diverted to Login
+	- Customer ID
+	- Password
+* But if user has not registered already then should click on the Sign Up link
+	- Customer ID
+	- Name
+	- Password
+	- Confirm Password
+* It should register in DB if everything is correct
+* And next time it should allow to login with registered id
+* If right id & pwd entered then should divert to welcome page with the user name displayed
