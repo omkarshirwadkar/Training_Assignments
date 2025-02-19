@@ -1,0 +1,39 @@
+REST --> REpresentational State Transfer:
+REST is an architectural style for designing networked applications. It's based on the idea of resources, which are identified by URIs, and can be manipulated using a fixed set of operations (GET, POST, PUT, DELETE). REST is often used in web services and APIs.
+
+What is a Service?
+--> A service is a self-contained piece of functionality that can be used by other applications or systems. It typically provides a specific function or set of functions that can be accessed through a well-defined interface. Services can be implemented using various technologies, such as web services, APIs, or messaging systems.
+
+
+Mom making food for the family --> Responsibility
+Mom starting a hotel and making food for everyone --> Service
+
+SOAP --> Simple Object Access Protocol:
+SOAP is a protocol for exchanging structured information in the implementation of web services. It relies on XML ( Extensible Markup Language) for its message format, and usually relies on other application layer protocols, such as HTTP or SMTP, for message negotiation and transmission. SOAP is often used in enterprise software integration.
+
+
+            RESTful service                         v                 SOAP webservice
+---------------------------------------------------------------------------------------------------------
+--> REpresentational State Transfer                     --> Simple Object Access Protocol
+--> Resource Oriented architecture(ROA)                 --> Service Oriented Architecture(SOA)
+--> Easy/Lightweight                                    --> Complex/Heavyweight
+--> JSON/XML/CSV/Plain text                             --> XML
+--> HTTP/HTTPS                                          --> SOAP/HTTP or SOAP/JMS
+--> Stateless                                           --> Stateful, Stateless
+--> Faster                                              --> Slower
+--> Single URl can perform multiple operations          --> Single operation per call
+
+REST API = URL + HTTP Method + Request Body + Headers
+
+HTTP methods:
+---------------
+--> GET: Retrieve data from the server ---> SELECT
+--> POST: Send data to the server ---> INSERT
+--> PUT: Update data on the server ---> UPDATE
+--> DELETE: Delete data from the server ---> DELETE
+--> PATCH: Partially update data on the server ---> UPDATE
+
+                        PUT                       vs                      PATCH
+------------------------------------------------------------------------------------------------------
+--> Replace the entire resource with the new one    --> Partially update the resource
+--> Example : Update a user's name and email        --> Example: Update a user's name only
