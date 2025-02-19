@@ -7,26 +7,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BankController {
 	@RequestMapping("/")
 	public String getFirstPage() {
-		return "home.jsp";
+		return "home.html";
 	}
 	
-	@RequestMapping("register-user")
+	@RequestMapping("/register-user")
 	public String registerUser() {
 		return "";
 	}
 
-	@RequestMapping("login-user")
+	@RequestMapping("/login-user")
 	public String loginUser() {
 		return "";
 	}
 
-	@RequestMapping("login")
+	@RequestMapping("/signin")
 	public String getlogin() {
 		return "login.jsp";
 	}
 
-	@RequestMapping("register")
+	@RequestMapping("/register-user")
 	public String getRegister() {
-		return "register.jsp";
+		return "register.html";
 	}
 }
