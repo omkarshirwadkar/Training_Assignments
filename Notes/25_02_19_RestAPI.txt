@@ -37,3 +37,40 @@ HTTP methods:
 ------------------------------------------------------------------------------------------------------
 --> Replace the entire resource with the new one    --> Partially update the resource
 --> Example : Update a user's name and email        --> Example: Update a user's name only
+
+
+Content Negotiation:
+-------------------
+--> Accept: header to specify the desired response format
+--> Content-Type: header to specify the format of the request Body
+
+
+@RestController --> Annotation in Spring framework to mark a class as a controller and enable REST support.
+
+REST Parameter Types:
+---------------------
+1. Query Parameter 
+2. Path Parameter
+3. Body Parameter
+
+
+for simple objects it is text/html --> default
+for complex objects it is application/json --> default
+
+
+Assignment:
+rollNo
+name
+standard
+school
+percentage
+
+/students --> get all students
+/student/rollNo --> get student by rollNo
+/students/school?name=school_name --> get students by school_name
+/students/result?pass=true --> all students above 40%
+/students/result?pass=false --> all students below 40%
+/students/student_standard/count --> count of students in each standard
+/students/strength?school=school_name --> count of students in each school
+/students/toppers --> top 5 students with highest percentage
+/students/topper/student_standard --> topper of student_standard standard 
