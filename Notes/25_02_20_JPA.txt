@@ -25,3 +25,16 @@ Annotations:
 - @Column: specifies the name of the column in the database table that the entity attribute will be mapped to.
 - @GeneratedValue: specifies that the id should be generated automatically by the database.
 
+
+
+JPA rules:
+Methods should start with get or find
+It has to be completely the attribute name
+
+
+
+Assignment:
+-----------
+Student: rollNo, name, standard, school, percentage
+
+save(s1) --> Save in two different databases H2 and/or Postgres
