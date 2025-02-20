@@ -1,0 +1,27 @@
+Spring data JPA:
+-----------------
+JDBC
+ORM
+Hibernate, iBatis, TopLink
+JPA
+
+
+Hibernate:
+----------------
+--> Hibernate is a popular ORM (Object-Relational Mapping) tool that provides a layer of abstraction betweeen Java objects and relational databases. 
+--> It allows developers to interact with databases using Java objects, rather than writing raw SQL code.
+
+
+Install dependencies JPA, H2 DB and Spring WEB
+Set up the application.properties file
+Create the entity class
+Create a data.sql file to insert dummy data
+
+
+Annotations:
+- @Entity: indicates that the class is an entity and will be mapped to a database table.
+- @Table: specifies the name of the database table that the entity will be mapped to.
+- @Id: specifies the primary key of the entity.
+- @Column: specifies the name of the column in the database table that the entity attribute will be mapped to.
+- @GeneratedValue: specifies that the id should be generated automatically by the database.
+
