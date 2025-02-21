@@ -72,8 +72,8 @@ public class EmpController {
 		 return service.getEmployeeAbove(age);
 	 }
 	 @GetMapping("/employees/role")
-	 public List<Employee> getEmployeeByDesig(String desig){
-		 return service.getEmployeeByDesig(desig);
+	 public List<Employee> getByDesignation(String desig){
+		 return service.getBy(desig);
 	 }
 	
 	

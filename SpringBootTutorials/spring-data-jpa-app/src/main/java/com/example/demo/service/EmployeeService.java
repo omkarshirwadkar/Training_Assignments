@@ -58,7 +58,6 @@ public class EmployeeService {
 	
 	 public List<Employee> getCustomQuery(String desig) {
 		return dao.myCustomQuery(desig);
-		
 	 }
 	
 	 public List<Employee> getEmployeeBelow(int age){
