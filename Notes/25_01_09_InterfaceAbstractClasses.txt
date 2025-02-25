@@ -33,7 +33,7 @@ Advantages:
 ------------------------------Afternoon Session------------------------------------------
 
                 Constructor                   v/s                   Method
-Same as class name                                                 Any name                               
+Same as class name                                                 Any  name                               
 Called when object is created                               Called after object created
 Must not have a return type                                     Have return type
 
