@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p.one { color: red; }
+        p.two { color: blue; }
+        .three { color: green; }
+        #four { color: yellow; }
+        span { color: darkmagenta; }
+        span > span { background-color: darkorange; }
+        p::first-letter { text-decoration: underline; color: deeppink; font-size: 30px;} 
+        h1::before { content: "Welcome Mr./Mrs. "; }
+        h1::after { content: " have a nice day!"; }
+        
+    </style>
+</head>
+<body>
+    <h1>Reddy</h1>
+    <h1>Mehta</h1>
+    <h1>Singh</h1>
+    <p class="one"> This is from first Paragraph</p>
+    <p class="two"> This is from second Paragraph</p>
+    <p id="four"> This is from third Paragraph</p>
+    <p class="three"> This is from fourth Paragraph</p>
+    <div class="three">This is from the div block</div>
+    <span>This is <span>from the </span>span tag</span><br>
+    <span>This is from the span tag</span><br>
+    <span>This is from the span tag</span><br>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias voluptatibus eveniet reprehenderit aspernatur! Delectus laboriosam recusandae porro, vel architecto eaque deleniti reiciendis dolor veritatis, molestiae fugit iure et amet nam!
+    Voluptatem dolor corrupti unde fugit vero accusamus, eos maxime velit voluptatum, illum quod sequi. Delectus eaque perferendis ratione? Exercitationem, distinctio quibusdam suscipit quod ab asperiores provident cum. Asperiores, nulla totam.</p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+User Interface / Frontend Technologies
+--------------------------
+* HTML(What to display): HyperText Markup Language is used for structuring and presenting content on the web. It is the backbone of a website's user interface.
+* CSS(How to display): Cascading Style Sheets is used for styling and layout of web pages. It controls the visual appearance of a website.
+* JavaScript(What to do): JavaScript is a high-level, dynamic, and interpreted programming language that is used for adding interactivity to web pages. It is used for creating dynamic user interfaces, animating elements, and handling user input.
+
+
+
+HTML
+-----
+* To validate your html code, you can use the W3C Markup Validation Service. This service checks your HTML code for errors and provides a report of any issues found.
+* There can be multiple body tags as well as multiple head tags in a single HTML document.
+* We can also write only h3 tag with no head, body or html tag.
+* <!DOCTYPE html> --> This is the document type declaration which tells the browser that this is an HTML document. 
+* Form tag cannot be inside of h3 tag.
+
+* types: text, password, checkbox, radio, submit, reset, file, hidden, email, number, date, month, week, time, datetime-local, color, range, search, tel, url
+
+* submit vs reset vs button: 
+    * submit is used to submit the form data to the server. 
+    * reset is used to reset the form data to its default value. 
+    * button is used to perform some action when clicked.
+
+* semantics standard tags:
+* header: defines a header for a document or section
+* nav: defines a navigation link or button
+* main: defines the main content of a document
+* section: defines a section in a document
+* article: defines an independent piece of content
+* aside: defines content aside from the main content
+* footer: defines a footer for a document or section
+* figure: defines self-contained content, like illustrations, diagrams, photos, code listings, etc.
+* figcaption: defines a caption for a figure
+
+
+CSS types
+----------
+* Inline: using style attribute
+* Internal: using style tag
+* External: using link tag href to 
+
+CSS Selector types
+-------------------
+* Class selector: .class
+* ID selector: #id
+* Tag selector: <tagname>
+* Attribute selector: [attribute]
+* Wild card selector: *
+* Child selector: parent > child
+* Pseudo-class selector: :hover
+* Pseudo-element selector: ::before
+
+
+CSS Box types
+-------------
+Box model
+Flex model
+Grid model
