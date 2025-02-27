@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @media  screen and (max-width: 1000px) {
+            body{
+                background-color: blue;
+                color: white;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            body{
+                background-color: red;
+                color: yellow;
+            }
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            color: white;
+            margin: 50px;
+            padding: 20px;
+            animation-name: p2w;
+            animation-duration: 10s;
+        }
+        @keyframes p2w{
+            from {background-color: purple;}
+            to {background-color: green;}
+        }
+    </style>
+</head>
+<body>
+    <h1>This is to demonstrate media queries</h1>
+    <hr>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odio porro, quis doloremque reiciendis hic illo quam voluptatum corrupti ipsum magni laboriosam iusto consequuntur amet assumenda quasi laborum ducimus repudiandae. Assumenda ducimus eius vel harum iusto inventore voluptatibus autem eos.</h2>
+    <hr>
+    <div>This is gonna keep changing color</div>
+    <hr>
+    <h3>Thank You</h3>
+</body>
+</html>

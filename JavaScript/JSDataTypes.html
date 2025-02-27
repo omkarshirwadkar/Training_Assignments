@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Datatypes Demo</title>
+</head>
+<body>
+    <h1>JavaScript Datatypes Demo</h1>
+    <hr>
+    <h2>
+    <script>
+        var a;
+        // If instead of document.write () we use console.log() we can see the output in the browser console
+        document.write("a value : " + a + "<br>"); //--> undefined
+        document.write("a type : " + typeof a + "<br><br>"); //--> undefined
+        a = 10;
+        document.write("a value : " + a + "<br>"); //--> 10
+        document.write("a type : " + typeof a + "<br><br>"); //--> number
+        a = false;
+        document.write("a value : " + a + "<br>"); //--> false
+        document.write("a type : " + typeof a + "<br><br>"); //--> boolean
+        a = "hello"
+        document.write("a value : " + a + "<br>"); //--> hello
+        document.write("a type : " + typeof a + "<br><br>"); //--> string
+        a = "f"
+        document.write("a value : " + a + "<br>"); //--> f
+        document.write("a type : " + typeof a + "<br><br>"); //--> string
+        a = 3.1415
+        document.write("a value : " + a + "<br>"); //--> 3.1415
+        document.write("a type : " + typeof a + "<br><br>"); //--> number
+        a = new Date();
+        document.write("a value : " + a + "<br>"); //--> current date
+        document.write("a type : " + typeof a + "<br><br>"); //--> object
+        a = null
+        document.write("a value : " + a + "<br>"); //--> null
+        document.write("a type : " + typeof a + "<br><br>"); //--> object
+        a = {}
+        document.write("a value : " + a + "<br>"); //--> {}
+        document.write("a type : " + typeof a + "<br><br>"); //--> object
+        a = () => {}
+        document.write("a value : " + a + "<br>"); //--> function ()
+        document.write("a type : " + typeof a + "<br><br>"); //--> function
+
+        var a = 10;
+        var b = "10";
+        document.write((a == b) + "<br>"); //--> true
+        document.write((a === b) + "<br>"); //--> false
+
+        var arr = [1, "fae", 3.14, true, 31, "nfuiq"];
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br>");
+        }
+        for (let x in arr) {
+            document.write(arr[x] + "<br>");
+        }
+        for (let y of arr) {
+            document.write(y + "<br>");
+        }
+    </script>
+    </h2>
+    <hr>
+    <h2>Thank You</h2>
+</body>
+</html>
