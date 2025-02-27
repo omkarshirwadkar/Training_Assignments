@@ -1,0 +1,75 @@
+               JavaScript                           vs                             Java
+========================================================================================================
+* Scripting Language                                   * Object-Oriented Programming Language
+* Dynamically typed language                           * Statically typed language
+* No need for explicit type definitions                * Need for explicit type definitions
+* Interpreted language                                 * Compiled and Interpreted language
+* Object Based Language                                * Object Oriented Language
+* ; is optional                                        * ; is mandatory
+* Strings can be in '' "" format                       * Strings can only be in "" format
+* constructor()                                        * constructor must have class name
+
+
+JavaScript Types
+-----------------
+Core JS: Variables, Constants, Datatypes, Operators, Operands, Control Statements, Inbuilt Functions, Custom Functions, Functional Programming, Inbuilt Objects, Custom Objects, Timer APIs, Rest and Spread 
+Client Side JS: BOM, DOM, Event Handling --> (Angular, React, Vue)
+Server Side JS: File Handling, DB Operations, Middleware --> (Node.js, Express.js)
+
+
+Variables/Constants
+-------------------
+
+
+
+Datatypes
+---------
+undefined, number, string, boolean, object, function
+
+Operators
+----------
+Arithmetic: +, -, *, /, % 
+Logical: &&, ||, !
+Biwise: ^, &, |
+Assignment: =, +=, -=, *=, /=, %=, ^=, &=, |=
+Relational: !=, >, <, >=, <=
+Increment / Decrement: ++, --
+Shift: >>, << 
+Conditional / Ternary: ? :
+Spread/ Rest: ... , ...
+Arrow: =>
+Equality : ===, !==, ==, !=
+    * 1. == --> checks value 
+    * 2. === --> checks value and type
+Optional Chaining: ?.
+
+
+Conditionals
+------------
+forin: for (var key in obj) { }
+forof: for (var value of obj) { }
+
+Inbuilt Functions
+-----------------
+typeof(), isNaN(), eval(), parseInt(), parseFloat(), setTimeout(), setInterval(), clearTimeout(), clearInterval(), etc.
+
+Functional Programming
+-----------------------
+* First Class Member: a vaiable can hold value as well as function
+* Higher Order Function: a function that takes another function as an argument or returns a function as a result
+
+In built Objects
+-----------------
+* console, Math, String, Date, Boolean, Array, Object, Number, RegExp, null, undefined, etc.
+
+Custom Objects
+-----------------
+
+
+
+JS Editions
+------------
+ES5: JavaScript
+ES6: ECMAScript(ES5 + OOPs)
+ES7: TypeScript(ES6 + Data Types)
+ES8: ECMAScript(ES7 + async/await)
