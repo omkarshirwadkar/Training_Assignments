@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        label, input, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[readonly] {
+            background-color: #f0f0f0;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>LOAN Calculator</h2>
+    <label>Applicant</label>
+    <input type="text" id="applicant" placeholder="Enter Name">
+    
+    <label>Type</label>
+    <select id="loanType" onchange="updateLoanDetails()">
+        <option value="HOME">Home</option>
+        <option value="CAR">Car</option>
+        <option value="PERSONAL">Personal</option>
+    </select>
+    
+    <label>Interest</label>
+    <input type="text" id="interest" readonly>
+    
+    <label>Tenure (Years)</label>
+    <input type="number" id="tenure" min="1" onchange="validateTenure()">
+    
+    <label>Amount</label>
+    <input type="number" id="amount" onchange="validateAmount()">
+    <small id="amountRange"></small>
+    
+    <label>EMI</label>
+    <input type="text" id="emi" readonly>
+    
+    <button onclick="calculateEMI()">CALCULATE</button>
+    
+    <script>
+        let maxTenure = 30;
+        let minAmount = 500000;
+        let maxAmount = 10000000;
+
+        function updateLoanDetails() {
+            let loanType = document.getElementById("loanType").value;
+            let interestField = document.getElementById("interest");
+            let tenureField = document.getElementById("tenure");
+            let amountField = document.getElementById("amount");
+            let amountRange = document.getElementById("amountRange");
+            
+            if (loanType === "HOME") {
+                interestField.value = "9%";
+                maxTenure = 30;
+                minAmount = 500000;
+                maxAmount = 10000000;
+                amountRange.innerText = "Range: 5L - 1Cr";
+            } else if (loanType === "CAR") {
+                interestField.value = "11%";
+                maxTenure = 7;
+                minAmount = 100000;
+                maxAmount = 1500000;
+                amountRange.innerText = "Range: 1L - 15L";
+            } else if (loanType === "PERSONAL") {
+                interestField.value = "15%";
+                maxTenure = 5;
+                minAmount = 10000;
+                maxAmount = 500000;
+                amountRange.innerText = "Range: 10k - 5L";
+            }
+            tenureField.max = maxTenure;
+            tenureField.value = "";
+            amountField.value = "";
+        }
+
+        function validateTenure() {
+            let tenureField = document.getElementById("tenure");
+            let tenureValue = parseInt(tenureField.value);
+            if (tenureValue < 1 || tenureValue > maxTenure) {
+                alert("Tenure must be between 1 and " + maxTenure + " years.");
+                tenureField.value = "";
+            }
+        }
+
+        function validateAmount() {
+            let amountField = document.getElementById("amount");
+            let amountValue = parseInt(amountField.value);
+            if (amountValue < minAmount || amountValue > maxAmount) {
+                alert("Amount must be between " + (minAmount / 100000) + "L and " + (maxAmount / 100000) + "L.");
+                amountField.value = "";
+            }
+        }
+
+        function calculateEMI() {
+            let amount = document.getElementById("amount").value;
+            let tenureValue = document.getElementById("tenure").value;
+            if (tenureValue < 1 || tenureValue > maxTenure) {
+                alert("Please enter a valid tenure before calculating EMI.");
+                return;
+            }
+            if (amount < minAmount || amount > maxAmount) {
+                alert("Please enter a valid amount before calculating EMI.");
+                return;
+            }
+            let interestRate = parseFloat(document.getElementById("interest").value) / (12 * 100);
+            let tenureMonths = tenureValue * 12;
+            
+            let emi = (amount * interestRate * Math.pow(1 + interestRate, tenureMonths)) / (Math.pow(1 + interestRate, tenureMonths) - 1);
+            document.getElementById("emi").value = emi.toFixed(2);
+        }
+        updateLoanDetails();
+    </script>
+</body>
+</html>

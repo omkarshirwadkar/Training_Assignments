@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[readonly] {
+            background-color: #f0f0f0;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Deposit Calculator</h2>
+    
+    <label>Principal</label>
+    <input type="number" id="principal" placeholder="Enter Amount">
+    
+    <label>Tenure (Years)</label>
+    <input type="number" id="tenure" min="1" max="10" onchange="validateTenure()">
+    
+    <label>Interest</label>
+    <input type="text" id="interest" value="7%" readonly>
+    
+    <label>Maturity</label>
+    <input type="text" id="maturity" readonly>
+    
+    <button onclick="calculateMaturity()">CALCULATE</button>
+    
+    <script>
+        function validateTenure() {
+            let tenureField = document.getElementById("tenure");
+            let tenureValue = parseInt(tenureField.value);
+            if (tenureValue < 1 || tenureValue > 10) {
+                alert("Tenure must be between 1 and 10 years.");
+                tenureField.value = "";
+            }
+        }
+        
+        function calculateMaturity() {
+            let principal = parseFloat(document.getElementById("principal").value);
+            let tenure = parseInt(document.getElementById("tenure").value);
+            let interestRate = 7 / 100; 
+            
+            if (isNaN(principal) || principal <= 0) {
+                alert("Please enter a valid principal amount.");
+                return;
+            }
+            if (isNaN(tenure) || tenure < 1 || tenure > 10) {
+                alert("Please enter a valid tenure between 1 and 10 years.");
+                return;
+            }
+            
+            let maturityAmount = principal * Math.pow(1 + interestRate, tenure);
+            document.getElementById("maturity").value = maturityAmount.toFixed(2);
+        }
+    </script>
+</body>
+</html>
