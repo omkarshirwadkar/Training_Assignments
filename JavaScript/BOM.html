@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+    <script>
+        function closePage(){
+            var flag = confirm("Are you sure you want to close this page?");
+            if(flag){
+                window.close();
+            }
+        }
+        function greet(){
+            var name = prompt("Please enter your name: ","");
+            document.write("Hello, " + name + "!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Browser Object Model</h1>
+    <hr>
+    <h2>Window Object</h2>
+    <hr>
+    <script>
+        document.write(" Window Object evoked");
+        // alert("Good Morning Everyone");
+        // confirm("Do you want to continue");
+    </script>
+    <input type="button" value="Close Page" onclick="closePage()">
+    <input type="button" value="Greet" onclick="greet()">
+    <hr>
+    <h3>Location Object</h3>
+    <script>
+        document.write("Location Object evoked" + "<br>");
+        document.write("Protocol : " + location.protocol + "<br>");
+        document.write("Host : " + location.host + "<br>");
+        document.write("Hostname : " + location.hostname + "<br>");
+        document.write("Resource Path: " + location.pathname + "<br>");
+        // location.assign("JSDataTypes.html")
+        // location.href = "JSDataTypes.html";
+    </script>
+    <hr>
+    <h3>History Object</h3>
+    <script>
+        // history.back();
+        // history.forward();
+    </script>
+    <hr>
+    <h3>Navigator Object</h3>
+    <script>
+        document.write("Navigator Object evoked" + "<br>");
+        document.write("Browser Name : " + navigator.appName + "<br>");
+        document.write("Browser Version : " + navigator.appVersion + "<br>");
+        document.write("Platform : " + navigator.platform + "<br>");
+        document.write("User Agent : " + navigator.userAgent + "<br>");
+        document.write("Language : " + navigator.language + "<br>");
+        document.write("Online : " + navigator.onLine + "<br>");
+        document.write("Cookies Enabled : " + navigator.cookieEnabled + "<br>");
+        document.write("Geolocation : " + navigator.geolocation.getCurrentPosition + "<br>");
+    </script>
+    <hr>
+    <h3>Screen Object</h3>
+    <script>
+        document.write("Screen Object evoked" + "<br>");
+        document.write("Screen Width : " + screen.width + "<br>");
+        document.write("Screen Height : " + screen.height + "<br>");
+        document.write("Color Depth : " + screen.colorDepth + "<br>");
+        document.write("Pixel Depth : " + screen.pixelDepth + "<br>");
+        // document.write("Available Width : " + screen.availWidth + "<br>");
+        // document.write("Available Height : " + screen.availHeight + "<br>");
+        // document.write("Device Pixel Ratio : " + screen.devicePixelRatio + "<br>");
+        // document.write("Screen Orientation : " + screen.orientation + "<br>");
+    </script>
+    <hr>
+    <h3>Thank You</h3>
+</body>
+</html>
