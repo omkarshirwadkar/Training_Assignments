@@ -1,0 +1,28 @@
+Browser Object Model
+--------------------
+* root object : `window`
+    * It's an optional thing to mention
+    * properties available in the window object can be directly called without doing window. before them
+    * alert(), confirm(), prompt(), close(), open() are methods of the window object
+
+window
+    location
+    history
+    document
+    navigator
+    screen
+
+declare the functions in the script tag present in the head
+else use the script tag in the body 
+
+
+history.forward(): go to the next page in the history list
+history.back(): go to the previous page in the history list
+
+
+
+Document Object Model
+---------------------
+--> DOM is a tree like structure of all the elements in the HTML document
+    * DOM Parser: used to parse the HTML document and create a tree like structure of all the elements in the document
+    * DOM API: used to interact with the DOM tree
