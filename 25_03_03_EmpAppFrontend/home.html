@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src = "script.js" ></script>
+</head>
+<body>
+    <div id="welcomeScreen" class="container">
+        <h1>Welcome to Employee Management System</h1>
+        <button onclick="loadDashboard()">Continue</button>
+    </div>
+
+    <div id="dashboard" class="container" style="display: none;">
+        <h2>Employee Management</h2>
+        <button onclick="toggleForm('addForm')">Add Employee</button>
+        <button onclick="showEmployees()">Display Employees</button>
+        <button onclick="toggleForm('searchForm')">Search Employee</button>
+        <button onclick="toggleForm('updateDetails')">Update Employee</button>
+        <button onclick="toggleForm('removeDetails')">Remove Employee</button>
+
+        <form id="addForm" onsubmit="addEmployee(event)">
+            <h3>Add Employee</h3>
+            <input type="text" id="addName" placeholder="Enter Name" required>
+            <input type="text" id="addPosition" placeholder="Enter Position" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <form id="searchForm" onsubmit="searchEmployee(event)">
+            <h3>Search Employee</h3>
+            <input type="number" id="searchId" placeholder="Enter Employee ID" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResult"></div>
+
+        <div id="updateDetails">
+            <h3>Enter Employee ID to Update</h3>
+            <input type="number" id="updateIdInput" placeholder="Enter Employee ID" required>
+            <button onclick="fetchUpdateEmployee()">Fetch Employee</button>
+            <form id="updateForm" style="display: none;" onsubmit="updateEmployee(event)">
+                <h3>Update Employee</h3>
+                <input type="text" id="updateName" required>
+                <input type="text" id="updatePosition" required>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+
+        <div id="removeDetails">
+            <h3>Enter Employee ID to Remove</h3>
+            <input type="number" id="removeIdInput" placeholder="Enter Employee ID" required>
+            <button onclick="confirmRemoveEmployee()">Fetch Employee</button>
+            <div id="removeConfirmation" style="display: none;">
+                <p id="removeEmployeeInfo"></p>
+                <button onclick="removeEmployee()">Confirm Remove</button>
+                <button onclick="cancelRemove()">Cancel</button>
+            </div>
+        </div>
+
+        <div id="employeeList"></div>
+    </div>
+</body>
+</html>
