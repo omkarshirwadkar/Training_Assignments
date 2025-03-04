@@ -104,3 +104,24 @@ var b = 20;
 console.log("The sum of " + a + " and " + b + " is " + (a + b));
 console.log(`The sum of ${a} and ${b} is ${a + b}`);
 
+class Person{
+    name: string;
+    constructor(name: string){
+        console.log("Person constructor called");
+        this.name = name;
+        // One solution is to use a getter
+        // var self = this;
+        // setTimeout(function(){
+        //     console.log("Hello " + self.name);
+        // }, 2000);
+
+        // using arrow function
+        setTimeout(() => {
+            console.log("Hello " + this.name);
+        } , 2000);
+        console.log("End of constructor");
+        
+    }
+}
+new Person("Rahul");
+console.log("This statement will not wait for anyone");

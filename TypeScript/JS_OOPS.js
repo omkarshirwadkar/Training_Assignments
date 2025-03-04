@@ -68,7 +68,7 @@ var B = /** @class */ (function (_super) {
     return B;
 }(A));
 var a1 = new B();
-console.log("--------------------------------------");
+console.log("-----------------------------------------------------------");
 var HatatchBack = /** @class */ (function () {
     function HatatchBack() {
     }
@@ -94,3 +94,28 @@ var arr1 = ["Hi", "Hello", "World", "Python", "Java"];
 var arr2 = ["Hi", "Hello", "World", "Python", "Java"];
 console.log(arr1);
 console.log(arr2);
+console.log("------------------------------------------------------------------------");
+var a = 10;
+var b = 20;
+console.log("The sum of " + a + " and " + b + " is " + (a + b));
+console.log("The sum of ".concat(a, " and ").concat(b, " is ").concat(a + b));
+var Person = /** @class */ (function () {
+    function Person(name) {
+        var _this = this;
+        console.log("Person constructor called");
+        this.name = name;
+        // One solution is to use a getter
+        // var self = this;
+        // setTimeout(function(){
+        //     console.log("Hello " + self.name);
+        // }, 2000);
+        // using arrow function
+        setTimeout(function () {
+            console.log("Hello " + _this.name);
+        }, 2000);
+        console.log("End of constructor");
+    }
+    return Person;
+}());
+new Person("Rahul");
+console.log("This statement will not wait for anyone");

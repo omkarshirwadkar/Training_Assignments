@@ -1,0 +1,24 @@
+Closure in JS
+--------------
+A closure in JavaScript is a function that can access variables from an outer function, even after the outer function has finished executing. 
+This is possible because the inner function keeps a reference to the outer function's lexical environment. 
+
+Event Bubbling
+--------------
+Event bubbling in JavaScript is a process that allows events to propagate from a child element to its parent elements.
+
+FCM
+---
+
+
+HOF
+---
+Higher-order functions in JavaScript are functions that can take other functions as arguments or return functions as results.
+
+Promises
+--------
+A promise in JavaScript is an object that represents a value that may not be available yet, but will be resolved at some point in the future.
+
+Promise.all(p1, p2, p3).then(.....) --> all promises are kept
+Promise.allSettled(p1, p2, p3).then(.....) --> all promises are executed doesn't matter if it is not kept
+Promise.race(p1, p2, p3) --> 
