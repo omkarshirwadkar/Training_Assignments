@@ -98,3 +98,69 @@ img{
     margin: 0%;
     padding: 0%;
 }
+.calc-container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, #ecf0f1); /* Soft gradient */
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    transition: transform 0.3s ease-in-out;
+}
+
+.calc-container:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.calc-container h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+.calc-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #34495e;
+    text-align: left;
+}
+
+.calc-container input,
+.calc-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f9f9f9;
+}
+
+.calc-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.calc-container button:hover {
+    background: #0cc60f;
+    transition: background 0.3s ease-in-out;
+}
+
+.calc-container small {
+    display: block;
+    color: #7f8c8d;
+    margin-top: -10px;
+    font-size: 12px;
+}

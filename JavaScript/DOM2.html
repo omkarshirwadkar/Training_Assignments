@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Demo 2</title>
+
+    <script>
+        var disp = true
+        function display(){
+            var login = `<h3>Please Login</h3>
+                        <form action="BOM.html" method="get">
+                            Username: <input type="text" id="username" name="un" required><br>
+                            Password: <input type="password" id="password" name="pw" required><br>
+                            <input type="submit" value="Login" name="login">
+                            <input type="reset" value="Reset" name="reset">
+                        </form>`;
+            if (disp){
+                document.getElementById("d1").innerHTML = login; // innerText will show the HTML text
+                document.getElementById("s1").innerText = 'Hide Login';
+                document.getElementById("s1").style.color = 'Red';
+            }
+            else{
+                document.getElementById("d1").innerHTML = "";
+                document.getElementById("s1").innerText = 'Show Login';
+                document.getElementById("s1").style.color = 'Blue';
+            }
+            disp = !disp;
+        }
+    </script>
+</head>
+<body>
+    <h1>DOM Demo</h1>
+    <hr>
+    <h2 onclick="display()" style="color: blue;"><span id="s1">Show Login</span></h2>
+    <hr>
+    <div id="d1"></div>
+    <h3>Thank You</h3>
+</body>
+</html>

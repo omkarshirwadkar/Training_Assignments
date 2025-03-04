@@ -1,0 +1,34 @@
+ES6/ECMAScript Features
+-----------------------
+1. Classes and Inheritance
+2. Arrow Functions
+3. Template Literals
+4. Promises
+5. Async/Await
+6. Destructuring
+7. Spread Operator
+8. Rest Parameter
+9. Default Parameters
+10. Let and Const
+11. For...of Loop
+12. Map and Set
+14. Modules
+15. Import and Export
+16. ES6 Modules
+
+
+ES7 / TypeScript Features
+-------------------------
+1. Type safe
+2. Interfaces
+3. Generics
+4. Exponential Operator
+5. Access Specifiers
+
+
+TS --> JS --> Interpreted
+Transformation + Compilation = Transpilation
+
+
+* The subclass constructor must call the superclass constructor
+* No Constructor Overloading in TS, only 1 constructor per class

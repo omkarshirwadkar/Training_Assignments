@@ -26,3 +26,20 @@ Document Object Model
 --> DOM is a tree like structure of all the elements in the HTML document
     * DOM Parser: used to parse the HTML document and create a tree like structure of all the elements in the document
     * DOM API: used to interact with the DOM tree
+
+
+backticks(`) : used to create a template string(holds multiple lines of code)
+
+
+
+Assignment
+-----------
+Services:
+    Loan Calculator:
+        Appllicant
+        Type: Home, Car, Personal
+        Interest: 9%, 12%, 15%
+        Tenure: <30, <7, <5
+        Amount: 5L-1Cr, 1L-15L, 10k-5L
+
+    Deposit Calculator
