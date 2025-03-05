@@ -1,0 +1,51 @@
+                Angular                     vs                      React
+-------------------------------------------------------------------------------------------------------
+-> Framework                                  -> Library
+-> Complete                                   -> Minimal Modules
+-> Real-time rendering                        -> Virtual DOM
+-> Google                                     -> Facebook
+
+
+            Angular JS                      vs                      Angular
+-------------------------------------------------------------------------------------------------------
+-> Library                                    -> Framework
+-> version: v1.x                              -> version: v2+
+-> JavaScript                                 -> TypeScript
+-> MVC architecture                           -> MVVM architecture(MVW)
+-> Controller Oriented                        -> Component Oriented
+
+
+SPA: Single Page Application
+----------------------------
+--> A web application that loads a single HTML page and dynamically updates that page as per user interactions.
+
+
+
+ng new my-app: Creates a new Angular project with the name my-app.
+ng new my-app --standalone: Creates a new Angular project with the standalone configuration.
+ng serve: Starts the development server.
+ng g c my-component: Generates a new component with the name my-component.
+ng g c my-component/another-component: Generates a new component inside the my-component folder.
+
+
+selector: The name of the component in the HTML template.
+selector: .some-name : The component will be rendered inside an HTML element with the class some-name.
+
+* Component comprises of 4 things:
+1. HTML
+2. CSS
+3. TypeScript
+4. Spec.ts
+
+* Data Binding: The process of synchronizing the data between the component and the template.
+--> One-way Binding:
+    --> TS to HTML:
+        * Interpolation: {{expression}}
+        * Property Binding: [property]="expression"
+
+    --> HTML to TS:
+        * Event Binding: (event)="expression"
+    
+--> Two-way Binding:
+    HTML <-> TS: (need to import it from FormsModel)
+        ng Model: [(ngModel)]="expression" --> banana in a box
