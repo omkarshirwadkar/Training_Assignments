@@ -1,0 +1,6 @@
+<h1>Deposit Calculator</h1>
+Principal: <input  #principal type="number" value="1000"><br>
+Tenure: <input #tenure  type="number" value="5"><br>
+Interest Rate: <input type="text" id="interestRate" value="7%" readonly><br>
+Maturity: <input type="number" id="maturity" [value]="getMaturity()" readonly><br><br>
+<button (click)="calculateMaturity(principal.value, tenure.value)"> Calculate</button>
