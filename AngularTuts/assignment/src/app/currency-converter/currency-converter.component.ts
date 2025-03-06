@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './currency-converter.component.css'
 })
 export class CurrencyConverterComponent {
+  flag: boolean = false;
   amount: number = 0;
   usd : number = 0;
   eur : number = 0;
@@ -15,11 +16,15 @@ export class CurrencyConverterComponent {
   sar: number = 0;
   aud: number = 0;
   converter(amountValue: string): void{
+    this.flag = true;
     this.amount = parseFloat(amountValue);
     this.usd = this.amount * 0.0112;
     this.eur = this.amount * 0.0115;
     this.jpy = this.amount * 1.7;
     this.sar = this.amount * 0.043;
     this.aud = this.amount * 0.016;
+  }
+  hide(): void{
+    this.flag = false;
   }
 }

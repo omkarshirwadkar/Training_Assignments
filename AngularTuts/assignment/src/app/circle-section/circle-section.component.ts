@@ -17,4 +17,7 @@ export class CircleSectionComponent {
       this.flag = true;
     }
   }
+  hide(): void {
+    this.flag = false;
+  }
 }

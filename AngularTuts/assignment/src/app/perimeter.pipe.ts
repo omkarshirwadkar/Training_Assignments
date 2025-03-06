@@ -7,7 +7,7 @@ export class PerimeterPipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): number {
     let val = parseInt(value);
-    return 2 * Math.PI * val;
+    return Math.round(2 * Math.PI * val);
   }
 
 }

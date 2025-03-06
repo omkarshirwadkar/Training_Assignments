@@ -7,7 +7,7 @@ export class AreaPipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): number {
     let val = parseInt(value);
-    return Math.PI*val*val;
+    return Math.round(Math.PI*val*val);
   }
 
 }
