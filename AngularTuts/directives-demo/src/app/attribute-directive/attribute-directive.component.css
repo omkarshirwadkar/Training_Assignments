@@ -1,0 +1,10 @@
+div{
+    width: 150px;
+    height: 150px;
+}
+.brdr{
+    border: 32px solid rgb(32, 151, 54);
+}
+.bg{
+    background-color:fuchsia
+}

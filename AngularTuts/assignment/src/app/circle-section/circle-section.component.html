@@ -1,0 +1,12 @@
+<h1>Circle Section</h1>
+<hr>
+<h3>
+    Radius: <input type="text" #radi> <br>
+    <button (click)="toggle()">Calculate</button>
+    <button (click)="hide()">Hide</button>
+    <div *ngIf="flag">
+        Diameter: {{radi.value | diameter}} <br>
+        Perimeter: {{radi.value | perimeter}} <br>
+        Area: {{radi.value | area}} <br>
+    </div>
+</h3>

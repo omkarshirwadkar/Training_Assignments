@@ -1,0 +1,26 @@
+ng interfaces:
+* NgOnInit
+* NgDoCheck
+* NgOnChange
+* NgOnDestroy
+
+
+
+Pipes
+-------
+* Inbuilt
+* Custom
+
+* Pure
+* Impure
+
+Directives
+------------
+* Attribute Directives:
+    * <div class="">    --> ngClass
+    * <div style="">    --> ngStyle
+* Structural Directives:
+    * ngIf
+    * ngFor
+    * ngSwitch
+    * ngElse

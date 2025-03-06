@@ -1,0 +1,15 @@
+<h2>Attribute Demo</h2>
+<h3>
+    <div [ngClass]="{brdr:brdrColor, bg:bgColor}" class="brdr">Just for demo purpose created this div block</div>
+    <div class="bg">Just for demo purpose created this div block</div>
+    <div class="brdr bg">Just for demo purpose created this div block</div>
+    <button (click)="toggleBorder()">Change Border</button>
+    <button (click)="toggleBg()"> Change Background</button>
+</h3>
+<br>
+<br>
+<h3>
+    <div [ngStyle]="{'background-color': color}"></div>
+    <input type="text" #mc>
+    <button (click)="setColor(mc.value)">Change Color</button>
+</h3>

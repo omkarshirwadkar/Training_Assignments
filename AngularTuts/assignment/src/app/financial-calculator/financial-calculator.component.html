@@ -1,0 +1,23 @@
+<h1>Choose Your Calculator</h1>
+<hr>
+<div>
+    <label>
+        <input type="radio" (click)="setSwitchCalculator(1)" name="option"> Loan
+    </label>
+    
+    <label>
+        <input type="radio" (click)="setSwitchCalculator(2)" name="option"> Deposit
+    </label>
+    
+    <label>
+        <input type="radio" (click)="setSwitchCalculator(3)" name="option"> Mutual Fund
+    </label>
+</div>
+<hr>
+<div [ngSwitch]="switchCalculator">
+    <app-loan-calculator *ngSwitchCase="1"></app-loan-calculator>
+    <app-deposit-calculator *ngSwitchCase="2"></app-deposit-calculator>
+    <app-mutual-fund-calculator *ngSwitchCase="3"></app-mutual-fund-calculator>
+</div>
+
+<br>
