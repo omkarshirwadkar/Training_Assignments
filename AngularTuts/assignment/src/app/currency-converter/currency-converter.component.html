@@ -1,0 +1,9 @@
+<h1>Currency Converter Section</h1>
+<hr>
+Enter Amount: <input type="number" #rupee><br>
+<button (click)="converter(rupee.value)">Money Converter</button> <br>
+USD: {{ usd | currency : "USD"}} <br>
+EUR: {{ eur | currency : "EUR"}} <br>
+JPY: {{ jpy | currency : "JPY"}} <br>
+SAR: {{ sar | currency : "SAR"}} <br>
+AUD: {{ aud | currency : "AUD"}} <br>

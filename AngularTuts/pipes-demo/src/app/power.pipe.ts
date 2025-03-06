@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'power'
+  name: 'power',
+  // pure: true // <--- Add this to make the pipe more efficient
 })
 export class PowerPipe implements PipeTransform {
 

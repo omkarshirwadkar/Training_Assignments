@@ -2,12 +2,14 @@
     <h1>Loan Calculator</h1>
     Applicant: <input type="text" id="applicant" name="applicant"><br>
     Type: 
-    <select id="loanType" (change)="updateLoanDetails()">
+    <select #loanType (change)="updateLoanDetails(loanType.value)">
         <option value="HOME">Home</option>
         <option value="CAR">Car</option>
         <option value="PERSONAL">Personal</option>
     </select><br>
-    Interest: <input type="number" id="interest" name="interest" readonly><br>
-    Tenure: <input type="number" id="tenure" name="tenure" min = 1 (change)="validateTenure()"><br>
-    Amount: <input type="number" id="amount" name="amount" readonly (change)="validateAmount()"><br>
+    Interest: <input #interest type="text" id="interest" name="interest" [value]="getInterest()" readonly><br>
+    Tenure: <input #tenure type="text" name="tenure" min = 1 (change)="validateTenure(tenure.value)"><br>
+    Amount: <input #amount type="number" name="amount" (change)="validateAmount(amount.value)"><br>
+    EMI: <input type="text" id="emi" [value]="getEMI()" readonly><br><br>
+    <button (click)="calculateEMI(amount.value, tenure.value, interest.value)">CALCULATE</button>
 </div>

@@ -5,7 +5,7 @@ import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.compo
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DepositCalculatorComponent],
+  imports: [RouterOutlet, DepositCalculatorComponent, LoanCalculatorComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

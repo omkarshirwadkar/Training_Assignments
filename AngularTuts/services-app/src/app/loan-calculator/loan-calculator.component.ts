@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './loan-calculator.component.css'
 })
 export class LoanCalculatorComponent {
-  validateTenure(tenureValue: number): void{
-    if (tenureValue < 1 || tenureValue > 10) {
-        alert("Tenure must be between 1 and 10 years.");
+  validateTenure(tenure: string): void{
+    let tenureValue = parseInt(tenure);
+    if (tenureValue < 1 || tenureValue > this.maxTenure) {
+        alert(`Tenure must be between 1 and ${this.maxTenure} years.`);
     }
   }
   maxTenure = 30;
@@ -19,7 +20,7 @@ export class LoanCalculatorComponent {
   amountRange: string = "";
   emi: number = 0.0;
 
-  updateLoanDetails(loanType: string, interestField: string, tenureField: string, amountField: string, amountRange: string): void {
+  updateLoanDetails(loanType: string): void {
       if (loanType === "HOME") {
           this.interestField= "9%";
           this.maxTenure = 30;
@@ -61,5 +62,11 @@ export class LoanCalculatorComponent {
       let interestRate = parseFloat(interest) / (12 * 100);
       let tenureMonths = tenureValue * 12;
       this.emi = (amount * interestRate * Math.pow(1 + interestRate, tenureMonths)) / (Math.pow(1 + interestRate, tenureMonths) - 1);
+  }
+  getInterest(): string {
+    return this.interestField;
+  }
+  getEMI(): number {
+    return this.emi;
   }
 }
