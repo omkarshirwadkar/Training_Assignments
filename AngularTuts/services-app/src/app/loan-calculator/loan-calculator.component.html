@@ -1,1 +1,13 @@
-<p>loan-calculator works!</p>
+<div>
+    <h1>Loan Calculator</h1>
+    Applicant: <input type="text" id="applicant" name="applicant"><br>
+    Type: 
+    <select id="loanType" (change)="updateLoanDetails()">
+        <option value="HOME">Home</option>
+        <option value="CAR">Car</option>
+        <option value="PERSONAL">Personal</option>
+    </select><br>
+    Interest: <input type="number" id="interest" name="interest" readonly><br>
+    Tenure: <input type="number" id="tenure" name="tenure" min = 1 (change)="validateTenure()"><br>
+    Amount: <input type="number" id="amount" name="amount" readonly (change)="validateAmount()"><br>
+</div>
