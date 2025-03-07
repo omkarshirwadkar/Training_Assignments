@@ -4,9 +4,9 @@ import { Directive, HostListener } from '@angular/core';
   selector: '[myEvent]'
 })
 export class MyEventDirective {
-
-  constructor() { }
-
+  constructor() { 
+    console.log('Event Directive created');
+  }
   @HostListener('click')
   abc(): void{
     console.log("You have clicked on this tag");
