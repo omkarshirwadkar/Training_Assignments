@@ -1,1 +1,8 @@
-<p>mutual-fund-calculator works!</p>
+<div>
+    <h1>Mutual Fund Calculator</h1>
+    Monthly SIP: <input type="text" value="0" #sip>
+    Duration: <input type="text" value="0" #duration>
+    ROI: <input type="text"value="0" #roi>
+    Total: <input type="number" id="total" [value]="getTotal()"> <br><br>
+    <button (click)="calculateTotal(sip.value, duration.value, roi.value)">Calculate</button>
+</div>

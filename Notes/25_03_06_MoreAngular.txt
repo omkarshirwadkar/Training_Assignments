@@ -24,3 +24,5 @@ Directives
     * ngFor
     * ngSwitch
     * ngElse
+* Custom Directives:
+    * Element 

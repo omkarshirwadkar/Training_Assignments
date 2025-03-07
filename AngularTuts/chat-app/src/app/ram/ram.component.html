@@ -1,0 +1,8 @@
+<hr>
+<h1>Ram's POV</h1>
+<div>
+    <input #mi>
+    <button (click)="sendMessage(mi.value)">Send Message</button>
+</div>
+<h3 *ngFor="let msg of cs.messages">{{msg}}</h3>
+<hr>
