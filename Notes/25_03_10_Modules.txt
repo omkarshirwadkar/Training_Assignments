@@ -1,0 +1,10 @@
+Modules in Angular
+------------------
+* declarations: Components, Directives, Pipes
+* imports: Other modules
+* providers: Services(manually add it)
+* bootstrap: Main Component(Root Component)
+* exports: Components, Directives, Pipes that can be used in other modules
+
+
+Create your own Angular module: ng g m my-module
