@@ -6,6 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoginComponent } from './login/login.component';
 import { ServicesComponent } from './services/services.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeGuard } from './guards/welcome.guard';
 
 const routes: Routes = [
   {
@@ -30,7 +31,9 @@ const routes: Routes = [
   },
   {
     path: 'welcome',
-    component: WelcomeComponent
+    component: WelcomeComponent,
+    canActivate: [WelcomeGuard],
+    data: ['Manager']
   }
 ];
 
