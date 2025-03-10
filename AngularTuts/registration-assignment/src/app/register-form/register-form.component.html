@@ -1,0 +1,36 @@
+<div [ngSwitch]="registerFlag">
+    <div *ngSwitchCase="1">
+        <h1>Register Here</h1>
+        <form (ngSubmit)="abc(registerForm)" [formGroup]="registerForm">
+            <h3>
+                Customer ID: <input type="text" name="customerID" formControlName="customerID"> <br>
+                Username: <input type="text" name="username" formControlName="username"> <br>
+                Password: <input type="password" name="password" formControlName="password"> <br>
+                Confirm: <input type="password" name="confirmPass" formControlName="confirmPass"> <br>
+                AccountNo: <input type="text" name="accountNo" formControlName="accountNo"> <br>
+                <br>
+                <input type="submit" value="SUBMIT" [disabled]="registerForm.invalid">
+                <input type="reset" value="RESET">
+            </h3>
+        </form>
+    </div>
+    <div *ngSwitchCase="2">
+        <h1>Login Here</h1>
+        <form (ngSubmit)="xyz(loginForm)">
+            <h3>
+                Customer ID: <input type="text" name="cid" formControlName="customerLoginID"> <br>
+                Password: <input type="password" name="password" formControlName="customerLoginPassword"> <br>
+                <br>
+                <input type="submit" value="SUBMIT" [disabled]="loginForm.invalid">
+                <input type="reset" value="RESET">
+            </h3>
+        </form>
+
+    </div>
+    <div *ngSwitchCase="3">
+        Welcome
+    </div>
+</div>
+<ng-template #finalBlock>
+    Welcome
+</ng-template>
