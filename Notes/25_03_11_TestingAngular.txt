@@ -1,0 +1,16 @@
+Testing in Angular
+------------------
+Tools:
+    1. Jasmine: 
+    - Unit testing framework for Angular
+    - Provides a way to write and run unit tests for Angular components, services, and other cod
+    - Supports testing of Angular components, directives, and pipes
+    2. Karma:
+    - Test runner for Angular
+    - Runs tests in a browser environment
+    - Supports running tests in multiple browsers and environments
+    3. Protractor:
+    - End-to-end testing framework for Angular
+    - Provides a way to write and run end-to-end tests for Angular applications
+    - Supports testing of Angular applications in a real browser environment
+    
