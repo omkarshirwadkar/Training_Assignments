@@ -1,0 +1,16 @@
+h1{
+    color: red;
+    text-align: center;
+}
+h2{
+    color: blue;
+    text-align: center;
+}
+h3{
+    color:forestgreen;
+    text-align: center;
+}
+*{
+    color: darkorange;
+    text-align: center;
+}
