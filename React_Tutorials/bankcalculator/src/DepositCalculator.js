@@ -9,7 +9,7 @@ function DepositCalculator(){
             Principal: <input type="number" value={principal} onChange={(e) => {
                 setPrincipal(e.target.valueAsNumber);
             }}/><br/>
-            Tenure: <input/><br/>
+            Tenure: <input /><br/>
             Interest Rate: <input readonly value={"7%"}/><br/>
             Maturity: <input/><br/><br/>
             <button> Calculate</button>
