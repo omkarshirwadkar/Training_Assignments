@@ -1,0 +1,36 @@
+var a = 10; --> functional scope
+b = 20; --> global scope
+let c = 30; --> block scope
+
+div --> block scope
+span --> inline scope
+
+React
+------
+Project Structure
+Virtual DOM: A lightweight in-memory representation of the real DOM.
+JSX: JavaScript XML --> JSX doesn't support if else
+
+                HTML                            vs                            XML
+            * Inbuilt Tags                                             * Custom Tags
+            * No need to close tags                                    * Need to close tags
+            * No need to use namespace                                 * Need to use namespace
+            * Case Insensitive                                         * Case Sensitive
+            * Static                                                   * Dynamic
+            * No proper nesting                                        * Strict nesting
+            * <h1></h1><h2></h2>                                       * Must have only 1 root element 
+            
+JSX Rules
+----------
+* Just follow all XML rules
+
+
+Fragments
+---------
+* Used to group elements together
+* <></> is used to create a fragment
+
+Props and State
+----------------
+* Props: Short for properties. Props are immutable and passed from parent to child.
+* State: Mutable and used to store data that can change. State is used in functional components. 
