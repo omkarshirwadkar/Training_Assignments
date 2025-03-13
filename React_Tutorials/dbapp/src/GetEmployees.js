@@ -6,9 +6,8 @@ function GetEmployees(){
         axios.get('http://localhost:4000/employees')
         .then(response => {
             setEmployees(response.data);
-            console.log(response.data);
         })
-    }, [])
+    })
     return(
         <>
             <h2>Employee Details</h2>

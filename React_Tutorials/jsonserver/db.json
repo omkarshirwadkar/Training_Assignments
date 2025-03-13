@@ -55,6 +55,167 @@
       "age": 25,
       "salary": 45000,
       "designation": "Programmer"
+    },
+    {
+      "id": "21",
+      "name": "Omkar",
+      "age": "23",
+      "salary": "80000",
+      "designation": "Programmer"
+    }
+  ],
+  "products": [
+    {
+      "id": "2",
+      "name": "Smartphone",
+      "category": "Electronics",
+      "price": 699.99,
+      "stockAvailability": true,
+      "brand": "TechBrand",
+      "sku": "TB-PHONE-002",
+      "vendorId": 2
+    },
+    {
+      "id": "3",
+      "name": "Laptop",
+      "category": "Computers",
+      "price": 1299.99,
+      "stockAvailability": true,
+      "brand": "CompTech",
+      "sku": "CT-LAP-003",
+      "vendorId": 3
+    },
+    {
+      "id": "4",
+      "name": "Smartwatch",
+      "category": "Wearables",
+      "price": 199.99,
+      "stockAvailability": false,
+      "brand": "WearTech",
+      "sku": "WT-WATCH-004",
+      "vendorId": 4
+    },
+    {
+      "id": "5",
+      "name": "Bluetooth Speaker",
+      "category": "Audio",
+      "price": 49.99,
+      "stockAvailability": true,
+      "brand": "SoundMax",
+      "sku": "SM-SPK-005",
+      "vendorId": 5
+    },
+    {
+      "id": "6",
+      "name": "Gaming Mouse",
+      "category": "Accessories",
+      "price": 59.99,
+      "stockAvailability": true,
+      "brand": "GamePro",
+      "sku": "GP-MOUSE-006",
+      "vendorId": 6
+    },
+    {
+      "id": "7",
+      "name": "Mechanical Keyboard",
+      "category": "Accessories",
+      "price": 129.99,
+      "stockAvailability": true,
+      "brand": "TypeFast",
+      "sku": "TF-KEY-007",
+      "vendorId": 7
+    },
+    {
+      "id": "8",
+      "name": "4K Monitor",
+      "category": "Displays",
+      "price": 399.99,
+      "stockAvailability": true,
+      "brand": "ViewTech",
+      "sku": "VT-MON-008",
+      "vendorId": 8
+    },
+    {
+      "id": "9",
+      "name": "External Hard Drive",
+      "category": "Storage",
+      "price": 89.99,
+      "stockAvailability": true,
+      "brand": "StoreMax",
+      "sku": "SM-HDD-009",
+      "vendorId": 9
+    },
+    {
+      "id": "10",
+      "name": "Wireless Router",
+      "category": "Networking",
+      "price": 149.99,
+      "stockAvailability": true,
+      "brand": "NetSpeed",
+      "sku": "NS-ROUT-010",
+      "vendorId": 10
+    }
+  ],
+  "vendors": [
+    {
+      "id": "1",
+      "name": "Tech Distributors",
+      "email": "contact@techworld.com",
+      "phone": "123-456-7890",
+      "rating": 4.7,
+      "status": "Active",
+      "productIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Elite Electronics",
+      "email": "sales@eliteelectronics.com",
+      "phone": "555-123-4567",
+      "rating": 4.8,
+      "status": "Active",
+      "productIds": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Gadget Hub",
+      "email": "support@gadgethub.com",
+      "phone": "987-654-3210",
+      "rating": 4.5,
+      "status": "Active",
+      "productIds": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Display Masters",
+      "email": "support@displaymasters.com",
+      "phone": "222-333-4444",
+      "rating": 4.6,
+      "status": "Active",
+      "productIds": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Storage Solutions",
+      "email": "help@storagesolutions.com",
+      "phone": "888-999-0000",
+      "rating": 4.3,
+      "status": "Active",
+      "productIds": [
+        9,
+        10
+      ]
     }
   ]
 }
