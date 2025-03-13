@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import Effect from "./Effect";
 import Greet from "./Greet";
 import JSXDemo from "./JSXDemo";
 import Welcome from "./Welcome";
@@ -19,6 +20,7 @@ function App() {
       <Greet day="Evening" name="Parvati"/>
       <Counter/>
       <Welcome/>
+      <Effect />
     </>
   );
 }

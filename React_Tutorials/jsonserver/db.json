@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John",
+      "age": 20,
+      "salary": 75000,
+      "designation": "Tester"
+    },
+    {
+      "id": "2",
+      "name": "Jacob",
+      "age": 34,
+      "salary": 100000,
+      "designation": "Programmer"
+    },
+    {
+      "id": "3",
+      "name": "Marie",
+      "age": 32,
+      "salary": 60000,
+      "designation": "Admin"
+    },
+    {
+      "id": "4",
+      "name": "Nick",
+      "age": 25,
+      "salary": 30000,
+      "designation": "Sales Manager"
+    },
+    {
+      "id": "5",
+      "name": "Stuart",
+      "age": 22,
+      "salary": 130000,
+      "designation": "HR"
+    },
+    {
+      "id": "6",
+      "name": "Jason",
+      "age": 29,
+      "salary": 240000,
+      "designation": "Manager"
+    },
+    {
+      "id": "7",
+      "name": "Karen",
+      "age": 21,
+      "salary": 25000,
+      "designation": "Tester"
+    },
+    {
+      "id": "8",
+      "name": "Rose",
+      "age": 25,
+      "salary": 45000,
+      "designation": "Programmer"
+    }
+  ]
+}
