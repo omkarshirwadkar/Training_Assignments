@@ -1,9 +1,28 @@
 import { useEffect, useState } from "react";
 import GetProducts from "./GetProducts";
 import axios from "axios";
+import AddProducts from "./AddProducts";
 
-function DbOperations(){
+function DbOperations(props){
     const [products, setProducts] = useState([]);
+
+    function updateProduct(e) {
+        e.preventDefault();
+        axios.put( `http://localhost:4000/products/${products.id}`, products )
+        .then( res => {
+            console.log("Successfully Updated");
+        })
+    }
+    function removeProduct(id) {
+        axios.delete( `http://localhost:4000/products/${id}`)
+        .then( res => {
+            console.log("Successfully Deleted");
+        })
+    }
+    const printdata = () => {
+        console.log("Data Printed");
+        
+    }
     useEffect(() =>{
         axios.get('http://localhost:4000/products')
         .then(response => {
@@ -14,6 +33,7 @@ function DbOperations(){
         <>
             <h2>Product Details</h2>
         <table>
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -25,6 +45,8 @@ function DbOperations(){
                 <th></th>
                 <th></th>
             </tr>
+            </thead>
+            <tbody>
             {products.map((product) => {
                 return (
                     <tr>
@@ -35,11 +57,16 @@ function DbOperations(){
                         <td>{product.stockAvailability? 'Available' : 'Not Available'}</td>
                         <td>{product.brand}</td>
                         <td>{product.vendorId}</td>
-                        <td><button onClick={GetProducts.updateProduct}>Update</button></td>
-                        <td><button onClick={GetProducts.removeProduct}>Delete</button></td>
+                        <td><button onClick={updateProduct}>Update</button></td>
+                        <td><button onClick={()=>{
+                            console.log("Called removed");
+                            
+                            removeProduct(product.id);
+                        }}>Delete</button></td>
                     </tr>
                 )
             })}
+            </tbody>
         </table>
 
         </>
