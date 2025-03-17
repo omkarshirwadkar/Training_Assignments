@@ -7,7 +7,7 @@ function Menu() {
         <Link to="/">Home</Link> | 
         <Link to="/about">About</Link> |
         <Link to="/contact">Contact</Link> |
-        <Link to="/netbanking">NetBanking</Link> |
+        <Link to="/login">NetBanking</Link> |
         <Link to="/services">Services</Link> 
     </div>
   )

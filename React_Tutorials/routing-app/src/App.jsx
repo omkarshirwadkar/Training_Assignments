@@ -5,6 +5,7 @@ import About from './screens/About';
 import Contact from './screens/Contact';
 import NetBanking from './screens/NetBanking';
 import Services from './screens/Services';
+import { Welcome } from './screens/Welcome';
 function App() {
   return (
     <>
@@ -14,8 +15,9 @@ function App() {
         <Route path="/demo" element={<h1>Just for Demo</h1>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/netbanking" element={<NetBanking />} />
+        <Route path="/login" element={<NetBanking />} />
         <Route path="/services" element={<Services />} />
+        <Route path="welcome" element={<Welcome/>}/>
       </Routes>
     </>
   )
