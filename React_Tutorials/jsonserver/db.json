@@ -1,13 +1,6 @@
 {
   "employees": [
     {
-      "id": "1",
-      "name": "John",
-      "age": 20,
-      "salary": 75000,
-      "designation": "Tester"
-    },
-    {
       "id": "2",
       "name": "Jacob",
       "age": 34,
@@ -61,6 +54,13 @@
       "name": "Omkar",
       "age": "23",
       "salary": "80000",
+      "designation": "Programmer"
+    },
+    {
+      "id": "11",
+      "name": "Omkar",
+      "age": "24",
+      "salary": "60000",
       "designation": "Programmer"
     }
   ],
@@ -168,8 +168,6 @@
   ],
   "vendors": [
     {
-      "0": "1",
-      "1": "4",
       "id": "1",
       "name": "Tech Distributors",
       "email": "contact@techworld.com",

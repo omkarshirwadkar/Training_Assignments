@@ -55,13 +55,8 @@ function removeProduct(id) {
       getVendorById(vid, id);
       console.log(vid, "vis");
       console.log(vendors, "Vendors");
-      
-      
       // console.log(vendors.fi, "csnnvcjnkdncz");
       console.log(vendors.productIds.filter(item => item != id));
-      
-      
-      
     })
 }
   useEffect (() => {
