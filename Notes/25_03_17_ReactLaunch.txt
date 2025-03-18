@@ -1,0 +1,8 @@
+npm install create-react-app
+
+
+
+pages, screens, views
+
+
+create a folder --> npm create vite@latest --> . 

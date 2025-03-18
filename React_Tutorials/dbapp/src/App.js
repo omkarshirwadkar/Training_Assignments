@@ -11,6 +11,7 @@ function App() {
       <AddEmployees/>
       <hr/>
       <GetEmployees/>
+      <hr />
       
     </div>
   );
