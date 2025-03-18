@@ -1,0 +1,14 @@
+
+either props or {}
+
+function ABC(props){
+    return <div>ABC {props.count}</div>;
+}
+function DEF({count}){
+    return <div>DEF {count}</div>;
+}
+
+
+
+useContext in React
+-------------------
