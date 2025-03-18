@@ -164,19 +164,12 @@
       "brand": "NetSpeed",
       "sku": "NS-ROUT-010",
       "vendorId": "5"
-    },
-    {
-      "id": "11",
-      "name": "4K Monitor",
-      "category": "Displays",
-      "price": 199.99,
-      "stockAvailability": true,
-      "brand": "ViewTech",
-      "vendorId": "4"
     }
   ],
   "vendors": [
     {
+      "0": "1",
+      "1": "4",
       "id": "1",
       "name": "Tech Distributors",
       "email": "contact@techworld.com",

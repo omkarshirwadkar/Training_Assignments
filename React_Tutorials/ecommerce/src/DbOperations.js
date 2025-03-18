@@ -33,7 +33,7 @@ function DbOperations(props){
         <>
             <h2>Product Details</h2>
         <table>
-            <thead>
+            {/* <thead> */}
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -45,8 +45,8 @@ function DbOperations(props){
                 <th></th>
                 <th></th>
             </tr>
-            </thead>
-            <tbody>
+            {/* </thead> */}
+            {/* <tbody> */}
             {products.map((product) => {
                 return (
                     <tr>
@@ -66,7 +66,7 @@ function DbOperations(props){
                     </tr>
                 )
             })}
-            </tbody>
+            {/* </tbody> */}
         </table>
 
         </>
